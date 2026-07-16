@@ -494,7 +494,11 @@ async function initialiseNextStopRoutePreview(stop) {
   });
 
   try {
-    const response = await fetch(route.geometryFile);
+    const response = await fetch(
+    `${route.geometryFile}?v=${Date.now()}`,
+    {
+      cache: "no-store"
+    }
 );
 
     if (!response.ok) {
