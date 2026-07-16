@@ -493,35 +493,36 @@ async function initialiseNextStopRoutePreview(stop) {
     instructionList.append(item);
   });
 
-try {
-  const response = await fetch(route.geometryFile);
+  try {
+    const routeUrl = new URL(
+      route.geometryFile,
+      window.location.href
+    ).href;
 
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}`);
+    const response = await fetch(routeUrl);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const geoJson = await response.json();
+    const routeFeature = getLineStringFeature(geoJson);
+
+    if (!routeFeature) {
+      throw new Error("No LineString geometry was found.");
+    }
+
+    renderRouteMap(mapContainer, routeFeature, stop, nextStop);
+  } catch (error) {
+    console.warn(
+      "The in-app route preview could not be loaded:",
+      error
+    );
+
+    mapContainer.innerHTML = `
+      <p class="route-map-error">
+        ${translate("routeUnavailable")}
+      </p>
+    `;
   }
-
-  const geoJson = await response.json();
-  const routeFeature = getLineStringFeature(geoJson);
-
-  if (!routeFeature) {
-    throw new Error("No LineString geometry was found.");
-  }
-
-  renderRouteMap(
-    mapContainer,
-    routeFeature,
-    stop,
-    nextStop
-  );
-} catch (error) {
-  console.warn(
-    "The in-app route preview could not be loaded:",
-    error
-  );
-
-  mapContainer.innerHTML = `
-    <p class="route-map-error">
-      ${translate("mapUnavailable")}
-    </p>
-  `;
 }
