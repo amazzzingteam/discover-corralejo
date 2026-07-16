@@ -5,7 +5,7 @@
   "description": "A multilingual walking tour of Corralejo.",
   "start_url": "./index.html?source=pwa_launch",
   "scope": "./",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#f4ebdd",
   "theme_color": "#155d6c",
   "lang": "en",
@@ -22,5 +22,10 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
+  "orientation": "portrait-primary"
 }
