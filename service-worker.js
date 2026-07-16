@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v13-offline-map-fix";
+const CACHE_VERSION = "v14-stable";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
