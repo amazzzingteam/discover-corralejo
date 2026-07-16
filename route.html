@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#155d6c">
+
+  <title>Route overview | Tour app</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="route-screen">
+  <main class="page-container route-page-container">
+    <nav class="top-bar top-bar-card">
+      <a
+        class="brand-link brand-lockup"
+        href="route.html?view_source=brand_link"
+      >
+        <span class="brand-symbol brand-symbol-small" aria-hidden="true">
+          <span class="brand-symbol-dot"></span>
+        </span>
+        <span data-app-name>Discover Corralejo</span>
+      </a>
+
+      <div class="top-bar-actions">
+        <a
+          class="change-language-link"
+          href="index.html?from=route_overview"
+          data-i18n="changeLanguage"
+        >
+          Change language
+        </a>
+
+        <button
+          id="exit-tour-button"
+          class="text-button"
+          type="button"
+          data-i18n="exitTour"
+        >
+          Exit tour
+        </button>
+      </div>
+    </nav>
+
+    <header class="route-hero-card">
+      <div class="route-hero-content">
+        <p class="eyebrow eyebrow-light" data-app-name>
+          Discover Corralejo
+        </p>
+
+        <h1 data-i18n="routeOverview">
+          Route overview
+        </h1>
+
+        <p data-i18n="routeIntro">
+          Choose a stop to begin the tour.
+        </p>
+
+        <p id="route-meta" class="route-meta"></p>
+      </div>
+    </header>
+
+    <section class="route-progress-card" aria-labelledby="route-progress-title">
+      <div class="route-progress-copy">
+        <p class="eyebrow" data-i18n="continueTour">
+          Continue your tour
+        </p>
+        <h2 id="route-progress-title" data-i18n="routeProgress">
+          0 of 18 stops completed
+        </h2>
+      </div>
+
+      <div class="progress-track" aria-hidden="true">
+        <span id="route-progress-fill" class="progress-fill"></span>
+      </div>
+
+      <a
+        id="continue-tour-button"
+        class="button route-continue-button"
+        href="#"
+        hidden
+      >
+        Continue your tour
+      </a>
+    </section>
+
+    <section class="offline-download-card" aria-labelledby="offline-download-title">
+      <div class="offline-card-icon" aria-hidden="true">↓</div>
+      <div class="offline-card-copy">
+        <h2 id="offline-download-title" data-i18n="downloadOfflineTitle">
+          Use this tour offline
+        </h2>
+
+        <p class="text-muted" data-i18n="offlineDownloadText">
+          Download the tour while you have Wi-Fi so its pages, photos, videos and audio work later without internet.
+        </p>
+      </div>
+
+      <button
+        id="download-offline-button"
+        class="button button-secondary compact-button"
+        type="button"
+        data-i18n="downloadOfflineButton"
+      >
+        Download tour for offline use
+      </button>
+
+      <button
+        id="install-app-button"
+        class="button button-ghost compact-button"
+        type="button"
+        data-i18n="installApp"
+        hidden
+      >
+        Install app
+      </button>
+
+      <progress
+        id="offline-download-progress"
+        class="offline-download-progress"
+        max="100"
+        value="0"
+        hidden
+        aria-label="Offline download progress"
+      ></progress>
+
+      <p
+        id="offline-download-status"
+        class="offline-download-status"
+        aria-live="polite"
+      ></p>
+    </section>
+
+    <section class="route-stops-section" aria-labelledby="route-stops-heading">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow" data-app-name>Discover Corralejo</p>
+          <h2 id="route-stops-heading" data-i18n="routeStopsHeading">
+            Explore the route
+          </h2>
+        </div>
+
+        <div class="route-category-legend" aria-hidden="true">
+          <span class="legend-dot legend-main"></span>
+          <span class="legend-dot legend-secret"></span>
+          <span class="legend-dot legend-hidden"></span>
+        </div>
+      </div>
+
+      <section
+        id="route-list"
+        class="route-list"
+        aria-live="polite"
+      ></section>
+    </section>
+  </main>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/offline.js"></script>
+  <script src="js/route.js"></script>
+  <script src="js/register-sw.js"></script>
+</body>
+</html>

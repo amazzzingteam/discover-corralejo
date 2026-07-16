@@ -1,0 +1,101 @@
+{
+  "id": "03-new-stop",
+  "slug": "new-stop-slug",
+  "published": false,
+  "number": "03",
+  "position": 3,
+  "matchingFolder": "stop-03-new-stop",
+  "typeKey": "mainStop",
+  "typeLabel": {
+    "en": "",
+    "es": "",
+    "fr": "",
+    "de": "",
+    "it": "",
+    "pl": "",
+    "nl": "",
+    "pt": ""
+  },
+  "displayName": {
+    "en": "",
+    "es": "",
+    "fr": "",
+    "de": "",
+    "it": "",
+    "pl": "",
+    "nl": "",
+    "pt": ""
+  },
+  "description": {
+    "en": "",
+    "es": "",
+    "fr": "",
+    "de": "",
+    "it": "",
+    "pl": "",
+    "nl": "",
+    "pt": ""
+  },
+  "transcript": {
+    "en": "",
+    "es": "",
+    "fr": "",
+    "de": "",
+    "it": "",
+    "pl": "",
+    "nl": "",
+    "pt": ""
+  },
+  "media": {
+    "heroImage": "assets/stops/stop-03-new-stop/photos/03-new-stop-photo-hero.jpeg",
+    "photos": [
+      {
+        "src": "assets/stops/stop-03-new-stop/photos/03-new-stop-photo-horizontal.jpeg"
+      }
+    ],
+    "videos": [
+      {
+        "src": "assets/stops/stop-03-new-stop/videos/03-new-stop-video-horizontal.mp4"
+      }
+    ]
+  },
+  "audio": {
+    "en": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-en.mp3",
+    "es": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-es.mp3",
+    "fr": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-fr.mp3",
+    "de": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-de.mp3",
+    "it": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-it.mp3",
+    "pl": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-pl.mp3",
+    "nl": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-nl.mp3",
+    "pt": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-pt.mp3"
+  },
+  "placeholderMedia": {
+    "heroImage": false,
+    "photos": false,
+    "videos": false,
+    "audioLanguages": [
+      "nl",
+      "pt"
+    ]
+  },
+  "usesPlaceholderMedia": true,
+  "contentStatus": "draft",
+  "maps": {
+    "location": "GOOGLE_MAPS_LOCATION_LINK"
+  },
+  "nextStop": {
+    "id": "04-following-stop",
+    "slug": "following-stop-slug",
+    "displayName": {
+      "en": "",
+      "es": "",
+      "fr": "",
+      "de": "",
+      "it": "",
+      "pl": "",
+      "nl": "",
+      "pt": ""
+    },
+    "directionsUrl": "GOOGLE_MAPS_DIRECTIONS_LINK"
+  }
+}

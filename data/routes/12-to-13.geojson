@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86523,
+            28.73326
+          ],
+          [
+            -13.8652584,
+            28.7329643
+          ],
+          [
+            -13.8656089,
+            28.7325727
+          ],
+          [
+            -13.86572,
+            28.73265
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "12-to-13",
+        "fromStopId": "12-lobos-viewpoint",
+        "toStopId": "13-galera-beach",
+        "distanceMetres": 102,
+        "walkingMinutes": 2,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "./index.html",
+  "name": "Discover Corralejo",
+  "short_name": "Corralejo",
+  "description": "A multilingual walking tour of Corralejo.",
+  "start_url": "./index.html?source=pwa_launch",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4ebdd",
+  "theme_color": "#155d6c",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

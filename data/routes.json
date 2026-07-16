@@ -1,0 +1,682 @@
+[
+  {
+    "id": "01-to-02",
+    "fromStopId": "01-supermercado-deseos",
+    "fromSlug": "supermercado-deseos",
+    "toStopId": "02-harbour",
+    "toSlug": "harbour",
+    "googleMapsFallback": "https://maps.app.goo.gl/xUUSpdkNpDqQngoA6",
+    "status": "approved",
+    "geometryFile": "data/routes/01-to-02.geojson",
+    "distanceMetres": 170,
+    "walkingMinutes": 2,
+    "geometrySource": "user_drawn_against_google_maps",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Supermercado Deseos to Corralejo Harbour."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Supermercado Deseos hasta Corralejo Harbour."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Supermercado Deseos à Corralejo Harbour."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Supermercado Deseos nach Corralejo Harbour."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Supermercado Deseos a Corralejo Harbour."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Supermercado Deseos do Corralejo Harbour."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Supermercado Deseos naar Corralejo Harbour."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Supermercado Deseos até Corralejo Harbour."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "02-to-03",
+    "fromStopId": "02-harbour",
+    "fromSlug": "harbour",
+    "toStopId": "03-avenida-maritima",
+    "toSlug": "avenida-maritima",
+    "googleMapsFallback": "https://maps.app.goo.gl/Hc62vXzuWLsC7qyaA",
+    "status": "approved",
+    "geometryFile": "data/routes/02-to-03.geojson",
+    "distanceMetres": 320,
+    "walkingMinutes": 5,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Corralejo Harbour to Avenida Marítima."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Corralejo Harbour hasta Avenida Marítima."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Corralejo Harbour à Avenida Marítima."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Corralejo Harbour nach Avenida Marítima."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Corralejo Harbour a Avenida Marítima."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Corralejo Harbour do Avenida Marítima."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Corralejo Harbour naar Avenida Marítima."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Corralejo Harbour até Avenida Marítima."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "03-to-04",
+    "fromStopId": "03-avenida-maritima",
+    "fromSlug": "avenida-maritima",
+    "toStopId": "04-monumento-al-pescador",
+    "toSlug": "monumento-al-pescador",
+    "googleMapsFallback": "https://maps.app.goo.gl/mWZ6PGZw5APA2xBS7",
+    "status": "approved",
+    "geometryFile": "data/routes/03-to-04.geojson",
+    "distanceMetres": 80,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Avenida Marítima to Monumento el Pescador & Marinero."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Avenida Marítima hasta Monumento el Pescador & Marinero."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Avenida Marítima à Monumento el Pescador & Marinero."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Avenida Marítima nach Monumento el Pescador & Marinero."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Avenida Marítima a Monumento el Pescador & Marinero."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Avenida Marítima do Monumento el Pescador & Marinero."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Avenida Marítima naar Monumento el Pescador & Marinero."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Avenida Marítima até Monumento el Pescador & Marinero."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "04-to-05",
+    "fromStopId": "04-monumento-al-pescador",
+    "fromSlug": "monumento-al-pescador",
+    "toStopId": "05-muelle-chico",
+    "toSlug": "muelle-chico",
+    "googleMapsFallback": "https://maps.app.goo.gl/GE2UcLuqVradJpge7",
+    "status": "approved",
+    "geometryFile": "data/routes/04-to-05.geojson",
+    "distanceMetres": 26,
+    "walkingMinutes": 1,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Monumento el Pescador & Marinero to Muelle Chico."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Monumento el Pescador & Marinero hasta Muelle Chico."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Monumento el Pescador & Marinero à Muelle Chico."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Monumento el Pescador & Marinero nach Muelle Chico."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Monumento el Pescador & Marinero a Muelle Chico."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Monumento el Pescador & Marinero do Muelle Chico."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Monumento el Pescador & Marinero naar Muelle Chico."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Monumento el Pescador & Marinero até Muelle Chico."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "05-to-06",
+    "fromStopId": "05-muelle-chico",
+    "fromSlug": "muelle-chico",
+    "toStopId": "06-plaza-patricio-music-square",
+    "toSlug": "plaza-patricio-music-square",
+    "googleMapsFallback": "https://maps.app.goo.gl/BrsMmxe1crssYE6UA",
+    "status": "approved",
+    "geometryFile": "data/routes/05-to-06.geojson",
+    "distanceMetres": 86,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Muelle Chico to The Music Square Corralejo / Plaza Felix."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Muelle Chico hasta The Music Square Corralejo / Plaza Felix."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Muelle Chico à The Music Square Corralejo / Plaza Felix."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Muelle Chico nach The Music Square Corralejo / Plaza Felix."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Muelle Chico a The Music Square Corralejo / Plaza Felix."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Muelle Chico do The Music Square Corralejo / Plaza Felix."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Muelle Chico naar The Music Square Corralejo / Plaza Felix."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Muelle Chico até The Music Square Corralejo / Plaza Felix."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "06-to-07",
+    "fromStopId": "06-plaza-patricio-music-square",
+    "fromSlug": "plaza-patricio-music-square",
+    "toStopId": "07-plaza-patricio-calero",
+    "toSlug": "plaza-patricio-calero",
+    "googleMapsFallback": "https://maps.app.goo.gl/yR1gy1FNu8DsX3QT8",
+    "status": "approved",
+    "geometryFile": "data/routes/06-to-07.geojson",
+    "distanceMetres": 99,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from The Music Square Corralejo / Plaza Felix to Plaza Patricio Calero."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde The Music Square Corralejo / Plaza Felix hasta Plaza Patricio Calero."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de The Music Square Corralejo / Plaza Felix à Plaza Patricio Calero."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von The Music Square Corralejo / Plaza Felix nach Plaza Patricio Calero."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da The Music Square Corralejo / Plaza Felix a Plaza Patricio Calero."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z The Music Square Corralejo / Plaza Felix do Plaza Patricio Calero."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van The Music Square Corralejo / Plaza Felix naar Plaza Patricio Calero."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de The Music Square Corralejo / Plaza Felix até Plaza Patricio Calero."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "07-to-08",
+    "fromStopId": "07-plaza-patricio-calero",
+    "fromSlug": "plaza-patricio-calero",
+    "toStopId": "08-main-shopping-street",
+    "toSlug": "main-shopping-street",
+    "googleMapsFallback": "https://maps.app.goo.gl/tP5M2WePhY1fqJWi9",
+    "status": "approved",
+    "geometryFile": "data/routes/07-to-08.geojson",
+    "distanceMetres": 66,
+    "walkingMinutes": 1,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Plaza Patricio Calero to Corralejo Main Street Start."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Plaza Patricio Calero hasta Corralejo Main Street Start."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Plaza Patricio Calero à Corralejo Main Street Start."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Plaza Patricio Calero nach Corralejo Main Street Start."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Plaza Patricio Calero a Corralejo Main Street Start."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Plaza Patricio Calero do Corralejo Main Street Start."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Plaza Patricio Calero naar Corralejo Main Street Start."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Plaza Patricio Calero até Corralejo Main Street Start."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "08-to-09",
+    "fromStopId": "08-main-shopping-street",
+    "fromSlug": "main-shopping-street",
+    "toStopId": "09-rainbow-beach",
+    "toSlug": "rainbow-beach",
+    "googleMapsFallback": "https://maps.app.goo.gl/RKA8iWo3eFsbUVMx9",
+    "status": "approved",
+    "geometryFile": "data/routes/08-to-09.geojson",
+    "distanceMetres": 190,
+    "walkingMinutes": 3,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Corralejo Main Street Start to Rainbow bench."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Corralejo Main Street Start hasta Rainbow bench."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Corralejo Main Street Start à Rainbow bench."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Corralejo Main Street Start nach Rainbow bench."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Corralejo Main Street Start a Rainbow bench."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Corralejo Main Street Start do Rainbow bench."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Corralejo Main Street Start naar Rainbow bench."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Corralejo Main Street Start até Rainbow bench."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "09-to-10",
+    "fromStopId": "09-rainbow-beach",
+    "fromSlug": "rainbow-beach",
+    "toStopId": "10-playa-corralejo-viejo",
+    "toSlug": "playa-corralejo-viejo",
+    "googleMapsFallback": "https://maps.app.goo.gl/7Rb7bShEHTrZrSVF9",
+    "status": "approved",
+    "geometryFile": "data/routes/09-to-10.geojson",
+    "distanceMetres": 146,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Rainbow bench to Corralejo Viejo."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Rainbow bench hasta Corralejo Viejo."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Rainbow bench à Corralejo Viejo."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Rainbow bench nach Corralejo Viejo."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Rainbow bench a Corralejo Viejo."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Rainbow bench do Corralejo Viejo."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Rainbow bench naar Corralejo Viejo."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Rainbow bench até Corralejo Viejo."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "10-to-11",
+    "fromStopId": "10-playa-corralejo-viejo",
+    "fromSlug": "playa-corralejo-viejo",
+    "toStopId": "11-waikiki-beach",
+    "toSlug": "waikiki-beach",
+    "googleMapsFallback": "https://maps.app.goo.gl/BpK2ajzvvgz5e8ZG8",
+    "status": "approved",
+    "geometryFile": "data/routes/10-to-11.geojson",
+    "distanceMetres": 510,
+    "walkingMinutes": 7,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Corralejo Viejo to Corralejo Waikiki & Galera Beach."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Corralejo Viejo hasta Corralejo Waikiki & Galera Beach."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Corralejo Viejo à Corralejo Waikiki & Galera Beach."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Corralejo Viejo nach Corralejo Waikiki & Galera Beach."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Corralejo Viejo a Corralejo Waikiki & Galera Beach."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Corralejo Viejo do Corralejo Waikiki & Galera Beach."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Corralejo Viejo naar Corralejo Waikiki & Galera Beach."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Corralejo Viejo até Corralejo Waikiki & Galera Beach."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "11-to-12",
+    "fromStopId": "11-waikiki-beach",
+    "fromSlug": "waikiki-beach",
+    "toStopId": "12-lobos-viewpoint",
+    "toSlug": "lobos-viewpoint",
+    "googleMapsFallback": "https://maps.app.goo.gl/WXdw2eVPvhMdxe8b9",
+    "status": "approved",
+    "geometryFile": "data/routes/11-to-12.geojson",
+    "distanceMetres": 354,
+    "walkingMinutes": 5,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Corralejo Waikiki & Galera Beach to Uitkijkpost Corralejo."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Corralejo Waikiki & Galera Beach hasta Uitkijkpost Corralejo."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Corralejo Waikiki & Galera Beach à Uitkijkpost Corralejo."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Corralejo Waikiki & Galera Beach nach Uitkijkpost Corralejo."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Corralejo Waikiki & Galera Beach a Uitkijkpost Corralejo."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Corralejo Waikiki & Galera Beach do Uitkijkpost Corralejo."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Corralejo Waikiki & Galera Beach naar Uitkijkpost Corralejo."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Corralejo Waikiki & Galera Beach até Uitkijkpost Corralejo."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "12-to-13",
+    "fromStopId": "12-lobos-viewpoint",
+    "fromSlug": "lobos-viewpoint",
+    "toStopId": "13-galera-beach",
+    "toSlug": "galera-beach",
+    "googleMapsFallback": "https://maps.app.goo.gl/FhXu98e2S9EpY5mw5",
+    "status": "approved",
+    "geometryFile": "data/routes/12-to-13.geojson",
+    "distanceMetres": 102,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Uitkijkpost Corralejo to Galera Beach Art Villas."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Uitkijkpost Corralejo hasta Galera Beach Art Villas."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Uitkijkpost Corralejo à Galera Beach Art Villas."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Uitkijkpost Corralejo nach Galera Beach Art Villas."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Uitkijkpost Corralejo a Galera Beach Art Villas."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Uitkijkpost Corralejo do Galera Beach Art Villas."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Uitkijkpost Corralejo naar Galera Beach Art Villas."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Uitkijkpost Corralejo até Galera Beach Art Villas."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "13-to-14",
+    "fromStopId": "13-galera-beach",
+    "fromSlug": "galera-beach",
+    "toStopId": "14-pop-corn-beach",
+    "toSlug": "pop-corn-beach",
+    "googleMapsFallback": "https://maps.app.goo.gl/ukEyR7AjcVefxhM66",
+    "status": "approved",
+    "geometryFile": "data/routes/13-to-14.geojson",
+    "distanceMetres": 602,
+    "walkingMinutes": 9,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Galera Beach Art Villas to Popcorn Beach."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Galera Beach Art Villas hasta Popcorn Beach."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Galera Beach Art Villas à Popcorn Beach."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Galera Beach Art Villas nach Popcorn Beach."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Galera Beach Art Villas a Popcorn Beach."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Galera Beach Art Villas do Popcorn Beach."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Galera Beach Art Villas naar Popcorn Beach."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Galera Beach Art Villas até Popcorn Beach."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "14-to-15",
+    "fromStopId": "14-pop-corn-beach",
+    "fromSlug": "pop-corn-beach",
+    "toStopId": "15-el-campanario",
+    "toSlug": "el-campanario",
+    "googleMapsFallback": "https://maps.app.goo.gl/vsWS82ANpM8Zy3Rw7",
+    "status": "approved",
+    "geometryFile": "data/routes/14-to-15.geojson",
+    "distanceMetres": 552,
+    "walkingMinutes": 8,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Popcorn Beach to Villa Comercial El Campanario."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Popcorn Beach hasta Villa Comercial El Campanario."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Popcorn Beach à Villa Comercial El Campanario."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Popcorn Beach nach Villa Comercial El Campanario."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Popcorn Beach a Villa Comercial El Campanario."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Popcorn Beach do Villa Comercial El Campanario."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Popcorn Beach naar Villa Comercial El Campanario."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Popcorn Beach até Villa Comercial El Campanario."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "15-to-16",
+    "fromStopId": "15-el-campanario",
+    "fromSlug": "el-campanario",
+    "toStopId": "16-el-campanario-bell-tower",
+    "toSlug": "el-campanario-bell-tower",
+    "googleMapsFallback": "https://maps.app.goo.gl/pW6BAT5Vp5V7fRpa9",
+    "status": "approved",
+    "geometryFile": "data/routes/15-to-16.geojson",
+    "distanceMetres": 30,
+    "walkingMinutes": 1,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Villa Comercial El Campanario to El Campanario Bell Tower."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Villa Comercial El Campanario hasta El Campanario Bell Tower."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Villa Comercial El Campanario à El Campanario Bell Tower."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Villa Comercial El Campanario nach El Campanario Bell Tower."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Villa Comercial El Campanario a El Campanario Bell Tower."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Villa Comercial El Campanario do El Campanario Bell Tower."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Villa Comercial El Campanario naar El Campanario Bell Tower."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Villa Comercial El Campanario até El Campanario Bell Tower."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "16-to-17",
+    "fromStopId": "16-el-campanario-bell-tower",
+    "fromSlug": "el-campanario-bell-tower",
+    "toStopId": "17-mama-and-you",
+    "toSlug": "mama-and-you",
+    "googleMapsFallback": "https://maps.app.goo.gl/xeRQJeJYLq4UMgXs5",
+    "status": "approved",
+    "geometryFile": "data/routes/16-to-17.geojson",
+    "distanceMetres": 176,
+    "walkingMinutes": 3,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from El Campanario Bell Tower to Mama and You."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde El Campanario Bell Tower hasta Mama and You."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de El Campanario Bell Tower à Mama and You."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von El Campanario Bell Tower nach Mama and You."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da El Campanario Bell Tower a Mama and You."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z El Campanario Bell Tower do Mama and You."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van El Campanario Bell Tower naar Mama and You."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de El Campanario Bell Tower até Mama and You."
+      ]
+    },
+    "approved": true
+  },
+  {
+    "id": "17-to-18",
+    "fromStopId": "17-mama-and-you",
+    "fromSlug": "mama-and-you",
+    "toStopId": "18-botanic-park",
+    "toSlug": "botanic-park",
+    "googleMapsFallback": "https://maps.app.goo.gl/CqUrZnPFiQfbDQREA",
+    "status": "approved",
+    "geometryFile": "data/routes/17-to-18.geojson",
+    "distanceMetres": 483,
+    "walkingMinutes": 7,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "instructions": {
+      "en": [
+        "Follow the highlighted walking route from Mama and You to Botanic Park of Corralejo."
+      ],
+      "es": [
+        "Siga la ruta peatonal resaltada desde Mama and You hasta Botanic Park of Corralejo."
+      ],
+      "fr": [
+        "Suivez l’itinéraire pédestre surligné de Mama and You à Botanic Park of Corralejo."
+      ],
+      "de": [
+        "Folgen Sie der markierten Fußroute von Mama and You nach Botanic Park of Corralejo."
+      ],
+      "it": [
+        "Segui il percorso pedonale evidenziato da Mama and You a Botanic Park of Corralejo."
+      ],
+      "pl": [
+        "Podążaj zaznaczoną trasą pieszą z Mama and You do Botanic Park of Corralejo."
+      ],
+      "nl": [
+        "Volg de gemarkeerde wandelroute van Mama and You naar Botanic Park of Corralejo."
+      ],
+      "pt": [
+        "Siga o percurso pedonal destacado de Mama and You até Botanic Park of Corralejo."
+      ]
+    },
+    "approved": true
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.865096,
+            28.742378
+          ],
+          [
+            -13.86466,
+            28.742477
+          ],
+          [
+            -13.864683,
+            28.742277
+          ],
+          [
+            -13.864341,
+            28.741927
+          ],
+          [
+            -13.864527,
+            28.741847
+          ],
+          [
+            -13.864643,
+            28.741802
+          ],
+          [
+            -13.86475,
+            28.74176
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "01-to-02",
+        "fromStopId": "01-supermercado-deseos",
+        "toStopId": "02-harbour",
+        "distanceMetres": 170,
+        "walkingMinutes": 2,
+        "status": "approved",
+        "geometrySource": "user_drawn_against_google_maps",
+        "approved": true
+      }
+    }
+  ]
+}

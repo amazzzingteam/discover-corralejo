@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#155d6c">
+
+  <title>Stop completed | Tour app</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="completion-screen">
+  <main class="page-container completion-page-container">
+    <nav class="top-bar top-bar-card">
+      <a
+        class="brand-link brand-lockup"
+        href="route.html?view_source=completion_page"
+      >
+        <span class="brand-symbol brand-symbol-small" aria-hidden="true">
+          <span class="brand-symbol-dot"></span>
+        </span>
+        <span data-app-name>Discover Corralejo</span>
+      </a>
+
+      <a
+        class="change-language-link"
+        href="index.html?from=completion_page"
+        data-i18n="changeLanguage"
+      >
+        Change language
+      </a>
+    </nav>
+
+    <section class="completion-card">
+      <div class="completion-summary">
+        <div class="completion-symbol" aria-hidden="true">✓</div>
+        <div>
+          <p class="eyebrow" data-i18n="completedStatus">Completed</p>
+          <h1 id="completion-title">Stop completed</h1>
+          <p id="completion-body">You have completed this tour stop.</p>
+        </div>
+      </div>
+
+      <section id="next-stop-route-preview" class="next-stop-route-preview" hidden>
+        <div class="next-stop-route-heading">
+          <div>
+            <p class="eyebrow" data-i18n="nextStopPreview">Next stop route</p>
+            <h2 data-i18n="walkingRoute">Walking route</h2>
+          </div>
+          <p id="next-stop-route-summary" class="next-stop-route-summary"></p>
+        </div>
+
+        <div id="next-stop-map" class="next-stop-map" aria-live="polite"></div>
+
+        <div class="route-approved-chip">
+          <span aria-hidden="true">✓</span>
+          <span data-i18n="routeReady">Approved walking route</span>
+        </div>
+
+        <ol id="next-stop-route-instructions" class="next-stop-route-instructions"></ol>
+      </section>
+
+      <div class="completion-actions sticky-action-bar">
+        <a
+          id="continue-to-next-stop-button"
+          class="button"
+          href="#"
+          hidden
+        >
+          Continue to next stop
+        </a>
+
+        <a
+          id="next-directions-button"
+          class="button button-secondary"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden
+        >
+          Directions to next stop
+        </a>
+
+        <a
+          id="feedback-button"
+          class="button button-secondary"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="giveFeedback"
+          hidden
+        >
+          Give feedback
+        </a>
+
+        <a
+          id="return-to-route-button"
+          class="button"
+          href="route.html?view_source=completion_page"
+          data-i18n="returnToRoute"
+          hidden
+        >
+          Return to route
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/offline.js"></script>
+  <script src="assets/vendor/maplibre-gl.js"></script>
+  <script src="assets/vendor/pmtiles.js"></script>
+  <script src="js/navigation-map.js"></script>
+  <script src="js/completion.js"></script>
+  <script src="js/register-sw.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Thank you | Tour app</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <main class="page-container">
+    <section class="content-section completion-card">
+      <div
+        class="completion-symbol"
+        aria-hidden="true"
+      >
+        ✓
+      </div>
+
+      <h1 data-i18n="feedbackThankYouTitle">
+        Thank you for your feedback
+      </h1>
+
+      <p data-i18n="feedbackThankYouBody">
+        Your feedback has been submitted.
+      </p>
+
+      <a
+        class="button"
+        href="route.html?view_source=feedback_complete"
+        data-i18n="returnToTour"
+      >
+        Return to tour
+      </a>
+    </section>
+  </main>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/offline.js"></script>
+  <script src="js/feedback-complete.js"></script>
+  <script src="js/register-sw.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86702,
+            28.73916
+          ],
+          [
+            -13.8670019,
+            28.739105
+          ],
+          [
+            -13.86691,
+            28.73895
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "04-to-05",
+        "fromStopId": "04-monumento-al-pescador",
+        "toStopId": "05-muelle-chico",
+        "distanceMetres": 26,
+        "walkingMinutes": 1,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#155d6c">
+
+  <title>Tour stop | Tour app</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="stop-screen">
+  <main class="page-container stop-page-container">
+    <nav class="top-bar top-bar-card stop-top-bar">
+      <a
+        id="back-to-route-link"
+        class="back-link"
+        href="route.html?view_source=stop_page"
+        data-i18n="backToRoute"
+      >
+        Back to route
+      </a>
+
+      <div class="top-bar-actions">
+        <a
+          id="change-language-link"
+          class="change-language-link"
+          href="index.html?from=stop_page"
+          data-i18n="changeLanguage"
+        >
+          Change language
+        </a>
+
+        <button
+          id="exit-tour-button"
+          class="text-button"
+          type="button"
+          data-i18n="exitTour"
+        >
+          Exit tour
+        </button>
+      </div>
+    </nav>
+
+    <div class="stop-progress-track" aria-hidden="true">
+      <span id="stop-progress-bar" class="stop-progress-fill"></span>
+    </div>
+
+    <section class="stop-hero-card">
+      <img
+        id="stop-hero"
+        class="hero-image"
+        src=""
+        alt=""
+      >
+
+      <div class="stop-hero-shade"></div>
+
+      <div class="stop-hero-copy">
+        <div class="stop-badge-row">
+          <p id="stop-type" class="stop-type-badge"></p>
+          <p id="stop-progress" class="stop-progress-pill"></p>
+        </div>
+
+        <p id="progress-note" class="progress-note" hidden></p>
+        <h1 id="stop-title">Tour stop</h1>
+      </div>
+    </section>
+
+    <div
+      id="secret-discovery-banner"
+      class="secret-discovery-banner"
+      hidden
+    >
+      <span aria-hidden="true">✦</span>
+      <span data-i18n="secretSpotDiscovered">Secret photo spot discovered</span>
+    </div>
+
+    <section id="audio-section" class="content-section audio-card">
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow" data-i18n="audioGuide">Audio guide</p>
+          <h2 data-i18n="audioGuide">Audio guide</h2>
+
+          <p class="audio-language-label">
+            <span data-i18n="audioLanguage">Audio language</span>:
+            <strong id="audio-language-name"></strong>
+          </p>
+
+          <p
+            id="audio-placeholder-note"
+            class="progress-note"
+            hidden
+          ></p>
+        </div>
+
+        <div class="audio-card-icon" aria-hidden="true">▶</div>
+      </div>
+
+      <audio id="audio-player" controls preload="metadata"></audio>
+    </section>
+
+    <section class="content-section story-card">
+      <p class="eyebrow" data-i18n="aboutThisStop">About this stop</p>
+      <h2 data-i18n="aboutThisStop">About this stop</h2>
+      <p id="stop-description" class="stop-description"></p>
+
+      <details class="transcript-details">
+        <summary data-i18n="transcriptSummary">Read the full story</summary>
+        <p id="stop-transcript"></p>
+      </details>
+    </section>
+
+    <section id="photo-section" class="content-section media-section" hidden>
+      <div class="section-title-row compact-title-row">
+        <div>
+          <p class="eyebrow" data-i18n="photos">Photos</p>
+          <h2 data-i18n="photos">Photos</h2>
+        </div>
+      </div>
+      <div id="photo-gallery" class="media-gallery"></div>
+    </section>
+
+    <section id="video-section" class="content-section media-section" hidden>
+      <div class="section-title-row compact-title-row">
+        <div>
+          <p class="eyebrow" data-i18n="video">Video</p>
+          <h2 data-i18n="video">Video</h2>
+        </div>
+      </div>
+      <div id="video-gallery" class="media-gallery"></div>
+    </section>
+
+    <section class="content-section location-card">
+      <div class="location-card-icon" aria-hidden="true">⌖</div>
+      <div>
+        <p class="eyebrow" data-i18n="location">Location</p>
+        <h2 data-i18n="location">Location</h2>
+        <p data-i18n="locationText">Open this stop in Google Maps.</p>
+      </div>
+
+      <a
+        id="maps-button"
+        class="button button-secondary"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n="openGoogleMaps"
+      >
+        Open in Google Maps
+      </a>
+    </section>
+
+    <div class="stop-actions sticky-action-bar">
+      <a id="next-stop-button" class="button" href="#">Next stop</a>
+    </div>
+  </main>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/offline.js"></script>
+  <script src="js/stop.js"></script>
+  <script src="js/register-sw.js"></script>
+</body>
+</html>

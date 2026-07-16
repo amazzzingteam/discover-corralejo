@@ -1,0 +1,155 @@
+[
+  {
+    "routeId": "01-to-02",
+    "from": "Supermercado Deseos",
+    "to": "Corralejo Harbour",
+    "distanceMetres": 170,
+    "walkingMinutes": 2,
+    "geometrySource": "user_drawn_against_google_maps",
+    "status": "approved"
+  },
+  {
+    "routeId": "02-to-03",
+    "from": "Corralejo Harbour",
+    "to": "Avenida Marítima",
+    "distanceMetres": 320,
+    "walkingMinutes": 5,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "03-to-04",
+    "from": "Avenida Marítima",
+    "to": "Monumento el Pescador & Marinero",
+    "distanceMetres": 80,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "04-to-05",
+    "from": "Monumento el Pescador & Marinero",
+    "to": "Muelle Chico",
+    "distanceMetres": 26,
+    "walkingMinutes": 1,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "05-to-06",
+    "from": "Muelle Chico",
+    "to": "The Music Square Corralejo / Plaza Felix",
+    "distanceMetres": 86,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "06-to-07",
+    "from": "The Music Square Corralejo / Plaza Felix",
+    "to": "Plaza Patricio Calero",
+    "distanceMetres": 99,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "07-to-08",
+    "from": "Plaza Patricio Calero",
+    "to": "Corralejo Main Street Start",
+    "distanceMetres": 66,
+    "walkingMinutes": 1,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "08-to-09",
+    "from": "Corralejo Main Street Start",
+    "to": "Rainbow bench",
+    "distanceMetres": 190,
+    "walkingMinutes": 3,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "09-to-10",
+    "from": "Rainbow bench",
+    "to": "Corralejo Viejo",
+    "distanceMetres": 146,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "10-to-11",
+    "from": "Corralejo Viejo",
+    "to": "Corralejo Waikiki & Galera Beach",
+    "distanceMetres": 510,
+    "walkingMinutes": 7,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "11-to-12",
+    "from": "Corralejo Waikiki & Galera Beach",
+    "to": "Uitkijkpost Corralejo",
+    "distanceMetres": 354,
+    "walkingMinutes": 5,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "12-to-13",
+    "from": "Uitkijkpost Corralejo",
+    "to": "Galera Beach Art Villas",
+    "distanceMetres": 102,
+    "walkingMinutes": 2,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "13-to-14",
+    "from": "Galera Beach Art Villas",
+    "to": "Popcorn Beach",
+    "distanceMetres": 602,
+    "walkingMinutes": 9,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "14-to-15",
+    "from": "Popcorn Beach",
+    "to": "Villa Comercial El Campanario",
+    "distanceMetres": 552,
+    "walkingMinutes": 8,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "15-to-16",
+    "from": "Villa Comercial El Campanario",
+    "to": "El Campanario Bell Tower",
+    "distanceMetres": 30,
+    "walkingMinutes": 1,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "16-to-17",
+    "from": "El Campanario Bell Tower",
+    "to": "Mama and You",
+    "distanceMetres": 176,
+    "walkingMinutes": 3,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  },
+  {
+    "routeId": "17-to-18",
+    "from": "Mama and You",
+    "to": "Botanic Park of Corralejo",
+    "distanceMetres": 483,
+    "walkingMinutes": 7,
+    "geometrySource": "generated_from_local_openstreetmap_network",
+    "status": "approved"
+  }
+]
