@@ -1,0 +1,1289 @@
+/* Cross-platform visual and accessibility polish — 2026-08-03 */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --touch-target: 44px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(24px + var(--safe-top));
+}
+
+body {
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-container {
+  padding-left: max(12px, var(--safe-left));
+  padding-right: max(12px, var(--safe-right));
+}
+
+.top-bar-card {
+  margin-top: max(8px, var(--safe-top));
+}
+
+button,
+a,
+summary,
+[role="button"],
+[role="tab"] {
+  min-height: var(--touch-target);
+}
+
+.change-language-link,
+.text-button,
+.back-link,
+.welcome-language-toggle,
+.language-sheet-close,
+.analytics-preferences-button,
+.maplibregl-ctrl button {
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+}
+
+.stop-type-chip,
+.stop-status,
+.route-meta,
+.language-code {
+  font-size: max(0.75rem, 12px);
+}
+
+/* Up next card */
+.up-next-card {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 0;
+  margin: 0 0 14px;
+  overflow: hidden;
+  color: var(--charcoal);
+  background: var(--warm-white);
+  border: 1px solid rgba(21, 93, 108, 0.18);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.up-next-image-wrap {
+  position: relative;
+  min-height: 176px;
+  overflow: hidden;
+}
+
+.up-next-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.up-next-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(13, 70, 82, 0.55));
+}
+
+.up-next-number {
+  position: absolute;
+  z-index: 1;
+  bottom: 12px;
+  left: 12px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: var(--warm-white);
+  background: var(--coral);
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.up-next-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+}
+
+.up-next-copy h2 {
+  margin: 4px 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.up-next-meta {
+  margin: 0 0 14px;
+  color: rgba(37,37,37,.68);
+  font-size: .86rem;
+}
+
+.up-next-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.up-next-actions .button {
+  min-height: 46px;
+  margin: 0;
+  padding: 10px 12px;
+  font-size: .8rem;
+}
+
+/* List / map switch */
+.route-view-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin: 0 0 14px;
+  padding: 4px;
+  background: rgba(21,93,108,.08);
+  border: 1px solid rgba(21,93,108,.12);
+  border-radius: 14px;
+}
+
+.route-view-button {
+  min-height: 44px;
+  color: var(--atlantic);
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.route-view-button.is-active {
+  background: var(--warm-white);
+  box-shadow: 0 5px 16px rgba(21,93,108,.12);
+}
+
+.route-view-panel[hidden] { display: none !important; }
+
+.route-overview-map-shell {
+  position: relative;
+  height: min(68svh, 640px);
+  min-height: 460px;
+  overflow: hidden;
+  background: #b9dce4;
+  border: 1px solid rgba(21,93,108,.18);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.route-overview-map {
+  width: 100%;
+  height: 100%;
+}
+
+.route-map-loading {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  margin: 0;
+  padding: 8px 11px;
+  color: var(--atlantic);
+  background: rgba(255,253,248,.95);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 850;
+  box-shadow: var(--shadow-sm);
+}
+
+.overview-stop-marker {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: white;
+  background: var(--atlantic);
+  border: 3px solid white;
+  border-radius: 50% 50% 50% 12px;
+  box-shadow: 0 6px 16px rgba(13,70,82,.24);
+  transform: rotate(-45deg);
+  font-size: .67rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.overview-stop-marker span { transform: rotate(45deg); }
+.overview-stop-marker.is-secret { background: var(--coral); }
+.overview-stop-marker.is-hidden { background: var(--ochre); }
+.overview-stop-marker.is-completed { background: #4d8e73; }
+.overview-stop-marker.is-current { box-shadow: 0 0 0 6px rgba(255,108,102,.2), 0 6px 16px rgba(13,70,82,.24); }
+
+.maplibregl-popup-content {
+  padding: 12px 14px;
+  color: var(--charcoal);
+  background: var(--warm-white);
+  border-radius: 13px;
+  box-shadow: 0 10px 28px rgba(13,70,82,.18);
+}
+
+.map-popup-title { margin: 0 0 7px; font-weight: 900; }
+.map-popup-link { color: var(--atlantic); font-weight: 850; }
+
+/* Entire route card is clickable */
+.stop-card {
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.stop-card:hover,
+.stop-card:focus-within {
+  border-color: rgba(21,93,108,.34);
+  box-shadow: 0 10px 28px rgba(21,93,108,.13);
+  transform: translateY(-2px);
+}
+.stop-card::after {
+  content: "›";
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  color: var(--atlantic);
+  font-size: 1.3rem;
+  font-weight: 900;
+  pointer-events: none;
+}
+.stop-card-button { padding-right: 30px; }
+
+/* Custom audio player, backed by native HTML audio */
+.native-audio-element {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.custom-audio-player {
+  margin-top: 16px;
+  padding: 14px;
+  background: rgba(255,253,248,.88);
+  border: 1px solid rgba(21,93,108,.13);
+  border-radius: 17px;
+}
+
+.audio-primary-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.audio-icon-button,
+.audio-play-button,
+.audio-text-button {
+  border: 0;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.audio-icon-button {
+  width: 48px;
+  height: 48px;
+  color: var(--atlantic);
+  background: rgba(21,93,108,.09);
+  border-radius: 50%;
+}
+
+.audio-play-button {
+  width: 62px;
+  height: 62px;
+  color: white;
+  background: var(--atlantic);
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(21,93,108,.26);
+  font-size: 1.25rem;
+}
+body[data-stop-type="secret"] .audio-play-button { background: var(--coral); }
+body[data-stop-type="hidden"] .audio-play-button { background: var(--ochre); }
+
+.audio-timeline-row {
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.audio-time {
+  min-width: 36px;
+  color: rgba(37,37,37,.66);
+  font-size: .73rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.audio-progress-slider {
+  width: 100%;
+  height: 28px;
+  accent-color: var(--atlantic);
+  cursor: pointer;
+}
+
+.audio-secondary-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.audio-text-button {
+  min-height: 44px;
+  padding: 8px 12px;
+  color: var(--atlantic);
+  background: rgba(21,93,108,.07);
+  border-radius: 11px;
+}
+
+/* Media galleries */
+.gallery-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 24px;
+  margin: -7px 0 10px;
+}
+.gallery-counter { color: rgba(37,37,37,.62); font-size: .75rem; font-weight: 750; }
+.gallery-dots { display: flex; gap: 5px; }
+.gallery-dot { width: 7px; height: 7px; background: rgba(21,93,108,.2); border-radius: 50%; }
+.gallery-dot.is-active { width: 18px; background: var(--atlantic); border-radius: 999px; }
+
+.media-item {
+  position: relative;
+  flex: 0 0 min(84%, 500px);
+  width: min(84%, 500px);
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  scroll-snap-align: start;
+  background: transparent;
+  padding: 0;
+  cursor: zoom-in;
+}
+.media-item .content-image,
+.media-item .content-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 260px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.media-item.is-portrait .content-image { aspect-ratio: 4 / 5; }
+.media-item-video { cursor: default; }
+.media-item-video .content-video { aspect-ratio: 16 / 9; min-height: 220px; }
+.media-expand-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: white;
+  background: rgba(13,70,82,.78);
+  border-radius: 50%;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.media-lightbox {
+  width: min(94vw, 1000px);
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+  background: #0d2227;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.42);
+}
+.media-lightbox::backdrop { background: rgba(4,20,24,.88); }
+.media-lightbox-image { display: block; max-width: 100%; max-height: 84svh; margin: auto; object-fit: contain; }
+.media-lightbox-close {
+  position: absolute;
+  z-index: 2;
+  top: max(10px, var(--safe-top));
+  right: max(10px, var(--safe-right));
+  width: 46px;
+  height: 46px;
+  color: white;
+  background: rgba(0,0,0,.58);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.preview-media-badge {
+  position: absolute;
+  z-index: 3;
+  top: max(16px, calc(8px + var(--safe-top)));
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  max-width: 180px;
+  padding: 8px 10px;
+  color: #704b08;
+  background: rgba(255,245,213,.94);
+  border: 1px solid rgba(214,164,74,.65);
+  border-radius: 11px;
+  box-shadow: 0 8px 20px rgba(37,37,37,.12);
+  font-size: .68rem;
+}
+.preview-media-badge strong { font-size: .72rem; }
+
+/* iOS install guidance */
+.ios-install-help {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding: 14px;
+  background: rgba(114,175,193,.12);
+  border: 1px solid rgba(21,93,108,.16);
+  border-radius: 14px;
+}
+.ios-install-help strong { color: var(--atlantic); }
+.ios-install-help ol { margin: 9px 0 0; padding-left: 20px; }
+.ios-install-help li + li { margin-top: 5px; }
+
+/* Completion feedback */
+.completion-symbol.is-animated {
+  animation: completion-pop 420ms cubic-bezier(.2,.9,.2,1.25);
+}
+@keyframes completion-pop {
+  0% { transform: scale(.65); opacity: 0; }
+  70% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Small phones and long translations */
+@media (max-width: 379px) {
+  .page-container { padding-left: max(9px, var(--safe-left)); padding-right: max(9px, var(--safe-right)); }
+  .top-bar { align-items: stretch; flex-direction: column; gap: 7px; }
+  .top-bar-actions { width: 100%; justify-content: space-between; }
+  .route-list { padding-left: 26px; }
+  .route-list::before { left: 12px; }
+  .route-timeline-marker { left: -29px; }
+  .stop-card { grid-template-columns: 1fr; }
+  .stop-card-image-wrap { min-height: 150px; border-radius: 19px 19px 0 0; }
+  .stop-card-image { min-height: 150px; height: 150px; }
+  .stop-card-content { padding: 14px; }
+  .stop-card-meta-row { flex-direction: row; align-items: center; }
+  .stop-card-content h3 { font-size: 1.14rem; padding-right: 22px; }
+  .up-next-card { grid-template-columns: 1fr; }
+  .up-next-image-wrap { min-height: 150px; max-height: 190px; }
+  .up-next-actions { grid-template-columns: 1fr; }
+  .route-overview-map-shell { min-height: 420px; }
+  .audio-primary-controls { gap: 12px; }
+  .media-item { flex-basis: 92%; width: 92%; }
+}
+
+/* Short displays and landscape phones must remain scrollable */
+@media (max-height: 700px), (orientation: landscape) and (max-height: 520px) {
+  .welcome-screen,
+  .welcome-stage,
+  .welcome-cover { overflow-y: auto; }
+  .welcome-cover { min-height: 720px; }
+  .welcome-language-sheet { max-height: calc(100svh - var(--safe-top) - var(--safe-bottom)); overflow-y: auto; }
+}
+
+/* Larger screens */
+@media (min-width: 760px) {
+  .up-next-card { grid-template-columns: 210px minmax(0,1fr); }
+  .up-next-image-wrap { min-height: 210px; }
+  .route-overview-map-shell { min-height: 620px; }
+  .media-item { flex-basis: min(72%, 620px); width: min(72%, 620px); }
+}
+
+/* Motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* High contrast and forced colours */
+@media (forced-colors: active) {
+  .button,
+  .stop-card,
+  .content-section,
+  .route-view-switch,
+  .up-next-card { border: 1px solid ButtonText; }
+  .progress-fill,
+  .stop-progress-fill { background: Highlight; }
+}
+.stop-card,
+.stop-card:hover,
+.stop-card:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.stop-card-button { display: inline-flex; align-items: center; justify-content: center; }
+.sticky-action-bar {
+  padding-right: max(12px, var(--safe-right));
+  padding-left: max(12px, var(--safe-left));
+  padding-bottom: calc(10px + var(--safe-bottom));
+}
+.analytics-preferences-button { right: var(--safe-right); }
+.analytics-consent-banner {
+  padding-right: max(18px, var(--safe-right));
+  padding-bottom: calc(18px + var(--safe-bottom));
+  padding-left: max(18px, var(--safe-left));
+}
+/* The custom player supplies its own primary play control. */
+.audio-card-icon { display: none; }
+
+
+/* =========================================================
+   UI fixes and dark mode — 2026-08-03
+   ========================================================= */
+
+/* Remove the unexplained chevron from route-card buttons. */
+.stop-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+.stop-card-button {
+  padding-right: 12px;
+}
+
+/* Avoid Safari keeping a stale, oversized scroll range after returning
+   from a stop or after lazy images finish loading. */
+body.route-screen {
+  min-height: 0;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.route-page-container,
+.route-stops-section,
+.route-view-panel,
+.route-list {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.route-page-container {
+  padding-bottom: max(28px, calc(16px + var(--safe-bottom)));
+}
+
+.route-stops-section,
+.route-list,
+.stop-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Theme control */
+.theme-toggle-button {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: var(--touch-target);
+  min-width: var(--touch-target);
+  height: var(--touch-target);
+  min-height: var(--touch-target);
+  padding: 0;
+  color: var(--atlantic);
+  background: rgba(21, 93, 108, 0.08);
+  border: 1px solid rgba(21, 93, 108, 0.18);
+  border-radius: 50%;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus-visible {
+  color: var(--warm-white);
+  background: var(--atlantic);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-icon {
+  font-size: 1.12rem;
+  line-height: 1;
+}
+
+.theme-toggle-floating {
+  position: fixed;
+  z-index: 85;
+  top: max(12px, var(--safe-top));
+  left: max(12px, var(--safe-left));
+  box-shadow: var(--shadow-sm);
+}
+
+.welcome-cover-header .theme-toggle-button {
+  color: var(--warm-white);
+  background: rgba(7, 38, 45, 0.4);
+  border-color: rgba(255, 253, 248, 0.32);
+  backdrop-filter: blur(12px);
+}
+
+.welcome-cover-header .theme-toggle-button:hover,
+.welcome-cover-header .theme-toggle-button:focus-visible {
+  background: rgba(7, 38, 45, 0.72);
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Dark mode uses the same Atlantic identity without turning the app pure black. */
+html[data-theme="dark"] {
+  --sand: #10191c;
+  --sand-deep: #162327;
+  --warm-white: #172428;
+  --atlantic: #75c3d0;
+  --atlantic-deep: #9bd7df;
+  --atlantic-soft: #20383e;
+  --ocean: #72afc1;
+  --charcoal: #f3eee5;
+  --line: rgba(243, 238, 229, 0.14);
+  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 22px 54px rgba(0, 0, 0, 0.35);
+  background: #10191c;
+}
+
+html[data-theme="dark"] body {
+  color: var(--charcoal);
+  background:
+    radial-gradient(circle at 15% 0%, rgba(114, 175, 193, 0.13), transparent 34%),
+    #10191c;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] .stop-card,
+html[data-theme="dark"] .button-ghost,
+html[data-theme="dark"] .maplibregl-popup-content {
+  color: var(--charcoal);
+}
+
+html[data-theme="dark"] .top-bar-card,
+html[data-theme="dark"] .route-progress-card,
+html[data-theme="dark"] .offline-download-card,
+html[data-theme="dark"] .up-next-card,
+html[data-theme="dark"] .stop-card,
+html[data-theme="dark"] .content-section,
+html[data-theme="dark"] .completion-card,
+html[data-theme="dark"] .custom-audio-player,
+html[data-theme="dark"] .maplibregl-popup-content {
+  background: rgba(23, 36, 40, 0.94);
+  border-color: rgba(243, 238, 229, 0.13);
+}
+
+html[data-theme="dark"] .top-bar-card {
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .text-muted,
+html[data-theme="dark"] .progress-text,
+html[data-theme="dark"] .progress-note,
+html[data-theme="dark"] .audio-language-label,
+html[data-theme="dark"] .up-next-meta,
+html[data-theme="dark"] .audio-time,
+html[data-theme="dark"] .gallery-counter,
+html[data-theme="dark"] .stop-status-upcoming,
+html[data-theme="dark"] .text-button {
+  color: rgba(243, 238, 229, 0.68);
+}
+
+html[data-theme="dark"] .button-secondary {
+  color: var(--atlantic);
+  background: #172428;
+  border-color: rgba(117, 195, 208, 0.45);
+}
+
+html[data-theme="dark"] .button-secondary:hover,
+html[data-theme="dark"] .button-secondary:focus-visible {
+  color: #10191c;
+  background: var(--atlantic);
+}
+
+html[data-theme="dark"] .button-ghost,
+html[data-theme="dark"] .audio-icon-button,
+html[data-theme="dark"] .audio-text-button,
+html[data-theme="dark"] .route-view-switch,
+html[data-theme="dark"] .theme-toggle-button {
+  background: rgba(117, 195, 208, 0.1);
+  border-color: rgba(117, 195, 208, 0.2);
+}
+
+html[data-theme="dark"] .route-view-button.is-active {
+  color: #10191c;
+  background: var(--atlantic);
+}
+
+html[data-theme="dark"] .progress-track,
+html[data-theme="dark"] .stop-progress-track {
+  background: rgba(243, 238, 229, 0.12);
+}
+
+html[data-theme="dark"] .stop-status-upcoming {
+  background: rgba(243, 238, 229, 0.08);
+}
+
+html[data-theme="dark"] .stop-card.is-upcoming {
+  opacity: 0.96;
+}
+
+html[data-theme="dark"] .offline-download-card,
+html[data-theme="dark"] .ios-install-help {
+  background: rgba(23, 36, 40, 0.84);
+}
+
+html[data-theme="dark"] .analytics-preferences-button,
+html[data-theme="dark"] .analytics-consent-banner {
+  color: var(--charcoal);
+  background: rgba(23, 36, 40, 0.98);
+  border-color: rgba(117, 195, 208, 0.28);
+}
+
+html[data-theme="dark"] .route-overview-map-shell,
+html[data-theme="dark"] .route-map-shell-real {
+  background: #14272c;
+  border-color: rgba(117, 195, 208, 0.26);
+}
+
+/* The local basemap remains readable without maintaining a second tile style. */
+html[data-theme="dark"] .maplibregl-canvas {
+  filter: brightness(0.72) contrast(1.08) saturate(0.82);
+}
+
+html[data-theme="dark"] .overview-stop-marker,
+html[data-theme="dark"] .map-stop-marker {
+  filter: none;
+}
+
+html[data-theme="dark"] .route-map-loading,
+html[data-theme="dark"] .route-map-badge {
+  color: var(--charcoal);
+  background: rgba(23, 36, 40, 0.95);
+}
+
+@media (max-width: 520px) {
+  .top-bar-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .theme-toggle-button {
+    order: -1;
+  }
+}
+
+/* =========================================================
+   Final iPhone scroll + dark-mode readability cleanup
+   2026-08-03
+   ========================================================= */
+
+/*
+ * iOS Safari can retain a layout viewport that is much taller than the
+ * visible page, especially when a fixed bottom action bar is present.
+ * Public content pages therefore use one explicit internal scroll area.
+ * This prevents the document itself from acquiring an empty scroll tail.
+ */
+html.app-scroll-shell {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html.app-scroll-shell body {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html.app-scroll-shell body > .page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+}
+
+/* Avoid scroll anchoring creating a stale bottom range after media loads. */
+html.app-scroll-shell body > .page-container,
+html.app-scroll-shell .route-list,
+html.app-scroll-shell .content-section,
+html.app-scroll-shell .completion-card {
+  overflow-anchor: none;
+}
+
+/* The bottom action fade must follow the selected theme. */
+html[data-theme="dark"] .sticky-action-bar {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 25, 28, 0),
+    rgba(16, 25, 28, 0.96) 28%,
+    rgba(16, 25, 28, 1) 100%
+  );
+}
+
+/* Ensure dark-mode content never inherits legacy near-black text colours. */
+html[data-theme="dark"] body,
+html[data-theme="dark"] main,
+html[data-theme="dark"] .page-container,
+html[data-theme="dark"] .completion-card,
+html[data-theme="dark"] .completion-summary,
+html[data-theme="dark"] .next-stop-route-preview,
+html[data-theme="dark"] .next-stop-route-instructions,
+html[data-theme="dark"] .content-section,
+html[data-theme="dark"] .content-section p,
+html[data-theme="dark"] .content-section li,
+html[data-theme="dark"] .stop-description,
+html[data-theme="dark"] .transcript-details p,
+html[data-theme="dark"] .location-card p,
+html[data-theme="dark"] .completion-summary p,
+html[data-theme="dark"] .completion-summary p:last-child {
+  color: #fffdf8;
+}
+
+/* Primary actions, marker numbers and completion symbols used --warm-white
+ * as both a light surface and a text colour. In dark mode that variable is a
+ * dark surface, so these foregrounds need an explicit light colour. */
+html[data-theme="dark"] .button:not(.button-secondary):not(.button-ghost),
+html[data-theme="dark"] .button-coral,
+html[data-theme="dark"] .sticky-action-bar .button:not(.button-secondary),
+html[data-theme="dark"] .completion-symbol,
+html[data-theme="dark"] .up-next-number,
+html[data-theme="dark"] .route-timeline-marker,
+html[data-theme="dark"] .stop-card-image-number,
+html[data-theme="dark"] .overview-stop-marker,
+html[data-theme="dark"] .map-stop-marker,
+html[data-theme="dark"] .audio-play-button {
+  color: #fffdf8 !important;
+}
+
+/* Secondary actions keep the Atlantic accent but gain stronger contrast. */
+html[data-theme="dark"] .button-secondary,
+html[data-theme="dark"] .audio-text-button,
+html[data-theme="dark"] .audio-icon-button,
+html[data-theme="dark"] .transcript-details summary,
+html[data-theme="dark"] .map-popup-link {
+  color: #8fd5df;
+}
+
+html[data-theme="dark"] .next-stop-route-instructions {
+  background: #0e171a;
+  border: 1px solid rgba(143, 213, 223, 0.12);
+}
+
+html[data-theme="dark"] .route-approved-chip {
+  color: #9ee7bd;
+  background: rgba(87, 174, 126, 0.15);
+}
+
+/* Remove any light gap visible behind fixed action buttons on iOS. */
+html[data-theme="dark"] body.stop-screen,
+html[data-theme="dark"] body.completion-screen,
+html[data-theme="dark"] body.feedback-screen {
+  background: #10191c;
+}
+
+html[data-theme="dark"] .stop-page-container,
+html[data-theme="dark"] .completion-page-container {
+  background: #10191c;
+}
+
+/* The internal scroller owns the safe-area space. Keep only the amount that
+ * is required for the fixed action bar, rather than an extra viewport. */
+html.app-scroll-shell .stop-page-container {
+  padding-bottom: calc(112px + var(--safe-bottom));
+}
+
+html.app-scroll-shell .completion-page-container {
+  padding-bottom: calc(154px + var(--safe-bottom));
+}
+
+html.app-scroll-shell .route-page-container,
+html.app-scroll-shell .feedback-page-container {
+  padding-bottom: max(28px, calc(18px + var(--safe-bottom)));
+}
+
+@supports (height: 100dvh) {
+  html.app-scroll-shell,
+  html.app-scroll-shell body,
+  html.app-scroll-shell body > .page-container {
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+}
+
+/* =========================================================
+   Stable stop header and hero badge cleanup
+   2026-08-03
+   ========================================================= */
+
+/* The stop progress chip always sits on photography, so its foreground must
+ * remain white in both themes. Do not bind it to --warm-white because that
+ * token becomes a dark surface colour in dark mode. */
+.stop-progress-pill,
+html[data-theme="dark"] .stop-progress-pill,
+html[data-theme="light"] .stop-progress-pill {
+  color: #fffdf8 !important;
+  -webkit-text-fill-color: #fffdf8;
+}
+
+/* Keep stop navigation outside the scrolling surface and align it as an
+ * intentional two-row mobile header. The content beneath it is the only
+ * part of the stop screen that scrolls. */
+.stop-top-bar {
+  position: fixed !important;
+  z-index: 90;
+  top: max(8px, var(--safe-top));
+  right: auto;
+  left: 50%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "back theme"
+    "language exit";
+  align-items: center;
+  width: calc(100% - 24px - var(--safe-left) - var(--safe-right));
+  max-width: calc(var(--page-width) - 24px);
+  min-height: 0;
+  margin: 0;
+  padding: 9px 11px;
+  gap: 2px 12px;
+  border-radius: 18px;
+  transform: translateX(-50%);
+}
+
+.stop-top-bar > .back-link {
+  grid-area: back;
+  justify-self: start;
+}
+
+.stop-top-bar > .top-bar-actions {
+  display: contents;
+}
+
+.stop-top-bar .theme-toggle-button {
+  grid-area: theme;
+  justify-self: end;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+  margin: 0;
+}
+
+.stop-top-bar .change-language-link {
+  grid-area: language;
+  justify-self: start;
+  text-align: left;
+}
+
+.stop-top-bar .text-button {
+  grid-area: exit;
+  justify-self: end;
+  text-align: right;
+}
+
+.stop-top-bar .back-link,
+.stop-top-bar .change-language-link,
+.stop-top-bar .text-button {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 40px;
+  margin: 0;
+  padding: 5px 7px;
+  border-radius: 10px;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.stop-top-bar .back-link::before {
+  content: "←";
+  margin-right: 6px;
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.stop-top-bar .back-link:hover,
+.stop-top-bar .back-link:focus-visible,
+.stop-top-bar .change-language-link:hover,
+.stop-top-bar .change-language-link:focus-visible,
+.stop-top-bar .text-button:hover,
+.stop-top-bar .text-button:focus-visible {
+  background: rgba(21, 93, 108, 0.09);
+  text-decoration: none;
+}
+
+html[data-theme="dark"] .stop-top-bar .back-link:hover,
+html[data-theme="dark"] .stop-top-bar .back-link:focus-visible,
+html[data-theme="dark"] .stop-top-bar .change-language-link:hover,
+html[data-theme="dark"] .stop-top-bar .change-language-link:focus-visible,
+html[data-theme="dark"] .stop-top-bar .text-button:hover,
+html[data-theme="dark"] .stop-top-bar .text-button:focus-visible {
+  background: rgba(117, 195, 208, 0.12);
+}
+
+/* Reserve exactly the fixed header's height inside the stop scroller. */
+.stop-page-container,
+html.app-scroll-shell .stop-page-container {
+  padding-top: calc(116px + var(--safe-top));
+}
+
+.stop-page-container > .stop-progress-track {
+  margin-top: 0;
+}
+
+@media (min-width: 620px) {
+  .stop-top-bar {
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    grid-template-areas: "back language exit theme";
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 999px;
+  }
+
+  .stop-top-bar .back-link,
+  .stop-top-bar .change-language-link,
+  .stop-top-bar .text-button {
+    justify-self: auto;
+    min-height: 44px;
+    text-align: left;
+  }
+
+  .stop-page-container,
+  html.app-scroll-shell .stop-page-container {
+    padding-top: calc(78px + var(--safe-top));
+  }
+}
+
+@media (max-width: 350px) {
+  .stop-top-bar {
+    width: calc(100% - 16px - var(--safe-left) - var(--safe-right));
+    padding-right: 8px;
+    padding-left: 8px;
+    gap: 1px 6px;
+  }
+
+  .stop-top-bar .back-link,
+  .stop-top-bar .change-language-link,
+  .stop-top-bar .text-button {
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 0.72rem;
+  }
+}
+
+
+/* =========================================================
+   Non-sticky compact navigation headers
+   2026-08-03
+   ========================================================= */
+
+/* Navigation should belong to the page flow. It scrolls away with the
+   content instead of following the user and covering the tour cards. */
+.route-screen .top-bar-card,
+.stop-screen .stop-top-bar {
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  transform: none !important;
+}
+
+/* Compact, aligned route overview header. */
+.route-screen .top-bar-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand theme"
+    "language exit";
+  align-items: center;
+  gap: 1px 8px;
+  margin: max(4px, var(--safe-top)) 0 10px;
+  padding: 7px 9px;
+  border-radius: 14px;
+}
+
+.route-screen .top-bar-card > .brand-lockup {
+  grid-area: brand;
+  min-width: 0;
+  min-height: 38px;
+  gap: 7px;
+  padding: 3px 5px;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.route-screen .brand-symbol-small {
+  width: 22px;
+  height: 22px;
+}
+
+.route-screen .brand-symbol-small::after {
+  width: 7px;
+  height: 7px;
+}
+
+.route-screen .top-bar-actions {
+  display: contents;
+}
+
+.route-screen .theme-toggle-button {
+  grid-area: theme;
+  justify-self: end;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  min-height: 38px;
+  margin: 0;
+}
+
+.route-screen .change-language-link,
+.route-screen .top-bar-card .text-button {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 34px;
+  margin: 0;
+  padding: 3px 5px;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.route-screen .change-language-link {
+  grid-area: language;
+  justify-self: start;
+  text-align: left;
+}
+
+.route-screen .top-bar-card .text-button {
+  grid-area: exit;
+  justify-self: end;
+  text-align: right;
+}
+
+/* Reduce the large visual header without losing its editorial character. */
+.route-screen .route-hero-card {
+  min-height: 158px;
+  margin-bottom: 12px;
+  padding: 18px 17px;
+  border-radius: 18px;
+}
+
+.route-screen .route-hero-card h1 {
+  margin: 3px 0 6px;
+  font-size: clamp(2rem, 9vw, 3.25rem);
+  line-height: 0.98;
+}
+
+.route-screen .route-hero-card p {
+  margin-top: 4px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.route-screen .route-meta {
+  margin-top: 5px;
+  padding: 5px 8px;
+  font-size: 0.72rem;
+}
+
+/* The stop header now lives inside the stop scroller, so it scrolls away
+   naturally and no artificial top reservation is required. */
+.stop-screen .stop-top-bar {
+  margin: max(4px, var(--safe-top)) 0 10px;
+  padding: 7px 9px;
+  border-radius: 14px;
+}
+
+.stop-page-container,
+html.app-scroll-shell .stop-page-container {
+  padding-top: 8px;
+}
+
+@media (min-width: 560px) {
+  .route-screen .top-bar-card {
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    grid-template-areas: "brand language exit theme";
+    gap: 5px;
+    padding: 6px 8px;
+    border-radius: 999px;
+  }
+
+  .route-screen .top-bar-card > .brand-lockup,
+  .route-screen .change-language-link,
+  .route-screen .top-bar-card .text-button {
+    min-height: 40px;
+  }
+
+  .stop-screen .stop-top-bar {
+    margin-top: max(4px, var(--safe-top));
+  }
+}
+
+@media (max-width: 350px) {
+  .route-screen .top-bar-card {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .route-screen .top-bar-card > .brand-lockup {
+    font-size: 0.82rem;
+  }
+
+  .route-screen .change-language-link,
+  .route-screen .top-bar-card .text-button {
+    font-size: 0.7rem;
+  }
+
+  .route-screen .route-hero-card {
+    min-height: 148px;
+    padding: 16px 15px;
+  }
+}

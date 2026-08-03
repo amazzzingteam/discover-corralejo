@@ -68,7 +68,21 @@
       "completeStop": "Complete stop & continue",
       "finishTour": "Finish tour",
       "transcriptSummary": "Read the full story",
-      "routeReady": "Approved walking route"
+      "routeReady": "Approved walking route",
+      "previewRoute": "Preview route",
+      "listView": "List",
+      "mapView": "Map",
+      "readTranscript": "Read transcript",
+      "previewMedia": "Preview media",
+      "finalMediaPending": "Final media pending",
+      "installIosTitle": "Install on iPhone or iPad",
+      "installIosStepOne": "Tap the Share button in Safari.",
+      "installIosStepTwo": "Choose Add to Home Screen.",
+      "installIosStepThree": "Open the installed app and download the tour for offline use.",
+      "audioPlay": "Play audio",
+      "audioPause": "Pause audio",
+      "galleryItem": "{current} of {total}",
+      "routeMapTitle": "Corralejo route map"
     },
     "es": {
       "audioPlaceholder": "Audio provisional: la grabación final para esta parada e idioma todavía no está disponible.",
@@ -124,7 +138,21 @@
       "completeStop": "Completar parada y continuar",
       "finishTour": "Finalizar ruta",
       "transcriptSummary": "Leer la historia completa",
-      "routeReady": "Ruta a pie aprobada"
+      "routeReady": "Ruta a pie aprobada",
+      "previewRoute": "Vista previa de la ruta",
+      "listView": "Lista",
+      "mapView": "Mapa",
+      "readTranscript": "Leer transcripción",
+      "previewMedia": "Contenido provisional",
+      "finalMediaPending": "Contenido final pendiente",
+      "installIosTitle": "Instalar en iPhone o iPad",
+      "installIosStepOne": "Pulsa el botón Compartir en Safari.",
+      "installIosStepTwo": "Selecciona Añadir a pantalla de inicio.",
+      "installIosStepThree": "Abre la aplicación instalada y descarga el tour para usarlo sin conexión.",
+      "audioPlay": "Reproducir audio",
+      "audioPause": "Pausar audio",
+      "galleryItem": "{current} de {total}",
+      "routeMapTitle": "Mapa de la ruta de Corralejo"
     },
     "fr": {
       "audioPlaceholder": "Audio provisoire : l’enregistrement final pour cette étape et cette langue n’est pas encore disponible.",
@@ -180,7 +208,21 @@
       "completeStop": "Terminer l’étape et continuer",
       "finishTour": "Terminer la visite",
       "transcriptSummary": "Lire toute l’histoire",
-      "routeReady": "Itinéraire à pied approuvé"
+      "routeReady": "Itinéraire à pied approuvé",
+      "previewRoute": "Aperçu de l’itinéraire",
+      "listView": "Liste",
+      "mapView": "Carte",
+      "readTranscript": "Lire la transcription",
+      "previewMedia": "Média provisoire",
+      "finalMediaPending": "Média final à venir",
+      "installIosTitle": "Installer sur iPhone ou iPad",
+      "installIosStepOne": "Touchez le bouton Partager dans Safari.",
+      "installIosStepTwo": "Choisissez Sur l’écran d’accueil.",
+      "installIosStepThree": "Ouvrez l’application installée et téléchargez le parcours pour une utilisation hors ligne.",
+      "audioPlay": "Lire l’audio",
+      "audioPause": "Mettre en pause",
+      "galleryItem": "{current} sur {total}",
+      "routeMapTitle": "Carte du parcours de Corralejo"
     },
     "de": {
       "audioPlaceholder": "Platzhalter-Audio: Die endgültige Aufnahme für diese Station und Sprache ist noch nicht verfügbar.",
@@ -236,7 +278,21 @@
       "completeStop": "Station abschließen und weiter",
       "finishTour": "Tour beenden",
       "transcriptSummary": "Die ganze Geschichte lesen",
-      "routeReady": "Bestätigte Fußroute"
+      "routeReady": "Bestätigte Fußroute",
+      "previewRoute": "Route ansehen",
+      "listView": "Liste",
+      "mapView": "Karte",
+      "readTranscript": "Transkript lesen",
+      "previewMedia": "Vorschaumedien",
+      "finalMediaPending": "Endgültige Medien ausstehend",
+      "installIosTitle": "Auf iPhone oder iPad installieren",
+      "installIosStepOne": "Tippe in Safari auf Teilen.",
+      "installIosStepTwo": "Wähle Zum Home-Bildschirm.",
+      "installIosStepThree": "Öffne die installierte App und lade die Tour für die Offline-Nutzung herunter.",
+      "audioPlay": "Audio abspielen",
+      "audioPause": "Audio pausieren",
+      "galleryItem": "{current} von {total}",
+      "routeMapTitle": "Karte der Corralejo-Route"
     },
     "it": {
       "audioPlaceholder": "Audio provvisorio: la registrazione finale per questa tappa e lingua non è ancora disponibile.",
@@ -292,7 +348,21 @@
       "completeStop": "Completa la tappa e continua",
       "finishTour": "Termina il tour",
       "transcriptSummary": "Leggi la storia completa",
-      "routeReady": "Percorso a piedi approvato"
+      "routeReady": "Percorso a piedi approvato",
+      "previewRoute": "Anteprima percorso",
+      "listView": "Elenco",
+      "mapView": "Mappa",
+      "readTranscript": "Leggi trascrizione",
+      "previewMedia": "Media provvisori",
+      "finalMediaPending": "Media finali in attesa",
+      "installIosTitle": "Installa su iPhone o iPad",
+      "installIosStepOne": "Tocca il pulsante Condividi in Safari.",
+      "installIosStepTwo": "Scegli Aggiungi alla schermata Home.",
+      "installIosStepThree": "Apri l’app installata e scarica il tour per l’uso offline.",
+      "audioPlay": "Riproduci audio",
+      "audioPause": "Metti in pausa",
+      "galleryItem": "{current} di {total}",
+      "routeMapTitle": "Mappa del percorso di Corralejo"
     },
     "pl": {
       "audioPlaceholder": "Nagranie zastępcze: ostateczne nagranie dla tego przystanku i języka nie jest jeszcze dostępne.",
@@ -348,7 +418,21 @@
       "completeStop": "Ukończ przystanek i kontynuuj",
       "finishTour": "Zakończ wycieczkę",
       "transcriptSummary": "Przeczytaj całą historię",
-      "routeReady": "Zatwierdzona trasa piesza"
+      "routeReady": "Zatwierdzona trasa piesza",
+      "previewRoute": "Podgląd trasy",
+      "listView": "Lista",
+      "mapView": "Mapa",
+      "readTranscript": "Czytaj transkrypcję",
+      "previewMedia": "Materiały podglądowe",
+      "finalMediaPending": "Oczekiwanie na materiały finalne",
+      "installIosTitle": "Zainstaluj na iPhonie lub iPadzie",
+      "installIosStepOne": "Stuknij przycisk Udostępnij w Safari.",
+      "installIosStepTwo": "Wybierz Dodaj do ekranu początkowego.",
+      "installIosStepThree": "Otwórz zainstalowaną aplikację i pobierz trasę do użycia offline.",
+      "audioPlay": "Odtwórz audio",
+      "audioPause": "Wstrzymaj audio",
+      "galleryItem": "{current} z {total}",
+      "routeMapTitle": "Mapa trasy Corralejo"
     },
     "nl": {
       "chooseLanguage": "Kies je taal",
@@ -450,7 +534,21 @@
       "completeStop": "Stop voltooien en doorgaan",
       "finishTour": "Tour afronden",
       "transcriptSummary": "Lees het volledige verhaal",
-      "routeReady": "Goedgekeurde wandelroute"
+      "routeReady": "Goedgekeurde wandelroute",
+      "previewRoute": "Route bekijken",
+      "listView": "Lijst",
+      "mapView": "Kaart",
+      "readTranscript": "Transcript lezen",
+      "previewMedia": "Voorbeeldmedia",
+      "finalMediaPending": "Definitieve media volgen",
+      "installIosTitle": "Installeren op iPhone of iPad",
+      "installIosStepOne": "Tik in Safari op de deelknop.",
+      "installIosStepTwo": "Kies Zet op beginscherm.",
+      "installIosStepThree": "Open de geïnstalleerde app en download de tour voor offline gebruik.",
+      "audioPlay": "Audio afspelen",
+      "audioPause": "Audio pauzeren",
+      "galleryItem": "{current} van {total}",
+      "routeMapTitle": "Kaart van de Corralejo-route"
     },
     "pt": {
       "chooseLanguage": "Escolha o seu idioma",
@@ -552,7 +650,21 @@
       "completeStop": "Concluir paragem e continuar",
       "finishTour": "Terminar o passeio",
       "transcriptSummary": "Ler a história completa",
-      "routeReady": "Percurso pedonal aprovado"
+      "routeReady": "Percurso pedonal aprovado",
+      "previewRoute": "Pré-visualizar rota",
+      "listView": "Lista",
+      "mapView": "Mapa",
+      "readTranscript": "Ler transcrição",
+      "previewMedia": "Conteúdo provisório",
+      "finalMediaPending": "Conteúdo final pendente",
+      "installIosTitle": "Instalar no iPhone ou iPad",
+      "installIosStepOne": "Toque no botão Partilhar no Safari.",
+      "installIosStepTwo": "Escolha Adicionar ao ecrã principal.",
+      "installIosStepThree": "Abra a aplicação instalada e descarregue o passeio para utilização offline.",
+      "audioPlay": "Reproduzir áudio",
+      "audioPause": "Pausar áudio",
+      "galleryItem": "{current} de {total}",
+      "routeMapTitle": "Mapa da rota de Corralejo"
     }
   },
   "placeholderAssets": {
@@ -566,8 +678,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     }
   }
 }

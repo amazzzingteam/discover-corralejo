@@ -494,12 +494,12 @@ async function initialiseNextStopRoutePreview(stop) {
   });
 
   try {
-    const routeUrl = new URL(
-      route.geometryFile,
-      window.location.href
-    ).href;
-
-    const response = await fetch(routeUrl);
+    const response = await fetch(
+    `${route.geometryFile}?v=${Date.now()}`,
+    {
+      cache: "no-store"
+    }
+);
 
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
@@ -514,15 +514,7 @@ async function initialiseNextStopRoutePreview(stop) {
 
     renderRouteMap(mapContainer, routeFeature, stop, nextStop);
   } catch (error) {
-    console.warn(
-      "The in-app route preview could not be loaded:",
-      error
-    );
-
-    mapContainer.innerHTML = `
-      <p class="route-map-error">
-        ${translate("routeUnavailable")}
-      </p>
-    `;
+    console.warn("The in-app route preview could not be loaded:", error);
+    mapContainer.innerHTML = `<p class="route-map-error">${translate("routeUnavailable")}</p>`;
   }
 }

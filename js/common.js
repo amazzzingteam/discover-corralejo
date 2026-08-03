@@ -332,3 +332,217 @@ function isPlaceholderAudio(stop, languageCode = null) {
     stop?.placeholderMedia?.audioLanguages?.includes(language)
   );
 }
+
+
+/* =========================================================
+   Theme preference: light, dark, or the device default.
+   ========================================================= */
+
+const DISCOVER_THEME_STORAGE_KEY = "discoverCorralejo:theme";
+
+function getSystemTheme() {
+  return window.matchMedia?.("(prefers-color-scheme: dark)")?.matches
+    ? "dark"
+    : "light";
+}
+
+function getSavedTheme() {
+  const savedTheme = localStorage.getItem(DISCOVER_THEME_STORAGE_KEY);
+  return savedTheme === "dark" || savedTheme === "light"
+    ? savedTheme
+    : null;
+}
+
+function getCurrentTheme() {
+  return document.documentElement.dataset.theme || getSavedTheme() || getSystemTheme();
+}
+
+function getThemeLabels(theme) {
+  const language = document.documentElement.lang || "en";
+  const labels = {
+    en: { dark: "Switch to dark mode", light: "Switch to light mode" },
+    es: { dark: "Cambiar al modo oscuro", light: "Cambiar al modo claro" },
+    fr: { dark: "Passer au mode sombre", light: "Passer au mode clair" },
+    de: { dark: "Zum Dunkelmodus wechseln", light: "Zum Hellmodus wechseln" },
+    it: { dark: "Passa alla modalità scura", light: "Passa alla modalità chiara" },
+    pl: { dark: "Włącz tryb ciemny", light: "Włącz tryb jasny" },
+    nl: { dark: "Schakel naar donkere modus", light: "Schakel naar lichte modus" },
+    pt: { dark: "Mudar para o modo escuro", light: "Mudar para o modo claro" }
+  };
+
+  return labels[language] || labels.en;
+}
+
+function updateThemeButtons(theme) {
+  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    const labels = getThemeLabels(nextTheme);
+    const label = labels[nextTheme];
+    const icon = button.querySelector(".theme-toggle-icon");
+    const accessibleText = button.querySelector(".theme-toggle-text");
+
+    if (icon) {
+      icon.textContent = theme === "dark" ? "☀" : "☾";
+    }
+    if (accessibleText) {
+      accessibleText.textContent = label;
+    }
+
+    button.setAttribute("aria-label", label);
+    button.title = label;
+    button.setAttribute("aria-pressed", String(theme === "dark"));
+  });
+}
+
+function applyDiscoverTheme(theme, { persist = false } = {}) {
+  const resolvedTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = resolvedTheme;
+  document.documentElement.style.colorScheme = resolvedTheme;
+
+  if (persist) {
+    localStorage.setItem(DISCOVER_THEME_STORAGE_KEY, resolvedTheme);
+  }
+
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeMeta) {
+    themeMeta.content = resolvedTheme === "dark" ? "#101b1e" : "#155d6c";
+  }
+
+  updateThemeButtons(resolvedTheme);
+  window.dispatchEvent(new CustomEvent("discover-theme-change", {
+    detail: { theme: resolvedTheme }
+  }));
+}
+
+function createThemeToggleButton() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "theme-toggle-button";
+  button.dataset.themeToggle = "";
+  button.innerHTML = `
+    <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+    <span class="theme-toggle-text sr-only">Switch theme</span>
+  `;
+  button.addEventListener("click", () => {
+    const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+    applyDiscoverTheme(nextTheme, { persist: true });
+  });
+  return button;
+}
+
+function setupThemeToggle() {
+  if (document.querySelector("[data-theme-toggle]")) {
+    updateThemeButtons(getCurrentTheme());
+    return;
+  }
+
+  const button = createThemeToggleButton();
+  const topBarActions = document.querySelector(".top-bar-actions");
+  const welcomeHeader = document.querySelector(".welcome-cover-header");
+  const topBar = document.querySelector(".top-bar");
+
+  if (topBarActions) {
+    topBarActions.prepend(button);
+  } else if (welcomeHeader) {
+    welcomeHeader.append(button);
+  } else if (topBar) {
+    topBar.append(button);
+  } else {
+    button.classList.add("theme-toggle-floating");
+    document.body.append(button);
+  }
+
+  applyDiscoverTheme(getCurrentTheme());
+}
+
+const systemThemeQuery = window.matchMedia?.("(prefers-color-scheme: dark)");
+systemThemeQuery?.addEventListener?.("change", (event) => {
+  if (!getSavedTheme()) {
+    applyDiscoverTheme(event.matches ? "dark" : "light");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", setupThemeToggle);
+
+/* =========================================================
+   Stable page scrolling for iPhone/iPad Safari.
+   ========================================================= */
+
+function setupStableAppScrollShell() {
+  const supportedScreens = [
+    "route-screen",
+    "stop-screen",
+    "completion-screen",
+    "feedback-screen"
+  ];
+
+  if (!supportedScreens.some((className) => document.body.classList.contains(className))) {
+    return;
+  }
+
+  const scroller = document.querySelector("body > .page-container");
+  if (!scroller) {
+    return;
+  }
+
+  document.documentElement.classList.add("app-scroll-shell");
+  scroller.dataset.appScroller = "true";
+
+  let clampFrame = 0;
+  const clampScrollRange = () => {
+    cancelAnimationFrame(clampFrame);
+    clampFrame = requestAnimationFrame(() => {
+      const maximumScroll = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+
+      if (scroller.scrollTop > maximumScroll) {
+        scroller.scrollTop = maximumScroll;
+      }
+      if (scroller.scrollTop < 0) {
+        scroller.scrollTop = 0;
+      }
+
+      /* The document itself must never become the scrolling surface. */
+      if (window.scrollX || window.scrollY) {
+        window.scrollTo(0, 0);
+      }
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    });
+  };
+
+  const scheduleClamp = () => {
+    clampScrollRange();
+    window.setTimeout(clampScrollRange, 80);
+    window.setTimeout(clampScrollRange, 260);
+  };
+
+  window.addEventListener("pageshow", scheduleClamp, { passive: true });
+  window.addEventListener("resize", scheduleClamp, { passive: true });
+  window.addEventListener("orientationchange", scheduleClamp, { passive: true });
+  window.visualViewport?.addEventListener("resize", scheduleClamp, { passive: true });
+
+  /* Safari may attempt to restore the old document scroll position. */
+  window.addEventListener("scroll", () => {
+    if (window.scrollY !== 0 || window.scrollX !== 0) {
+      window.scrollTo(0, 0);
+    }
+  }, { passive: true });
+
+  scroller.querySelectorAll("img, video").forEach((media) => {
+    media.addEventListener("load", scheduleClamp, { once: true, passive: true });
+    media.addEventListener("loadedmetadata", scheduleClamp, { once: true, passive: true });
+    media.addEventListener("error", scheduleClamp, { once: true, passive: true });
+  });
+
+  const observer = new MutationObserver(scheduleClamp);
+  observer.observe(scroller, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["hidden", "class", "style", "src"]
+  });
+
+  scheduleClamp();
+}
+
+document.addEventListener("DOMContentLoaded", setupStableAppScrollShell);

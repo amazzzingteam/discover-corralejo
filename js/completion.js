@@ -145,6 +145,13 @@ function initialiseCompletionPage() {
   setCustomDocumentTitle(completionTitle);
 
   trackTourCompletionIfNeeded(stop);
+
+  const completionSymbol = document.querySelector(".completion-symbol");
+  completionSymbol?.classList.add("is-animated");
+  if (navigator.vibrate && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    navigator.vibrate(35);
+  }
+
   setupCompletionActions(stop);
 
   if (typeof initialiseNextStopRoutePreview === "function") {

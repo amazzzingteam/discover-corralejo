@@ -2,18 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#155d6c">
-  <meta name="mobile-web-app-capable" content="yes">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("discoverCorralejo:theme");
+        const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+        const theme = savedTheme === "dark" || savedTheme === "light"
+          ? savedTheme
+          : systemDark ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="Discover Corralejo">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Discover Corralejo">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <title>Choose your language | Tour app</title>
 
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/platform-polish.css">
 </head>
 
 <body class="welcome-screen">

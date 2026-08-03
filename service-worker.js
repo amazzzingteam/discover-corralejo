@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v15-fullscreen-pwa";
+const CACHE_VERSION = "v18-nonsticky-compact-headers";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -13,6 +13,12 @@ const CORE_FILES = [
   "./feedback-complete.html",
   "./manifest.webmanifest",
   "./css/styles.css",
+  "./assets/screenshots/route-mobile.png",
+  "./assets/screenshots/welcome-mobile.png",
+  "./assets/icons/icon-maskable-512.png",
+  "./assets/icons/icon-maskable-192.png",
+  "./assets/icons/apple-touch-icon.png",
+  "./css/platform-polish.css",
   "./assets/vendor/maplibre-gl.css",
   "./assets/vendor/maplibre-gl.js",
   "./assets/vendor/pmtiles.js",
@@ -61,6 +67,7 @@ const REQUIRED_CORE_FILES = new Set([
   "./stop.html",
   "./completion.html",
   "./css/styles.css",
+  "./css/platform-polish.css",
   "./assets/vendor/maplibre-gl.css",
   "./assets/vendor/maplibre-gl.js",
   "./assets/vendor/pmtiles.js",

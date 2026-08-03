@@ -2,18 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#155d6c">
-  <meta name="mobile-web-app-capable" content="yes">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("discoverCorralejo:theme");
+        const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+        const theme = savedTheme === "dark" || savedTheme === "light"
+          ? savedTheme
+          : systemDark ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="Discover Corralejo">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Discover Corralejo">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <title>Route overview | Tour app</title>
 
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/platform-polish.css">
 </head>
 
 <body class="route-screen">
@@ -91,6 +109,23 @@
       </a>
     </section>
 
+
+    <section id="up-next-card" class="up-next-card" aria-labelledby="up-next-heading" hidden>
+      <div class="up-next-image-wrap">
+        <img id="up-next-image" class="up-next-image" src="" alt="">
+        <span id="up-next-number" class="up-next-number"></span>
+      </div>
+      <div class="up-next-copy">
+        <p class="eyebrow" data-i18n="upNextStatus">Up next</p>
+        <h2 id="up-next-heading">Next stop</h2>
+        <p id="up-next-meta" class="up-next-meta"></p>
+        <div class="up-next-actions">
+          <a id="up-next-open" class="button" href="#">Continue tour</a>
+          <button id="up-next-map" class="button button-secondary" type="button" data-i18n="previewRoute">Preview route</button>
+        </div>
+      </div>
+    </section>
+
     <section class="offline-download-card" aria-labelledby="offline-download-title">
       <div class="offline-card-icon" aria-hidden="true">↓</div>
       <div class="offline-card-copy">
@@ -111,6 +146,15 @@
       >
         Download tour for offline use
       </button>
+
+      <div id="ios-install-help" class="ios-install-help" hidden>
+        <strong data-i18n="installIosTitle">Install on iPhone or iPad</strong>
+        <ol>
+          <li data-i18n="installIosStepOne">Tap the Share button in Safari.</li>
+          <li data-i18n="installIosStepTwo">Choose Add to Home Screen.</li>
+          <li data-i18n="installIosStepThree">Open the installed app and download the tour for offline use.</li>
+        </ol>
+      </div>
 
       <button
         id="install-app-button"
@@ -154,11 +198,21 @@
         </div>
       </div>
 
-      <section
-        id="route-list"
-        class="route-list"
-        aria-live="polite"
-      ></section>
+      <div class="route-view-switch" role="tablist" aria-label="Route view">
+        <button id="route-view-list" class="route-view-button is-active" type="button" role="tab" aria-selected="true" aria-controls="route-list-panel" data-i18n="listView">List</button>
+        <button id="route-view-map" class="route-view-button" type="button" role="tab" aria-selected="false" aria-controls="route-map-panel" data-i18n="mapView">Map</button>
+      </div>
+
+      <div id="route-list-panel" class="route-view-panel" role="tabpanel" aria-labelledby="route-view-list">
+        <section id="route-list" class="route-list" aria-live="polite"></section>
+      </div>
+
+      <div id="route-map-panel" class="route-view-panel" role="tabpanel" aria-labelledby="route-view-map" hidden>
+        <div class="route-overview-map-shell">
+          <div id="route-overview-map" class="route-overview-map" aria-label="Corralejo route map"></div>
+          <p id="route-map-loading" class="route-map-loading" data-i18n="mapLoading">Loading map…</p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -166,6 +220,9 @@
   <script src="js/common.js"></script>
   <script src="js/analytics.js"></script>
   <script src="js/offline.js"></script>
+  <script src="assets/vendor/maplibre-gl.js"></script>
+  <script src="assets/vendor/pmtiles.js"></script>
+  <script src="js/navigation-map.js"></script>
   <script src="js/route.js"></script>
   <script src="js/register-sw.js"></script>
 </body>

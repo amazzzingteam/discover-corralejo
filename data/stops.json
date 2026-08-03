@@ -66,32 +66,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Supermercado Deseos",
-            "es": "Supermercado Deseos",
-            "fr": "Supermercado Deseos",
-            "de": "Supermercado Deseos",
-            "it": "Supermercado Deseos",
-            "pl": "Supermercado Deseos",
-            "nl": "Supermercado Deseos",
-            "pt": "Supermercado Deseos"
-          }
+          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Supermercado Deseos",
-            "es": "Supermercado Deseos",
-            "fr": "Supermercado Deseos",
-            "de": "Supermercado Deseos",
-            "it": "Supermercado Deseos",
-            "pl": "Supermercado Deseos",
-            "nl": "Supermercado Deseos",
-            "pt": "Supermercado Deseos"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
@@ -102,8 +82,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/5G4V1XPMxcPQ9Ecr6"
@@ -209,32 +189,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Corralejo Harbour",
-            "es": "Corralejo Harbour",
-            "fr": "Corralejo Harbour",
-            "de": "Corralejo Harbour",
-            "it": "Corralejo Harbour",
-            "pl": "Corralejo Harbour",
-            "nl": "Corralejo Harbour",
-            "pt": "Corralejo Harbour"
-          }
+          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Corralejo Harbour",
-            "es": "Corralejo Harbour",
-            "fr": "Corralejo Harbour",
-            "de": "Corralejo Harbour",
-            "it": "Corralejo Harbour",
-            "pl": "Corralejo Harbour",
-            "nl": "Corralejo Harbour",
-            "pt": "Corralejo Harbour"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
@@ -245,14 +205,14 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/pPreZsPUbtiAwL7f6"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "03-avenida-maritima",
       "slug": "avenida-maritima",
@@ -273,10 +233,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -346,45 +303,15 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Avenida Marítima",
-            "es": "Avenida Marítima",
-            "fr": "Avenida Marítima",
-            "de": "Avenida Marítima",
-            "it": "Avenida Marítima",
-            "pl": "Avenida Marítima",
-            "nl": "Avenida Marítima",
-            "pt": "Avenida Marítima"
-          }
+          "src": "assets/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-horizontal.jpeg"
         },
         {
-          "src": "assets/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-vertical.jpeg",
-          "alt": {
-            "en": "Avenida Marítima",
-            "es": "Avenida Marítima",
-            "fr": "Avenida Marítima",
-            "de": "Avenida Marítima",
-            "it": "Avenida Marítima",
-            "pl": "Avenida Marítima",
-            "nl": "Avenida Marítima",
-            "pt": "Avenida Marítima"
-          }
+          "src": "assets/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-03-avenida-maritima/videos/03-avenida-maritima-video-horizontal.mp4",
-          "label": {
-            "en": "Avenida Marítima",
-            "es": "Avenida Marítima",
-            "fr": "Avenida Marítima",
-            "de": "Avenida Marítima",
-            "it": "Avenida Marítima",
-            "pl": "Avenida Marítima",
-            "nl": "Avenida Marítima",
-            "pt": "Avenida Marítima"
-          }
+          "src": "assets/stops/stop-03-avenida-maritima/videos/03-avenida-maritima-video-horizontal.mp4"
         }
       ]
     },
@@ -395,14 +322,14 @@
       "de": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-de.mp3",
       "it": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-it.mp3",
       "pl": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-pl.mp3",
-      "nl": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-en.mp3",
-      "pt": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-en.mp3"
+      "nl": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-nl.mp3",
+      "pt": "assets/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/J1ng92oB8gfyGfmw8"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "04-monumento-al-pescador",
       "slug": "monumento-al-pescador",
@@ -423,10 +350,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -496,32 +420,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-04-monumento-al-pescador/photos/04-monumento-al-pescador-photo-vertical.jpeg",
-          "alt": {
-            "en": "Monumento el Pescador & Marinero",
-            "es": "Monumento el Pescador & Marinero",
-            "fr": "Monumento el Pescador & Marinero",
-            "de": "Monumento el Pescador & Marinero",
-            "it": "Monumento el Pescador & Marinero",
-            "pl": "Monumento el Pescador & Marinero",
-            "nl": "Monumento el Pescador & Marinero",
-            "pt": "Monumento el Pescador & Marinero"
-          }
+          "src": "assets/stops/stop-04-monumento-al-pescador/photos/04-monumento-al-pescador-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-04-monumento-al-pescador/videos/04-monumento-al-pescador-video-horizontal.mp4",
-          "label": {
-            "en": "Monumento el Pescador & Marinero",
-            "es": "Monumento el Pescador & Marinero",
-            "fr": "Monumento el Pescador & Marinero",
-            "de": "Monumento el Pescador & Marinero",
-            "it": "Monumento el Pescador & Marinero",
-            "pl": "Monumento el Pescador & Marinero",
-            "nl": "Monumento el Pescador & Marinero",
-            "pt": "Monumento el Pescador & Marinero"
-          }
+          "src": "assets/stops/stop-04-monumento-al-pescador/videos/04-monumento-al-pescador-video-horizontal.mp4"
         }
       ]
     },
@@ -532,8 +436,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/qSHQSaMA2tUZ3XT38"
@@ -616,14 +520,14 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
       "heroImage": "assets/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-hero.jpeg",
@@ -639,63 +543,33 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Muelle Chico",
-            "es": "Muelle Chico",
-            "fr": "Muelle Chico",
-            "de": "Muelle Chico",
-            "it": "Muelle Chico",
-            "pl": "Muelle Chico",
-            "nl": "Muelle Chico",
-            "pt": "Muelle Chico"
-          }
+          "src": "assets/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-horizontal.jpeg"
         },
         {
-          "src": "assets/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-vertical.jpeg",
-          "alt": {
-            "en": "Muelle Chico",
-            "es": "Muelle Chico",
-            "fr": "Muelle Chico",
-            "de": "Muelle Chico",
-            "it": "Muelle Chico",
-            "pl": "Muelle Chico",
-            "nl": "Muelle Chico",
-            "pt": "Muelle Chico"
-          }
+          "src": "assets/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-05-muelle-chico/videos/05-muelle-chico-video-horizontal.mp4",
-          "label": {
-            "en": "Muelle Chico",
-            "es": "Muelle Chico",
-            "fr": "Muelle Chico",
-            "de": "Muelle Chico",
-            "it": "Muelle Chico",
-            "pl": "Muelle Chico",
-            "nl": "Muelle Chico",
-            "pt": "Muelle Chico"
-          }
+          "src": "assets/stops/stop-05-muelle-chico/videos/05-muelle-chico-video-horizontal.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-en.mp3",
+      "es": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-es.mp3",
+      "fr": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-fr.mp3",
+      "de": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-de.mp3",
+      "it": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-it.mp3",
+      "pl": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-pl.mp3",
+      "nl": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-nl.mp3",
+      "pt": "assets/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/91t786QGkFiXL9dD7"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "06-plaza-patricio-music-square",
       "slug": "plaza-patricio-music-square",
@@ -716,16 +590,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -772,14 +637,14 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
       "heroImage": "assets/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-hero.jpeg",
@@ -795,63 +660,33 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-vertical.jpeg",
-          "alt": {
-            "en": "The Music Square Corralejo / Plaza Felix",
-            "es": "The Music Square Corralejo / Plaza Felix",
-            "fr": "The Music Square Corralejo / Plaza Felix",
-            "de": "The Music Square Corralejo / Plaza Felix",
-            "it": "The Music Square Corralejo / Plaza Felix",
-            "pl": "The Music Square Corralejo / Plaza Felix",
-            "nl": "The Music Square Corralejo / Plaza Felix",
-            "pt": "The Music Square Corralejo / Plaza Felix"
-          }
+          "src": "assets/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-horizontal.mp4",
-          "label": {
-            "en": "The Music Square Corralejo / Plaza Felix",
-            "es": "The Music Square Corralejo / Plaza Felix",
-            "fr": "The Music Square Corralejo / Plaza Felix",
-            "de": "The Music Square Corralejo / Plaza Felix",
-            "it": "The Music Square Corralejo / Plaza Felix",
-            "pl": "The Music Square Corralejo / Plaza Felix",
-            "nl": "The Music Square Corralejo / Plaza Felix",
-            "pt": "The Music Square Corralejo / Plaza Felix"
-          }
+          "src": "assets/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-horizontal.mp4"
         },
         {
-          "src": "assets/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-vertical.mp4",
-          "label": {
-            "en": "The Music Square Corralejo / Plaza Felix",
-            "es": "The Music Square Corralejo / Plaza Felix",
-            "fr": "The Music Square Corralejo / Plaza Felix",
-            "de": "The Music Square Corralejo / Plaza Felix",
-            "it": "The Music Square Corralejo / Plaza Felix",
-            "pl": "The Music Square Corralejo / Plaza Felix",
-            "nl": "The Music Square Corralejo / Plaza Felix",
-            "pt": "The Music Square Corralejo / Plaza Felix"
-          }
+          "src": "assets/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-vertical.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-en.mp3",
+      "es": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-es.mp3",
+      "fr": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-fr.mp3",
+      "de": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-de.mp3",
+      "it": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-it.mp3",
+      "pl": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-pl.mp3",
+      "nl": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-nl.mp3",
+      "pt": "assets/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/85UnyeJ69FSgT7zX7"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "07-plaza-patricio-calero",
       "slug": "plaza-patricio-calero",
@@ -872,16 +707,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -951,32 +777,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Plaza Patricio Calero",
-            "es": "Plaza Patricio Calero",
-            "fr": "Plaza Patricio Calero",
-            "de": "Plaza Patricio Calero",
-            "it": "Plaza Patricio Calero",
-            "pl": "Plaza Patricio Calero",
-            "nl": "Plaza Patricio Calero",
-            "pt": "Plaza Patricio Calero"
-          }
+          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Plaza Patricio Calero",
-            "es": "Plaza Patricio Calero",
-            "fr": "Plaza Patricio Calero",
-            "de": "Plaza Patricio Calero",
-            "it": "Plaza Patricio Calero",
-            "pl": "Plaza Patricio Calero",
-            "nl": "Plaza Patricio Calero",
-            "pt": "Plaza Patricio Calero"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
@@ -987,8 +793,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/VU3BfwnTtuLUJpFz7"
@@ -1094,32 +900,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Corralejo Main Street Start",
-            "es": "Corralejo Main Street Start",
-            "fr": "Corralejo Main Street Start",
-            "de": "Corralejo Main Street Start",
-            "it": "Corralejo Main Street Start",
-            "pl": "Corralejo Main Street Start",
-            "nl": "Corralejo Main Street Start",
-            "pt": "Corralejo Main Street Start"
-          }
+          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Corralejo Main Street Start",
-            "es": "Corralejo Main Street Start",
-            "fr": "Corralejo Main Street Start",
-            "de": "Corralejo Main Street Start",
-            "it": "Corralejo Main Street Start",
-            "pl": "Corralejo Main Street Start",
-            "nl": "Corralejo Main Street Start",
-            "pt": "Corralejo Main Street Start"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
@@ -1130,8 +916,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/Gn3Sap4hfq6TNj7s5"
@@ -1176,7 +962,7 @@
     "published": true,
     "number": "09",
     "position": 9,
-    "matchingFolder": "stop-09-rainbow-beach",
+    "matchingFolder": "stop-09-rainbow-bench",
     "role": "Secret Instagrammable Spot",
     "typeKey": "secretInstagrammableSpot",
     "typeLabel": {
@@ -1214,17 +1000,17 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
-      "heroImage": "assets/stops/stop-02-harbour/photos/02-harbour-photo-hero.jpeg",
+      "heroImage": "assets/stops/stop-09-rainbow-bench/photos/09-rainbow-bench-photo-hero.jpeg",
       "heroAlt": {
         "en": "Rainbow bench",
         "es": "Rainbow bench",
@@ -1237,49 +1023,29 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Rainbow bench",
-            "es": "Rainbow bench",
-            "fr": "Rainbow bench",
-            "de": "Rainbow bench",
-            "it": "Rainbow bench",
-            "pl": "Rainbow bench",
-            "nl": "Rainbow bench",
-            "pt": "Rainbow bench"
-          }
+          "src": "assets/stops/stop-09-rainbow-bench/photos/09-rainbow-bench-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Rainbow bench",
-            "es": "Rainbow bench",
-            "fr": "Rainbow bench",
-            "de": "Rainbow bench",
-            "it": "Rainbow bench",
-            "pl": "Rainbow bench",
-            "nl": "Rainbow bench",
-            "pt": "Rainbow bench"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-en.mp3",
+      "es": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-es.mp3",
+      "fr": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-fr.mp3",
+      "de": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-de.mp3",
+      "it": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-it.mp3",
+      "pl": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-pl.mp3",
+      "nl": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-nl.mp3",
+      "pt": "assets/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/f4wnpd8fPREjVFTY6"
     },
-    "contentStatus": "placeholder",
+    "contentStatus": "draft",
     "usesPlaceholderMedia": true,
     "nextStop": {
       "id": "10-playa-corralejo-viejo",
@@ -1298,19 +1064,10 @@
       "routeId": "09-to-10"
     },
     "placeholderMedia": {
-      "heroImage": true,
-      "photos": true,
+      "heroImage": false,
+      "photos": false,
       "videos": true,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -1357,14 +1114,14 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
       "heroImage": "assets/stops/stop-10-playa-corralejo-viejo/photos/10-playa-corralejo-viejo-photo-hero.jpeg",
@@ -1380,63 +1137,33 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-10-playa-corralejo-viejo/photos/10-playa-corralejo-viejo-photo-vertical.jpeg",
-          "alt": {
-            "en": "Corralejo Viejo",
-            "es": "Corralejo Viejo",
-            "fr": "Corralejo Viejo",
-            "de": "Corralejo Viejo",
-            "it": "Corralejo Viejo",
-            "pl": "Corralejo Viejo",
-            "nl": "Corralejo Viejo",
-            "pt": "Corralejo Viejo"
-          }
+          "src": "assets/stops/stop-10-playa-corralejo-viejo/photos/10-playa-corralejo-viejo-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-10-playa-corralejo-viejo/videos/10-playa-corralejo-viejo-video-horizontal.mp4",
-          "label": {
-            "en": "Corralejo Viejo",
-            "es": "Corralejo Viejo",
-            "fr": "Corralejo Viejo",
-            "de": "Corralejo Viejo",
-            "it": "Corralejo Viejo",
-            "pl": "Corralejo Viejo",
-            "nl": "Corralejo Viejo",
-            "pt": "Corralejo Viejo"
-          }
+          "src": "assets/stops/stop-10-playa-corralejo-viejo/videos/10-playa-corralejo-viejo-video-horizontal.mp4"
         },
         {
-          "src": "assets/stops/stop-10-playa-corralejo-viejo/videos/10-playa-corralejo-viejo-video-vertical.mp4",
-          "label": {
-            "en": "Corralejo Viejo",
-            "es": "Corralejo Viejo",
-            "fr": "Corralejo Viejo",
-            "de": "Corralejo Viejo",
-            "it": "Corralejo Viejo",
-            "pl": "Corralejo Viejo",
-            "nl": "Corralejo Viejo",
-            "pt": "Corralejo Viejo"
-          }
+          "src": "assets/stops/stop-10-playa-corralejo-viejo/videos/10-playa-corralejo-viejo-video-vertical.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-en.mp3",
+      "es": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-es.mp3",
+      "fr": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-fr.mp3",
+      "de": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-de.mp3",
+      "it": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-it.mp3",
+      "pl": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-pl.mp3",
+      "nl": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-nl.mp3",
+      "pt": "assets/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/cahxmgwV7eny5iXo8"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "11-waikiki-beach",
       "slug": "waikiki-beach",
@@ -1457,16 +1184,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -1513,14 +1231,14 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
       "heroImage": "assets/stops/stop-11-waikiki-beach/photos/11-waikiki-beach-photo-hero.jpeg",
@@ -1536,63 +1254,33 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-11-waikiki-beach/photos/11-waikiki-beach-photo-vertical.jpeg",
-          "alt": {
-            "en": "Corralejo Waikiki & Galera Beach",
-            "es": "Corralejo Waikiki & Galera Beach",
-            "fr": "Corralejo Waikiki & Galera Beach",
-            "de": "Corralejo Waikiki & Galera Beach",
-            "it": "Corralejo Waikiki & Galera Beach",
-            "pl": "Corralejo Waikiki & Galera Beach",
-            "nl": "Corralejo Waikiki & Galera Beach",
-            "pt": "Corralejo Waikiki & Galera Beach"
-          }
+          "src": "assets/stops/stop-11-waikiki-beach/photos/11-waikiki-beach-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-11-waikiki-beach/videos/11-waikiki-beach-video-horizontal.mp4",
-          "label": {
-            "en": "Corralejo Waikiki & Galera Beach",
-            "es": "Corralejo Waikiki & Galera Beach",
-            "fr": "Corralejo Waikiki & Galera Beach",
-            "de": "Corralejo Waikiki & Galera Beach",
-            "it": "Corralejo Waikiki & Galera Beach",
-            "pl": "Corralejo Waikiki & Galera Beach",
-            "nl": "Corralejo Waikiki & Galera Beach",
-            "pt": "Corralejo Waikiki & Galera Beach"
-          }
+          "src": "assets/stops/stop-11-waikiki-beach/videos/11-waikiki-beach-video-horizontal.mp4"
         },
         {
-          "src": "assets/stops/stop-11-waikiki-beach/videos/11-waikiki-beach-video-vertical.mp4",
-          "label": {
-            "en": "Corralejo Waikiki & Galera Beach",
-            "es": "Corralejo Waikiki & Galera Beach",
-            "fr": "Corralejo Waikiki & Galera Beach",
-            "de": "Corralejo Waikiki & Galera Beach",
-            "it": "Corralejo Waikiki & Galera Beach",
-            "pl": "Corralejo Waikiki & Galera Beach",
-            "nl": "Corralejo Waikiki & Galera Beach",
-            "pt": "Corralejo Waikiki & Galera Beach"
-          }
+          "src": "assets/stops/stop-11-waikiki-beach/videos/11-waikiki-beach-video-vertical.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-en.mp3",
+      "es": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-es.mp3",
+      "fr": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-fr.mp3",
+      "de": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-de.mp3",
+      "it": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-it.mp3",
+      "pl": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-pl.mp3",
+      "nl": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-nl.mp3",
+      "pt": "assets/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/b1acQWaSXwD9RVWN7"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "12-lobos-viewpoint",
       "slug": "lobos-viewpoint",
@@ -1613,16 +1301,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -1692,45 +1371,15 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-12-lobos-viewpoint/photos/12-lobos-viewpoint-photo-vertical.jpeg",
-          "alt": {
-            "en": "Uitkijkpost Corralejo",
-            "es": "Uitkijkpost Corralejo",
-            "fr": "Uitkijkpost Corralejo",
-            "de": "Uitkijkpost Corralejo",
-            "it": "Uitkijkpost Corralejo",
-            "pl": "Uitkijkpost Corralejo",
-            "nl": "Uitkijkpost Corralejo",
-            "pt": "Uitkijkpost Corralejo"
-          }
+          "src": "assets/stops/stop-12-lobos-viewpoint/photos/12-lobos-viewpoint-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-12-lobos-viewpoint/videos/12-lobos-viewpoint-video-horizontal.mp4",
-          "label": {
-            "en": "Uitkijkpost Corralejo",
-            "es": "Uitkijkpost Corralejo",
-            "fr": "Uitkijkpost Corralejo",
-            "de": "Uitkijkpost Corralejo",
-            "it": "Uitkijkpost Corralejo",
-            "pl": "Uitkijkpost Corralejo",
-            "nl": "Uitkijkpost Corralejo",
-            "pt": "Uitkijkpost Corralejo"
-          }
+          "src": "assets/stops/stop-12-lobos-viewpoint/videos/12-lobos-viewpoint-video-horizontal.mp4"
         },
         {
-          "src": "assets/stops/stop-12-lobos-viewpoint/videos/12-lobos-viewpoint-video-vertical.mp4",
-          "label": {
-            "en": "Uitkijkpost Corralejo",
-            "es": "Uitkijkpost Corralejo",
-            "fr": "Uitkijkpost Corralejo",
-            "de": "Uitkijkpost Corralejo",
-            "it": "Uitkijkpost Corralejo",
-            "pl": "Uitkijkpost Corralejo",
-            "nl": "Uitkijkpost Corralejo",
-            "pt": "Uitkijkpost Corralejo"
-          }
+          "src": "assets/stops/stop-12-lobos-viewpoint/videos/12-lobos-viewpoint-video-vertical.mp4"
         }
       ]
     },
@@ -1741,8 +1390,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/Q9xHsYpUZYEQW7n16"
@@ -1825,17 +1474,17 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
-      "heroImage": "assets/stops/stop-02-harbour/photos/02-harbour-photo-hero.jpeg",
+      "heroImage": "assets/stops/stop-13-galera-beach/photos/13-galera-beach-photo-hero.jpeg",
       "heroAlt": {
         "en": "Galera Beach Art Villas",
         "es": "Galera Beach Art Villas",
@@ -1848,49 +1497,29 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Galera Beach Art Villas",
-            "es": "Galera Beach Art Villas",
-            "fr": "Galera Beach Art Villas",
-            "de": "Galera Beach Art Villas",
-            "it": "Galera Beach Art Villas",
-            "pl": "Galera Beach Art Villas",
-            "nl": "Galera Beach Art Villas",
-            "pt": "Galera Beach Art Villas"
-          }
+          "src": "assets/stops/stop-13-galera-beach/photos/13-galera-beach-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Galera Beach Art Villas",
-            "es": "Galera Beach Art Villas",
-            "fr": "Galera Beach Art Villas",
-            "de": "Galera Beach Art Villas",
-            "it": "Galera Beach Art Villas",
-            "pl": "Galera Beach Art Villas",
-            "nl": "Galera Beach Art Villas",
-            "pt": "Galera Beach Art Villas"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-en.mp3",
+      "es": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-es.mp3",
+      "fr": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-fr.mp3",
+      "de": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-de.mp3",
+      "it": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-it.mp3",
+      "pl": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-pl.mp3",
+      "nl": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-nl.mp3",
+      "pt": "assets/stops/stop-13-galera-beach/audio/13-galera-beach-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/o1nWJ3zmecW6SL9d9"
     },
-    "contentStatus": "placeholder",
+    "contentStatus": "draft",
     "usesPlaceholderMedia": true,
     "nextStop": {
       "id": "14-pop-corn-beach",
@@ -1909,19 +1538,10 @@
       "routeId": "13-to-14"
     },
     "placeholderMedia": {
-      "heroImage": true,
-      "photos": true,
+      "heroImage": false,
+      "photos": false,
       "videos": true,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -1968,14 +1588,14 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
       "heroImage": "assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg",
@@ -1991,63 +1611,33 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-vertical.jpeg",
-          "alt": {
-            "en": "Popcorn Beach",
-            "es": "Popcorn Beach",
-            "fr": "Popcorn Beach",
-            "de": "Popcorn Beach",
-            "it": "Popcorn Beach",
-            "pl": "Popcorn Beach",
-            "nl": "Popcorn Beach",
-            "pt": "Popcorn Beach"
-          }
+          "src": "assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-vertical.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-14-pop-corn-beach/videos/14-pop-corn-beach-video-horizontal.mp4",
-          "label": {
-            "en": "Popcorn Beach",
-            "es": "Popcorn Beach",
-            "fr": "Popcorn Beach",
-            "de": "Popcorn Beach",
-            "it": "Popcorn Beach",
-            "pl": "Popcorn Beach",
-            "nl": "Popcorn Beach",
-            "pt": "Popcorn Beach"
-          }
+          "src": "assets/stops/stop-14-pop-corn-beach/videos/14-pop-corn-beach-video-horizontal.mp4"
         },
         {
-          "src": "assets/stops/stop-14-pop-corn-beach/videos/14-pop-corn-beach-video-vertical.mp4",
-          "label": {
-            "en": "Popcorn Beach",
-            "es": "Popcorn Beach",
-            "fr": "Popcorn Beach",
-            "de": "Popcorn Beach",
-            "it": "Popcorn Beach",
-            "pl": "Popcorn Beach",
-            "nl": "Popcorn Beach",
-            "pt": "Popcorn Beach"
-          }
+          "src": "assets/stops/stop-14-pop-corn-beach/videos/14-pop-corn-beach-video-vertical.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "en": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-en.mp3",
+      "es": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-es.mp3",
+      "fr": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-fr.mp3",
+      "de": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-de.mp3",
+      "it": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-it.mp3",
+      "pl": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-pl.mp3",
+      "nl": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-nl.mp3",
+      "pt": "assets/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/vy5UqfyUYuxH3edWA"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "15-el-campanario",
       "slug": "el-campanario",
@@ -2068,16 +1658,7 @@
       "heroImage": false,
       "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -2134,7 +1715,7 @@
       "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
-      "heroImage": "assets/stops/stop-02-harbour/photos/02-harbour-photo-hero.jpeg",
+      "heroImage": "assets/stops/stop-15-el-campanario/photos/15-el-campanario-photo-hero.jpg",
       "heroAlt": {
         "en": "Villa Comercial El Campanario",
         "es": "Villa Comercial El Campanario",
@@ -2147,45 +1728,18 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Villa Comercial El Campanario",
-            "es": "Villa Comercial El Campanario",
-            "fr": "Villa Comercial El Campanario",
-            "de": "Villa Comercial El Campanario",
-            "it": "Villa Comercial El Campanario",
-            "pl": "Villa Comercial El Campanario",
-            "nl": "Villa Comercial El Campanario",
-            "pt": "Villa Comercial El Campanario"
-          }
+          "src": "assets/stops/stop-15-el-campanario/photos/15-el-campanario-photo-horizontal.jpg"
+        },
+        {
+          "src": "assets/stops/stop-15-el-campanario/photos/15-el-campanario-photo-vertical.jpg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-15-el-campanario/videos/15-el-campanario-video-horizontal.mp4",
-          "label": {
-            "en": "Villa Comercial El Campanario",
-            "es": "Villa Comercial El Campanario",
-            "fr": "Villa Comercial El Campanario",
-            "de": "Villa Comercial El Campanario",
-            "it": "Villa Comercial El Campanario",
-            "pl": "Villa Comercial El Campanario",
-            "nl": "Villa Comercial El Campanario",
-            "pt": "Villa Comercial El Campanario"
-          }
+          "src": "assets/stops/stop-15-el-campanario/videos/15-el-campanario-video-horizontal.mp4"
         },
         {
-          "src": "assets/stops/stop-15-el-campanario/videos/15-el-campanario-video-vertical.mp4",
-          "label": {
-            "en": "Villa Comercial El Campanario",
-            "es": "Villa Comercial El Campanario",
-            "fr": "Villa Comercial El Campanario",
-            "de": "Villa Comercial El Campanario",
-            "it": "Villa Comercial El Campanario",
-            "pl": "Villa Comercial El Campanario",
-            "nl": "Villa Comercial El Campanario",
-            "pt": "Villa Comercial El Campanario"
-          }
+          "src": "assets/stops/stop-15-el-campanario/videos/15-el-campanario-video-vertical.mp4"
         }
       ]
     },
@@ -2196,14 +1750,14 @@
       "de": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-de.mp3",
       "it": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-it.mp3",
       "pl": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-pl.mp3",
-      "nl": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-en.mp3",
-      "pt": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-en.mp3"
+      "nl": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-nl.mp3",
+      "pt": "assets/stops/stop-15-el-campanario/audio/15-el-campanario-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/kunQu1dkf6499Uwe7"
     },
     "contentStatus": "draft",
-    "usesPlaceholderMedia": true,
+    "usesPlaceholderMedia": false,
     "nextStop": {
       "id": "16-el-campanario-bell-tower",
       "slug": "el-campanario-bell-tower",
@@ -2221,13 +1775,10 @@
       "routeId": "15-to-16"
     },
     "placeholderMedia": {
-      "heroImage": true,
-      "photos": true,
+      "heroImage": false,
+      "photos": false,
       "videos": false,
-      "audioLanguages": [
-        "nl",
-        "pt"
-      ]
+      "audioLanguages": []
     }
   },
   {
@@ -2297,32 +1848,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "El Campanario Bell Tower",
-            "es": "El Campanario Bell Tower",
-            "fr": "El Campanario Bell Tower",
-            "de": "El Campanario Bell Tower",
-            "it": "El Campanario Bell Tower",
-            "pl": "El Campanario Bell Tower",
-            "nl": "El Campanario Bell Tower",
-            "pt": "El Campanario Bell Tower"
-          }
+          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "El Campanario Bell Tower",
-            "es": "El Campanario Bell Tower",
-            "fr": "El Campanario Bell Tower",
-            "de": "El Campanario Bell Tower",
-            "it": "El Campanario Bell Tower",
-            "pl": "El Campanario Bell Tower",
-            "nl": "El Campanario Bell Tower",
-            "pt": "El Campanario Bell Tower"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
@@ -2333,8 +1864,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/KQM7grGLn1wayD8m8"
@@ -2417,17 +1948,17 @@
       "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
     },
     "transcript": {
-      "en": "Placeholder content: the final audio and reading transcript for this stop are not available yet.",
-      "es": "Contenido provisional: el audio final y la transcripción de esta parada todavía no están disponibles.",
-      "fr": "Contenu provisoire : l’audio final et la transcription de cette étape ne sont pas encore disponibles.",
-      "de": "Platzhalterinhalt: Das endgültige Audio und Transkript für diese Station sind noch nicht verfügbar.",
-      "it": "Contenuto provvisorio: l’audio finale e la trascrizione di questa tappa non sono ancora disponibili.",
-      "pl": "Treść zastępcza: ostateczne nagranie i transkrypcja dla tego przystanku nie są jeszcze dostępne.",
-      "nl": "Tijdelijke inhoud: de definitieve audio en het transcript voor deze stop zijn nog niet beschikbaar.",
-      "pt": "Conteúdo provisório: o áudio final e a transcrição desta paragem ainda não estão disponíveis."
+      "en": "The full reading transcript is not available yet.",
+      "es": "La transcripción completa todavía no está disponible.",
+      "fr": "La transcription complète n’est pas encore disponible.",
+      "de": "Das vollständige Transkript ist noch nicht verfügbar.",
+      "it": "La trascrizione completa non è ancora disponibile.",
+      "pl": "Pełna transkrypcja nie jest jeszcze dostępna.",
+      "nl": "Het volledige transcript is nog niet beschikbaar.",
+      "pt": "A transcrição completa ainda não está disponível."
     },
     "media": {
-      "heroImage": "assets/stops/stop-02-harbour/photos/02-harbour-photo-hero.jpeg",
+      "heroImage": "assets/stops/stop-17-mama-and-you/photos/17-mama-and-you-photo-hero.jpeg",
       "heroAlt": {
         "en": "Mama and You",
         "es": "Mama and You",
@@ -2440,49 +1971,29 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Mama and You",
-            "es": "Mama and You",
-            "fr": "Mama and You",
-            "de": "Mama and You",
-            "it": "Mama and You",
-            "pl": "Mama and You",
-            "nl": "Mama and You",
-            "pt": "Mama and You"
-          }
+          "src": "assets/stops/stop-17-mama-and-you/photos/17-mama-and-you-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Mama and You",
-            "es": "Mama and You",
-            "fr": "Mama and You",
-            "de": "Mama and You",
-            "it": "Mama and You",
-            "pl": "Mama and You",
-            "nl": "Mama and You",
-            "pt": "Mama and You"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
     "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
+      "en": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-en.mp3",
+      "es": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-es.mp3",
+      "fr": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-fr.mp3",
+      "de": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "pl": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-pl.mp3",
+      "nl": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-nl.mp3",
+      "pt": "assets/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/SojuxVZWDwozCWgG6"
     },
-    "contentStatus": "placeholder",
+    "contentStatus": "draft",
     "usesPlaceholderMedia": true,
     "nextStop": {
       "id": "18-botanic-park",
@@ -2501,18 +2012,11 @@
       "routeId": "17-to-18"
     },
     "placeholderMedia": {
-      "heroImage": true,
-      "photos": true,
+      "heroImage": false,
+      "photos": false,
       "videos": true,
       "audioLanguages": [
-        "en",
-        "es",
-        "fr",
-        "de",
-        "it",
-        "pl",
-        "nl",
-        "pt"
+        "it"
       ]
     }
   },
@@ -2583,32 +2087,12 @@
       },
       "photos": [
         {
-          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-          "alt": {
-            "en": "Botanic Park of Corralejo",
-            "es": "Botanic Park of Corralejo",
-            "fr": "Botanic Park of Corralejo",
-            "de": "Botanic Park of Corralejo",
-            "it": "Botanic Park of Corralejo",
-            "pl": "Botanic Park of Corralejo",
-            "nl": "Botanic Park of Corralejo",
-            "pt": "Botanic Park of Corralejo"
-          }
+          "src": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-          "label": {
-            "en": "Botanic Park of Corralejo",
-            "es": "Botanic Park of Corralejo",
-            "fr": "Botanic Park of Corralejo",
-            "de": "Botanic Park of Corralejo",
-            "it": "Botanic Park of Corralejo",
-            "pl": "Botanic Park of Corralejo",
-            "nl": "Botanic Park of Corralejo",
-            "pt": "Botanic Park of Corralejo"
-          }
+          "src": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         }
       ]
     },
@@ -2619,8 +2103,8 @@
       "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
       "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
       "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3"
+      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/Gv8s1FsM8RDp4Vcu8"
