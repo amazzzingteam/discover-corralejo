@@ -341,9 +341,9 @@ function isPlaceholderAudio(stop, languageCode = null) {
 const DISCOVER_THEME_STORAGE_KEY = "discoverCorralejo:theme";
 
 function getSystemTheme() {
-  return window.matchMedia?.("(prefers-color-scheme: dark)")?.matches
-    ? "dark"
-    : "light";
+  // Light mode is the app default. Dark mode is enabled only after the
+  // visitor explicitly selects it on a page that offers the theme control.
+  return "light";
 }
 
 function getSavedTheme() {
@@ -354,6 +354,10 @@ function getSavedTheme() {
 }
 
 function getCurrentTheme() {
+  if (document.documentElement.dataset.themeLocked === "light") {
+    return "light";
+  }
+
   return document.documentElement.dataset.theme || getSavedTheme() || getSystemTheme();
 }
 
@@ -431,6 +435,17 @@ function createThemeToggleButton() {
 }
 
 function setupThemeToggle() {
+  // The welcome/language screen has one approved visual treatment and must
+  // always remain in light mode. Do not insert a theme control on this page.
+  if (
+    document.body.classList.contains("welcome-screen") ||
+    document.documentElement.dataset.themeLocked === "light"
+  ) {
+    applyDiscoverTheme("light");
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => button.remove());
+    return;
+  }
+
   if (document.querySelector("[data-theme-toggle]")) {
     updateThemeButtons(getCurrentTheme());
     return;
@@ -455,12 +470,8 @@ function setupThemeToggle() {
   applyDiscoverTheme(getCurrentTheme());
 }
 
-const systemThemeQuery = window.matchMedia?.("(prefers-color-scheme: dark)");
-systemThemeQuery?.addEventListener?.("change", (event) => {
-  if (!getSavedTheme()) {
-    applyDiscoverTheme(event.matches ? "dark" : "light");
-  }
-});
+// System colour-scheme changes do not alter the app automatically. Light is
+// the default; a visitor's explicit saved selection remains authoritative.
 
 document.addEventListener("DOMContentLoaded", setupThemeToggle);
 
