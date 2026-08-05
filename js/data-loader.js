@@ -2,7 +2,8 @@ const TOUR_DATA_FILES = {
   tour: "data/tour.json",
   stops: "data/stops.json",
   extension: "data/content-extension.json",
-  routes: "data/routes.json"
+  routes: "data/routes.json",
+  mapPoints: "data/map-points.json"
 };
 
 let TOUR_APP_DATA = null;
@@ -86,8 +87,9 @@ async function loadTourData() {
       fetchJson(TOUR_DATA_FILES.tour),
       fetchJson(TOUR_DATA_FILES.stops),
       fetchJson(TOUR_DATA_FILES.extension, true),
-      fetchJson(TOUR_DATA_FILES.routes, true)
-    ]).then(([tourFile, stopsFile, extensionFile, routesFile]) => {
+      fetchJson(TOUR_DATA_FILES.routes, true),
+      fetchJson(TOUR_DATA_FILES.mapPoints, true)
+    ]).then(([tourFile, stopsFile, extensionFile, routesFile, mapPointsFile]) => {
       const mergedTourFile = mergeTourExtension(
         tourFile,
         extensionFile
@@ -126,6 +128,7 @@ async function loadTourData() {
       );
 
       const routes = Array.isArray(routesFile) ? routesFile : [];
+      const mapPoints = Array.isArray(mapPointsFile) ? mapPointsFile : [];
       const routesById = Object.fromEntries(
         routes.map((route) => [route.id, route])
       );
@@ -146,7 +149,9 @@ async function loadTourData() {
         routes,
         routesById,
         routesByFromStopId,
-        routesByFromSlug
+        routesByFromSlug,
+        mapPoints,
+        mapPointsById: Object.fromEntries(mapPoints.map((point) => [point.id, point]))
       };
 
       return TOUR_APP_DATA;
@@ -164,7 +169,7 @@ function showDataLoadError(error) {
 
   const helpText = openedDirectly
     ? "Open this project through VS Code Live Server. JSON files cannot be loaded reliably when an HTML file is opened directly from a folder."
-    : "Check data/tour.json, data/stops.json, data/routes.json and data/content-extension.json for invalid JSON or file paths.";
+    : "Check data/tour.json, data/stops.json, data/routes.json, data/map-points.json and data/content-extension.json for invalid JSON or file paths.";
 
   main.innerHTML = `
     <section class="content-section">

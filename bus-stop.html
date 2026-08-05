@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#155d6c">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("discoverCorralejo:theme");
+        const theme = savedTheme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.style.colorScheme = "light";
+      }
+    })();
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="Discover Corralejo">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Bus stop | Discover Corralejo</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/platform-polish.css">
+</head>
+
+<body class="stop-screen bus-stop-screen">
+  <main class="page-container stop-page-container bus-stop-page-container">
+    <nav class="top-bar top-bar-card stop-top-bar" aria-label="Bus stop navigation">
+      <a
+        id="back-to-route-link"
+        class="back-link"
+        href="route.html?view_source=bus_stop_page"
+        data-i18n="backToRoute"
+      >
+        Back to route
+      </a>
+
+      <div class="top-bar-actions">
+        <a
+          id="change-language-link"
+          class="change-language-link"
+          href="index.html?from=bus_stop_page"
+          data-i18n="changeLanguage"
+        >
+          Change language
+        </a>
+
+        <button
+          id="exit-tour-button"
+          class="text-button"
+          type="button"
+          data-i18n="exitTour"
+        >
+          Exit tour
+        </button>
+      </div>
+    </nav>
+
+    <section class="stop-hero-card bus-stop-hero-card">
+      <img id="bus-stop-hero" class="hero-image" src="" alt="">
+      <div class="stop-hero-shade"></div>
+
+      <div class="stop-hero-copy">
+        <div class="stop-badge-row">
+          <p class="stop-type-badge bus-stop-type-badge" data-i18n="busStopReference">Bus stop reference</p>
+          <p class="stop-progress-pill bus-stop-icon-pill" aria-hidden="true">🚌</p>
+        </div>
+        <h1 id="bus-stop-title">Bus stop</h1>
+      </div>
+    </section>
+
+    <section class="content-section story-card bus-stop-details-card">
+      <p class="eyebrow" data-i18n="busStopDetails">Bus stop information</p>
+      <h2 data-i18n="busStopDetails">Bus stop information</h2>
+      <p id="bus-stop-description"></p>
+    </section>
+
+    <section id="bus-photo-section" class="content-section media-section" hidden>
+      <div class="section-title-row compact-title-row">
+        <div>
+          <p class="eyebrow" data-i18n="photos">Photos</p>
+          <h2 data-i18n="photos">Photos</h2>
+        </div>
+      </div>
+      <div class="gallery-status-row">
+        <span id="bus-photo-counter" class="gallery-counter"></span>
+        <div id="bus-photo-dots" class="gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div id="bus-photo-gallery" class="media-gallery"></div>
+    </section>
+
+    <section id="bus-video-section" class="content-section media-section" hidden>
+      <div class="section-title-row compact-title-row">
+        <div>
+          <p class="eyebrow" data-i18n="video">Video</p>
+          <h2 data-i18n="video">Video</h2>
+        </div>
+      </div>
+      <div class="gallery-status-row">
+        <span id="bus-video-counter" class="gallery-counter"></span>
+        <div id="bus-video-dots" class="gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div id="bus-video-gallery" class="media-gallery"></div>
+    </section>
+
+    <section class="content-section bus-stop-map-card">
+      <div class="section-title-row compact-title-row">
+        <div>
+          <p class="eyebrow" data-i18n="location">Location</p>
+          <h2 data-i18n="busStopMapTitle">Bus stop and walking route</h2>
+          <p data-i18n="busStopMapBody">See where this bus stop is in relation to the tour and the nearest stop.</p>
+        </div>
+      </div>
+
+      <div id="bus-stop-map-shell" class="bus-stop-map-shell">
+        <div id="bus-stop-map" class="bus-stop-map" aria-label="Bus stop map"></div>
+        <p id="bus-stop-map-loading" class="route-map-loading" data-i18n="mapLoading">Loading map…</p>
+      </div>
+
+      <div id="nearest-stop-card" class="nearest-stop-card" hidden>
+        <div>
+          <p class="eyebrow" data-i18n="nearestTourStop">Nearest tour stop</p>
+          <h3 id="nearest-stop-name"></h3>
+          <p id="nearest-stop-distance"></p>
+        </div>
+        <a id="walking-directions-button" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer" data-i18n="openLiveDirections">Open live directions</a>
+      </div>
+
+      <a
+        id="bus-maps-button"
+        class="button button-secondary bus-maps-button"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n="openGoogleMaps"
+      >
+        Open in Google Maps
+      </a>
+    </section>
+
+    <div class="stop-actions sticky-action-bar bus-stop-actions">
+      <a id="rejoin-tour-button" class="button" href="#">Rejoin tour</a>
+      <a class="button button-secondary" href="route.html?view_source=bus_stop_page" data-i18n="backToRoute">Back to route</a>
+    </div>
+  </main>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/offline.js"></script>
+  <script src="assets/vendor/maplibre-gl.js"></script>
+  <script src="assets/vendor/pmtiles.js"></script>
+  <script src="js/navigation-map.js"></script>
+  <script src="js/map-points.js"></script>
+  <script src="js/bus-stop.js"></script>
+  <script src="js/register-sw.js"></script>
+</body>
+</html>

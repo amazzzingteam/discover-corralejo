@@ -206,9 +206,11 @@
       </div>
 
       <div id="route-map-panel" class="route-view-panel" role="tabpanel" aria-labelledby="route-view-map" hidden>
-        <div class="route-overview-map-shell">
+        <div id="route-overview-map-shell" class="route-overview-map-shell">
           <div id="route-overview-map" class="route-overview-map" aria-label="Corralejo route map"></div>
           <p id="route-map-loading" class="route-map-loading" data-i18n="mapLoading">Loading map…</p>
+          <button id="route-map-expand" class="route-map-expand-button" type="button" aria-expanded="false" data-i18n="expandMap">Expand map</button>
+          <p id="route-map-reference-hint" class="route-map-reference-hint" hidden data-i18n="busReferenceHint">Tap a bus icon to open its information page.</p>
         </div>
       </div>
     </section>
@@ -221,6 +223,7 @@
   <script src="assets/vendor/maplibre-gl.js"></script>
   <script src="assets/vendor/pmtiles.js"></script>
   <script src="js/navigation-map.js"></script>
+  <script src="js/map-points.js"></script>
   <script src="js/route.js"></script>
   <script src="js/register-sw.js"></script>
 </body>

@@ -2,6 +2,8 @@ let routeOverviewMap = null;
 let routeOverviewMapReady = false;
 let routeOverviewPendingPreviewStop = null;
 let routeOverviewPreviewRequest = 0;
+let routeOverviewMapPointMarkers = [];
+let routeOverviewMapExpanded = false;
 
 function getStopTypeClass(stop) {
   const typeClasses = {
@@ -224,6 +226,58 @@ function createOverviewMarker(stop, state) {
   return marker;
 }
 
+
+function addMapReferenceMarkers(map) {
+  routeOverviewMapPointMarkers.forEach((entry) => entry.marker.remove());
+  routeOverviewMapPointMarkers = [];
+
+  if (typeof addMapReferenceMarkersToMap !== "function") {
+    return;
+  }
+
+  routeOverviewMapPointMarkers = addMapReferenceMarkersToMap(map, {
+    source: "route_overview_map"
+  });
+}
+
+function syncMapReferenceVisibility() {
+  routeOverviewMapPointMarkers.forEach(({ element }) => {
+    element.hidden = false;
+  });
+
+  const hint = document.querySelector("#route-map-reference-hint");
+  if (hint) {
+    hint.hidden = routeOverviewMapPointMarkers.length === 0;
+  }
+}
+
+function setRouteMapExpanded(expanded) {
+  const shell = document.querySelector("#route-overview-map-shell");
+  const button = document.querySelector("#route-map-expand");
+  if (!shell || !button) return;
+
+  routeOverviewMapExpanded = Boolean(expanded);
+  shell.classList.toggle("is-map-expanded", routeOverviewMapExpanded);
+  document.body.classList.toggle("route-map-modal-open", routeOverviewMapExpanded);
+  button.setAttribute("aria-expanded", String(routeOverviewMapExpanded));
+  button.textContent = translate(routeOverviewMapExpanded ? "closeExpandedMap" : "expandMap");
+  syncMapReferenceVisibility();
+
+  window.setTimeout(() => routeOverviewMap?.resize(), 50);
+}
+
+function setupRouteMapExpansion() {
+  document.querySelector("#route-map-expand")?.addEventListener("click", () => {
+    setRouteMapExpanded(!routeOverviewMapExpanded);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && routeOverviewMapExpanded) {
+      setRouteMapExpanded(false);
+    }
+  });
+}
+
 function initialiseRouteOverviewMap(stops, completedStopIds, currentStopId) {
   if (routeOverviewMapReady || !window.maplibregl || !window.pmtiles) {
     routeOverviewMap?.resize();
@@ -281,6 +335,20 @@ function initialiseRouteOverviewMap(stops, completedStopIds, currentStopId) {
         .setPopup(popup)
         .addTo(routeOverviewMap);
     });
+
+    const publishedReferencePoints = typeof getPublishedMapPoints === "function"
+      ? getPublishedMapPoints()
+      : [];
+
+    publishedReferencePoints.forEach((point) => {
+      bounds.extend([
+        Number(point.coordinates.longitude),
+        Number(point.coordinates.latitude)
+      ]);
+    });
+
+    addMapReferenceMarkers(routeOverviewMap);
+    syncMapReferenceVisibility();
 
     routeOverviewMap.fitBounds(bounds, {
       padding: { top: 70, right: 46, bottom: 70, left: 46 },
@@ -504,6 +572,7 @@ function initialiseRoutePage() {
   }
 
   setupRouteViewSwitch();
+  setupRouteMapExpansion();
   setupRouteActions();
 
   window.setTimeout(clampRouteScrollPosition, 80);

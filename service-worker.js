@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v19-light-default-no-home-toggle";
+const CACHE_VERSION = "v22-persistent-bus-pages";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -9,6 +9,7 @@ const CORE_FILES = [
   "./index.html",
   "./route.html",
   "./stop.html",
+  "./bus-stop.html",
   "./completion.html",
   "./feedback-complete.html",
   "./manifest.webmanifest",
@@ -29,6 +30,7 @@ const CORE_FILES = [
   "./data/stops.json",
   "./data/content-extension.json",
   "./data/routes.json",
+  "./data/map-points.json",
   "./data/routes/01-to-02.geojson",
   "./data/routes/02-to-03.geojson",
   "./data/routes/03-to-04.geojson",
@@ -51,9 +53,11 @@ const CORE_FILES = [
   "./js/analytics.js",
   "./js/offline.js",
   "./js/navigation-map.js",
+  "./js/map-points.js",
   "./js/index.js",
   "./js/route.js",
   "./js/stop.js",
+  "./js/bus-stop.js",
   "./js/completion.js",
   "./js/feedback-complete.js",
   "./js/register-sw.js",
@@ -65,6 +69,7 @@ const REQUIRED_CORE_FILES = new Set([
   "./index.html",
   "./route.html",
   "./stop.html",
+  "./bus-stop.html",
   "./completion.html",
   "./css/styles.css",
   "./css/platform-polish.css",
@@ -77,8 +82,10 @@ const REQUIRED_CORE_FILES = new Set([
   "./data/tour.json",
   "./data/stops.json",
   "./data/routes.json",
+  "./data/map-points.json",
   "./js/data-loader.js",
   "./js/common.js",
+  "./js/map-points.js",
   "./js/offline.js",
   "./js/register-sw.js"
 ]);

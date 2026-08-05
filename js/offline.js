@@ -3,6 +3,7 @@ const OFFLINE_CORE_URLS = Object.freeze([
   "index.html",
   "route.html",
   "stop.html",
+  "bus-stop.html",
   "completion.html",
   "feedback-complete.html",
   "manifest.webmanifest",
@@ -21,6 +22,7 @@ const OFFLINE_CORE_URLS = Object.freeze([
   "data/stops.json",
   "data/content-extension.json",
   "data/routes.json",
+  "data/map-points.json",
   "data/routes/01-to-02.geojson",
   "data/routes/02-to-03.geojson",
   "data/routes/03-to-04.geojson",
@@ -43,9 +45,11 @@ const OFFLINE_CORE_URLS = Object.freeze([
   "js/analytics.js",
   "js/offline.js",
   "js/navigation-map.js",
+  "js/map-points.js",
   "js/index.js",
   "js/route.js",
   "js/stop.js",
+  "js/bus-stop.js",
   "js/completion.js",
   "js/feedback-complete.js",
   "js/register-sw.js",
@@ -114,6 +118,17 @@ function collectOfflineTourUrls() {
   if (typeof getPublishedRoutes === "function") {
     getPublishedRoutes().forEach((route) => {
       addOfflineUrl(urls, route.geometryFile);
+    });
+  }
+
+  if (typeof getPublishedMapPoints === "function") {
+    getPublishedMapPoints().forEach((point) => {
+      (point.media?.photos || []).forEach((photo) => {
+        addOfflineUrl(urls, typeof photo === "string" ? photo : photo?.src);
+      });
+      (point.media?.videos || []).forEach((video) => {
+        addOfflineUrl(urls, typeof video === "string" ? video : video?.src);
+      });
     });
   }
 

@@ -209,6 +209,14 @@ function getPublishedRoutes() {
   );
 }
 
+function getPublishedMapPoints() {
+  return (getTourData().mapPoints || []).filter((point) => {
+    const latitude = Number(point.coordinates?.latitude);
+    const longitude = Number(point.coordinates?.longitude);
+    return point.published !== false && Number.isFinite(latitude) && Number.isFinite(longitude);
+  });
+}
+
 function getProgressTotal() {
   const plannedStopCount =
     getTourData().app.route?.plannedStopCount;

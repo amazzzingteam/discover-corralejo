@@ -189,6 +189,28 @@ function renderVideos(stop) {
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
     video.className = "content-video";
+
+    const applyVideoOrientation = () => {
+      const sourceName = String(videoData.src || "");
+      const declaredOrientation = videoData.orientation ||
+        (/vertical/i.test(sourceName) ? "portrait" :
+          (/horizontal|landscape/i.test(sourceName) ? "landscape" : ""));
+      const isPortrait = declaredOrientation === "portrait" ||
+        (!declaredOrientation && video.videoHeight > video.videoWidth);
+      item.classList.toggle("is-portrait-video", isPortrait);
+      item.classList.toggle("is-landscape-video", !isPortrait);
+
+      if (declaredOrientation === "portrait") {
+        video.style.aspectRatio = "9 / 16";
+      } else if (declaredOrientation === "landscape") {
+        video.style.aspectRatio = "16 / 9";
+      } else if (video.videoWidth && video.videoHeight) {
+        video.style.aspectRatio = `${video.videoWidth} / ${video.videoHeight}`;
+      }
+    };
+
+    video.addEventListener("loadedmetadata", applyVideoOrientation);
+    applyVideoOrientation();
     video.setAttribute("aria-label", getLocalizedValue(videoData.label || translate("video")));
     item.appendChild(video);
     gallery.appendChild(item);
@@ -547,12 +569,6 @@ function renderStop(stop) {
   }, { once: true });
   heroImage.alt = getLocalizedValue(
     stop.media.heroAlt || stop.displayName
-  );
-
-  document.querySelector(
-    "#stop-description"
-  ).textContent = getLocalizedValue(
-    stop.description
   );
 
   document.querySelector(

@@ -440,6 +440,14 @@ function renderRouteMap(container, routeFeature, currentStop, nextStop) {
       ])
       .addTo(map);
 
+    if (typeof addMapReferenceMarkersToMap === "function") {
+      addMapReferenceMarkersToMap(map, {
+        source: "walking_route_map",
+        compact: true,
+        maxWidth: "min(86vw, 310px)"
+      });
+    }
+
     loading.hidden = true;
     fitRoute();
   });

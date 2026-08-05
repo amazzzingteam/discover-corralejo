@@ -1287,3 +1287,416 @@ html.app-scroll-shell .stop-page-container {
     padding: 16px 15px;
   }
 }
+
+
+/* =========================================================
+   Expanded route map + transport reference points
+   2026-08-05
+   ========================================================= */
+.route-map-expand-button {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  right: 12px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 9px 13px;
+  color: var(--warm-white);
+  background: rgba(21, 93, 108, .94);
+  border: 1px solid rgba(255, 255, 255, .42);
+  border-radius: 13px;
+  box-shadow: 0 7px 20px rgba(13, 70, 82, .24);
+  font: inherit;
+  font-size: .76rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.route-map-reference-hint {
+  position: absolute;
+  z-index: 5;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  left: 12px;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 9px 12px;
+  color: var(--charcoal);
+  background: rgba(255, 253, 248, .94);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+body.route-map-modal-open {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+.route-overview-map-shell.is-map-expanded {
+  position: fixed !important;
+  z-index: 12000;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  min-height: 100dvh;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background: #b9dce4;
+  border: 0;
+  border-radius: 0;
+}
+
+.route-overview-map-shell.is-map-expanded .route-overview-map {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.route-overview-map-shell.is-map-expanded .route-map-expand-button {
+  top: calc(12px + env(safe-area-inset-top));
+  right: calc(12px + env(safe-area-inset-right));
+}
+
+.map-reference-marker {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #fff;
+  background: #155d6c;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 12px;
+  box-shadow: 0 7px 18px rgba(13, 70, 82, .32);
+  transform: rotate(-45deg);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.map-reference-marker[hidden] { display: none !important; }
+.map-reference-marker > span { transform: rotate(45deg); }
+
+.map-reference-popup { min-width: min(270px, 74vw); }
+.map-reference-popup h3 { margin: 2px 0 8px; font-size: 1.05rem; }
+.map-reference-popup p { margin: 8px 0; line-height: 1.45; }
+.map-reference-popup img,
+.map-reference-popup video {
+  display: block;
+  width: 100%;
+  max-height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.map-reference-popup video { margin-top: 9px; background: #101820; }
+.map-reference-eyebrow {
+  color: var(--atlantic);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+html[data-theme="dark"] .route-map-reference-hint,
+html[data-theme="dark"] .map-reference-popup {
+  color: #fffdf8;
+}
+
+@media (max-width: 480px) {
+  .route-map-expand-button {
+    top: 10px;
+    right: 10px;
+    font-size: .7rem;
+  }
+}
+
+
+/* =========================================================
+   Map references, portrait media and transcript cleanup
+   2026-08-05
+   ========================================================= */
+
+/* Prevent a portrait hero from increasing the height of a route card. */
+.stop-card-image-wrap {
+  min-height: 132px;
+  isolation: isolate;
+}
+
+.stop-card-image {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  object-fit: cover;
+}
+
+/* Videos should retain their whole frame. Vertical footage is letterboxed
+   instead of being cropped to a horizontal card. */
+.media-item-video {
+  display: grid;
+  place-items: center;
+  background: #101820;
+}
+
+.media-item-video .content-video {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: min(72svh, 680px);
+  aspect-ratio: 16 / 9;
+  object-fit: contain !important;
+  background: #101820;
+  border-radius: 16px;
+}
+
+.media-item-video.is-portrait-video {
+  flex-basis: min(78vw, 430px);
+  width: min(78vw, 430px);
+}
+
+.media-item-video.is-portrait-video .content-video {
+  max-height: min(76svh, 720px);
+}
+
+.map-reference-popup video {
+  height: auto;
+  max-height: min(52svh, 360px);
+  object-fit: contain !important;
+  background: #101820;
+}
+
+.transcript-card .transcript-details {
+  margin-top: 12px;
+}
+
+@media (max-width: 379px) {
+  .stop-card-image-wrap {
+    height: 150px;
+    min-height: 150px;
+  }
+
+  .media-item-video.is-portrait-video {
+    flex-basis: 86%;
+    width: 86%;
+  }
+}
+
+/* =========================================================
+   Persistent bus references + dedicated bus-stop pages
+   2026-08-05
+   ========================================================= */
+.map-reference-marker {
+  display: grid;
+}
+
+.map-reference-marker.is-compact {
+  width: 36px;
+  height: 36px;
+  font-size: .9rem;
+  border-width: 2px;
+}
+
+.map-reference-popup-compact {
+  min-width: min(250px, 72vw);
+}
+
+.map-reference-popup-compact .map-reference-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 7px 0 12px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.map-reference-open-button {
+  display: flex;
+  min-height: 42px;
+  margin-top: 10px;
+  padding: 9px 13px;
+  color: #fff !important;
+  font-size: .78rem;
+  text-decoration: none;
+}
+
+.route-map-reference-hint {
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  pointer-events: none;
+}
+
+.bus-stop-page-container {
+  padding-bottom: calc(130px + env(safe-area-inset-bottom));
+}
+
+.bus-stop-hero-card {
+  min-height: clamp(310px, 58vw, 460px);
+}
+
+.bus-stop-hero-card .hero-image {
+  object-position: center;
+}
+
+.bus-stop-type-badge {
+  background: rgba(255, 253, 248, .94);
+  color: var(--atlantic);
+}
+
+.bus-stop-icon-pill {
+  display: grid;
+  place-items: center;
+  min-width: 48px;
+  padding-inline: 12px;
+  color: #fff !important;
+  background: rgba(21, 93, 108, .88);
+  font-size: 1rem;
+}
+
+.bus-stop-details-card p:last-child {
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2.3vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.bus-stop-map-card {
+  overflow: hidden;
+}
+
+.bus-stop-map-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  margin-top: 20px;
+  border: 1px solid rgba(21, 93, 108, .24);
+  border-radius: 24px;
+  background: #b9dce4;
+  box-shadow: var(--shadow-sm);
+}
+
+.bus-stop-map {
+  width: 100%;
+  height: 420px;
+  min-height: 420px;
+}
+
+.bus-route-stop-marker {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: #fff;
+  background: rgba(21, 93, 108, .9);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 12px rgba(13, 70, 82, .22);
+  font: inherit;
+  font-size: .66rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.bus-route-stop-marker.is-nearest {
+  width: 38px;
+  height: 38px;
+  background: var(--coral);
+  box-shadow: 0 7px 18px rgba(255, 108, 102, .35);
+}
+
+.nearest-stop-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid rgba(21, 93, 108, .2);
+  border-radius: 20px;
+  background: rgba(114, 175, 193, .1);
+}
+
+.nearest-stop-card h3 {
+  margin: 3px 0 5px;
+}
+
+.nearest-stop-card p:last-child {
+  margin: 0;
+}
+
+.nearest-stop-card .button {
+  min-width: 190px;
+}
+
+.bus-maps-button {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.bus-stop-actions {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .65fr);
+}
+
+html[data-theme="dark"] .bus-stop-type-badge {
+  color: #fffdf8;
+  background: rgba(16, 27, 30, .88);
+}
+
+html[data-theme="dark"] .bus-stop-map-shell {
+  background: #14292e;
+  border-color: rgba(114, 175, 193, .32);
+}
+
+html[data-theme="dark"] .nearest-stop-card {
+  color: #fffdf8;
+  background: rgba(114, 175, 193, .08);
+  border-color: rgba(114, 175, 193, .28);
+}
+
+@media (max-width: 560px) {
+  .bus-stop-hero-card {
+    min-height: 330px;
+  }
+
+  .bus-stop-map-shell,
+  .bus-stop-map {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .nearest-stop-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nearest-stop-card .button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .bus-stop-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .bus-stop-hero-card {
+    min-height: 290px;
+  }
+
+  .bus-stop-map-shell,
+  .bus-stop-map {
+    min-height: 330px;
+    height: 330px;
+  }
+}
+
+.media-item-button {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: inherit;
+  cursor: zoom-in;
+}
