@@ -502,12 +502,11 @@ async function initialiseNextStopRoutePreview(stop) {
   });
 
   try {
-    const response = await fetch(
-    `${route.geometryFile}?v=${Date.now()}`,
-    {
-      cache: "no-store"
-    }
-);
+    // Keep the route URL stable so the service worker can match the
+    // GeoJSON file that was downloaded for offline use. A timestamp query
+    // made every request unique and caused the offline cache lookup to fail.
+    const routeUrl = new URL(route.geometryFile, document.baseURI).href;
+    const response = await fetch(routeUrl);
 
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);

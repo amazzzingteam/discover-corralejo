@@ -391,7 +391,7 @@ async function showOverviewRoutePreview(stop) {
   }
 
   try {
-    const response = await fetch(route.geometryFile, { cache: "no-store" });
+    const response = await fetch(new URL(route.geometryFile, document.baseURI).href);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }

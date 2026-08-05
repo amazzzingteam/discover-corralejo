@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v22-persistent-bus-pages";
+const CACHE_VERSION = "v23-offline-map-cache-fix";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -176,6 +176,14 @@ async function handleRangeRequest(request) {
 
   let cachedResponse = await getCachedResponse(fullRequest);
 
+  // PMTiles and media players may add harmless query parameters. Fall back
+  // to the downloaded same-path response when the exact request is absent.
+  if (!cachedResponse) {
+    cachedResponse = await getCachedResponse(fullRequest, {
+      ignoreSearch: true
+    });
+  }
+
   if (!cachedResponse) {
     try {
       const networkResponse = await fetch(fullRequest);
@@ -250,7 +258,16 @@ async function handleNavigationRequest(request) {
 }
 
 async function handleAssetRequest(request) {
-  const cachedResponse = await getCachedResponse(request);
+  let cachedResponse = await getCachedResponse(request);
+
+  if (!cachedResponse) {
+    // Static files can occasionally be requested with cache-busting query
+    // parameters. The offline download stores the same file without that
+    // query, so allow a same-path fallback before attempting the network.
+    cachedResponse = await getCachedResponse(request, {
+      ignoreSearch: true
+    });
+  }
 
   if (cachedResponse) {
     return cachedResponse;

@@ -263,7 +263,7 @@ async function loadFullRouteGeometry() {
     getPublishedRoutes()
       .filter((route) => route.geometryFile)
       .map(async (route) => {
-        const response = await fetch(route.geometryFile, { cache: "no-store" });
+        const response = await fetch(new URL(route.geometryFile, document.baseURI).href);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
       })
