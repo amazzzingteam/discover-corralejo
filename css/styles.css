@@ -1263,7 +1263,7 @@ summary {
   min-height: 54svh;
   padding: 22px 20px 72px;
   color: var(--warm-white);
-  background-image: url("../assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg");
+  background-image: var(--welcome-hero-image, none);
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -1413,7 +1413,7 @@ summary {
   color: var(--warm-white);
   background:
     linear-gradient(120deg, rgba(13, 70, 82, 0.94), rgba(21, 93, 108, 0.72)),
-    url("../assets/stops/stop-12-lobos-viewpoint/photos/12-lobos-viewpoint-photo-hero.jpeg") center / cover;
+    var(--route-hero-image, none) center / cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -2342,7 +2342,7 @@ h3 {
   min-height: 100svh;
   padding: max(22px, env(safe-area-inset-top)) 22px calc(26px + env(safe-area-inset-bottom));
   color: var(--warm-white);
-  background-image: url("../assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg");
+  background-image: var(--welcome-hero-image, none);
   background-position: 54% center;
   background-size: cover;
   isolation: isolate;
@@ -2679,7 +2679,7 @@ body.language-sheet-open::after {
   padding: 28px 22px;
   background:
     linear-gradient(120deg, rgba(13, 70, 82, 0.94), rgba(21, 93, 108, 0.63)),
-    url("../assets/stops/stop-12-lobos-viewpoint/photos/12-lobos-viewpoint-photo-hero.jpeg") center 66% / cover;
+    var(--route-hero-image, none) center 66% / cover;
 }
 
 .route-hero-card h1 {

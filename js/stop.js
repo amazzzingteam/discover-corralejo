@@ -399,6 +399,60 @@ function renderAudio(stop) {
   setupAudioAnalytics(audioPlayer, stop);
 }
 
+async function loadStopTranscript(stop) {
+  const languageCode = getActiveLanguage();
+  const fallbackLanguage = getTourData().app.defaultLanguage || "en";
+  const transcriptFiles = stop.transcriptFiles || {};
+
+  const candidates = [
+    transcriptFiles[languageCode],
+    transcriptFiles[fallbackLanguage]
+  ].filter((value, index, values) => value && values.indexOf(value) === index);
+
+  for (const transcriptUrl of candidates) {
+    try {
+      const response = await fetch(transcriptUrl);
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const text = (await response.text()).trim();
+      if (text) {
+        return text;
+      }
+    } catch (error) {
+      console.warn(
+        "Transcript could not be loaded:",
+        transcriptUrl,
+        error
+      );
+    }
+  }
+
+  // Backward-compatible fallback for older stop data during migrations.
+  return getLocalizedValue(stop.transcript || {});
+}
+
+async function renderTranscript(stop) {
+  const transcriptCard = document.querySelector(".transcript-card");
+  const transcriptElement = document.querySelector("#stop-transcript");
+
+  if (!transcriptElement) {
+    return;
+  }
+
+  transcriptElement.textContent = "";
+
+  const transcriptText = await loadStopTranscript(stop);
+
+  transcriptElement.textContent = transcriptText || "";
+
+  if (transcriptCard) {
+    transcriptCard.hidden = !transcriptText;
+  }
+}
+
 function getStopTimeSeconds() {
   return Math.max(
     1,
@@ -571,11 +625,7 @@ function renderStop(stop) {
     stop.media.heroAlt || stop.displayName
   );
 
-  document.querySelector(
-    "#stop-transcript"
-  ).textContent = getLocalizedValue(
-    stop.transcript
-  );
+  renderTranscript(stop);
 
   renderAudio(stop);
   renderPhotos(stop);

@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v24-r2-offline-media";
+const CACHE_VERSION = "v25-r2-content-final";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -24,8 +24,6 @@ const CORE_FILES = [
   "./assets/vendor/maplibre-gl.js",
   "./assets/vendor/pmtiles.js",
   "./assets/maps/corralejo.pmtiles",
-  "./assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg",
-  "./assets/stops/stop-12-lobos-viewpoint/photos/12-lobos-viewpoint-photo-hero.jpeg",
   "./data/tour.json",
   "./data/stops.json",
   "./data/content-extension.json",
@@ -77,8 +75,6 @@ const REQUIRED_CORE_FILES = new Set([
   "./assets/vendor/maplibre-gl.js",
   "./assets/vendor/pmtiles.js",
   "./assets/maps/corralejo.pmtiles",
-  "./assets/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg",
-  "./assets/stops/stop-12-lobos-viewpoint/photos/12-lobos-viewpoint-photo-hero.jpeg",
   "./data/tour.json",
   "./data/stops.json",
   "./data/routes.json",

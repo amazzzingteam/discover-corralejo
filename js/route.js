@@ -543,12 +543,25 @@ function clampRouteScrollPosition() {
   });
 }
 
+function applyRouteFeaturedMedia() {
+  const imageUrl = getTourData().app.featuredMedia?.routeHero;
+  const hero = document.querySelector(".route-hero-card");
+
+  if (!imageUrl || !hero) {
+    return;
+  }
+
+  const cssImage = `url("${String(imageUrl).replace(/"/g, '\\"')}")`;
+  hero.style.setProperty("--route-hero-image", cssImage);
+}
+
 function initialiseRoutePage() {
   if (!requireSelectedLanguage()) {
     return;
   }
 
   applyPageTranslations();
+  applyRouteFeaturedMedia();
   setTranslatedDocumentTitle("routeOverview");
 
   const routeList = document.querySelector("#route-list");

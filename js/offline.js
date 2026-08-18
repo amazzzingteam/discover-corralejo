@@ -108,15 +108,10 @@ function collectOfflineTourUrls() {
     Object.values(stop.audio || {}).forEach((audioUrl) => {
       addOfflineUrl(urls, audioUrl);
     });
-  });
 
-  const placeholderAssets = getPlaceholderAssets();
-  addOfflineUrl(urls, placeholderAssets.heroImage);
-  addOfflineUrl(urls, placeholderAssets.photo);
-  addOfflineUrl(urls, placeholderAssets.video);
-
-  Object.values(placeholderAssets.audio || {}).forEach((audioUrl) => {
-    addOfflineUrl(urls, audioUrl);
+    Object.values(stop.transcriptFiles || {}).forEach((transcriptUrl) => {
+      addOfflineUrl(urls, transcriptUrl);
+    });
   });
 
   if (typeof getPublishedRoutes === "function") {

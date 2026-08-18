@@ -786,20 +786,5 @@
       "busStopNotFound": "Paragem não encontrada",
       "busStopNotFoundBody": "Este ponto de referência de autocarro não está disponível."
     }
-  },
-  "placeholderAssets": {
-    "heroImage": "assets/stops/stop-02-harbour/photos/02-harbour-photo-hero.jpeg",
-    "photo": "assets/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg",
-    "video": "assets/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
-    "audio": {
-      "en": "assets/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "assets/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "assets/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "assets/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "assets/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "assets/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
-      "pt": "assets/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
-    }
   }
 }

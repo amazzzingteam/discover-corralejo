@@ -178,7 +178,6 @@ async function loadTourData() {
         );
       }
 
-      
       const mediaConfig =
         mergedTourFile.app?.media || {};
 
@@ -196,6 +195,12 @@ async function loadTourData() {
       mergedTourFile.app.placeholderAssets =
         resolveMediaPaths(
           mergedTourFile.app.placeholderAssets || {},
+          mediaConfig
+        );
+
+      mergedTourFile.app.featuredMedia =
+        resolveMediaPaths(
+          mergedTourFile.app.featuredMedia || {},
           mediaConfig
         );
 

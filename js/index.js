@@ -169,8 +169,25 @@ function setupLanguageSheetControls() {
   });
 }
 
+function applyWelcomeFeaturedMedia() {
+  const imageUrl = getTourData().app.featuredMedia?.welcomeHero;
+
+  if (!imageUrl) {
+    return;
+  }
+
+  const cssImage = `url("${String(imageUrl).replace(/"/g, '\\"')}")`;
+
+  document
+    .querySelectorAll(".welcome-cover, .welcome-hero")
+    .forEach((element) => {
+      element.style.setProperty("--welcome-hero-image", cssImage);
+    });
+}
+
 function initialiseLanguagePage() {
   applyPageTranslations();
+  applyWelcomeFeaturedMedia();
   setTranslatedDocumentTitle("chooseLanguage");
 
   const languageGrid = document.querySelector(

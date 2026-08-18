@@ -31,6 +31,10 @@
     "feedback": {
       "enabled": false,
       "urlTemplate": ""
+    },
+    "featuredMedia": {
+      "welcomeHero": "@media/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg",
+      "routeHero": "@media/stops/stop-12-secret-bench-galera-beach/photos/12-secret-bench-galera-beach-photo-hero.jpeg"
     }
   },
   "languages": [

@@ -32,19 +32,21 @@
     "media": {
       "photos": [
         {
-          "src": "assets/map-points/bus-stop-01/photos/bus-stop-01-photo-01.jpeg"
+          "src": "@media/stops/bus-stop-1/photos/bus-stop-1-photo.jpeg"
         },
         {
-          "src": "assets/map-points/bus-stop-01/photos/bus-stop-01-photo-02.jpeg"
+          "src": "@media/stops/bus-stop-1/photos/bus-stop-1-photo-2.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/map-points/bus-stop-01/videos/bus-stop-01-video-vertical.mp4"
+          "src": "@media/stops/bus-stop-1/videos/bus-stop-1-video-vertical.mp4",
+          "orientation": "portrait"
         }
       ]
     },
-    "coordinateConfidence": "verified_public_transport_dataset"
+    "coordinateConfidence": "verified_public_transport_dataset",
+    "matchingFolder": "bus-stop-1"
   },
   {
     "id": "bus-stop-02",
@@ -79,19 +81,21 @@
     "media": {
       "photos": [
         {
-          "src": "assets/map-points/bus-stop-02/photos/bus-stop-02-photo-01.jpeg"
+          "src": "@media/stops/bus-stop-2/photos/bus-stop-2-photo-1.jpeg"
         },
         {
-          "src": "assets/map-points/bus-stop-02/photos/bus-stop-02-photo-02.jpeg"
+          "src": "@media/stops/bus-stop-2/photos/bus-stop-2-photo-2.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/map-points/bus-stop-02/videos/bus-stop-02-video-vertical.mp4"
+          "src": "@media/stops/bus-stop-2/videos/bus-stop-2-video-vertical.mp4",
+          "orientation": "portrait"
         }
       ]
     },
-    "coordinateConfidence": "verified_public_transport_dataset"
+    "coordinateConfidence": "verified_public_transport_dataset",
+    "matchingFolder": "bus-stop-2"
   },
   {
     "id": "bus-stop-03",
@@ -126,15 +130,17 @@
     "media": {
       "photos": [
         {
-          "src": "assets/map-points/bus-stop-03/photos/bus-stop-03-photo-01.jpeg"
+          "src": "@media/stops/bus-stop-3/photos/bus-stop-3-photo.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "assets/map-points/bus-stop-03/videos/bus-stop-03-video-vertical.mp4"
+          "src": "@media/stops/bus-stop-3/videos/bus-stop-3-video-vertical.mp4",
+          "orientation": "portrait"
         }
       ]
     },
-    "coordinateConfidence": "estimated_from_supplied_media_and_route"
+    "coordinateConfidence": "estimated_from_supplied_media_and_route",
+    "matchingFolder": "bus-stop-3"
   }
 ]

@@ -36,49 +36,30 @@
     "nl": "",
     "pt": ""
   },
-  "transcript": {
-    "en": "",
-    "es": "",
-    "fr": "",
-    "de": "",
-    "it": "",
-    "pl": "",
-    "nl": "",
-    "pt": ""
-  },
   "media": {
-    "heroImage": "assets/stops/stop-03-new-stop/photos/03-new-stop-photo-hero.jpeg",
+    "heroImage": "@media/stops/stop-03-new-stop/photos/03-new-stop-photo-hero.jpeg",
     "photos": [
       {
-        "src": "assets/stops/stop-03-new-stop/photos/03-new-stop-photo-horizontal.jpeg"
+        "src": "@media/stops/stop-03-new-stop/photos/03-new-stop-photo-horizontal.jpeg"
       }
     ],
     "videos": [
       {
-        "src": "assets/stops/stop-03-new-stop/videos/03-new-stop-video-horizontal.mp4"
+        "src": "@media/stops/stop-03-new-stop/videos/03-new-stop-video-horizontal.mp4",
+        "orientation": "landscape"
       }
     ]
   },
   "audio": {
-    "en": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-en.mp3",
-    "es": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-es.mp3",
-    "fr": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-fr.mp3",
-    "de": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-de.mp3",
-    "it": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-it.mp3",
-    "pl": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-pl.mp3",
-    "nl": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-nl.mp3",
-    "pt": "assets/stops/stop-03-new-stop/audio/03-new-stop-audio-pt.mp3"
+    "en": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-en.mp3",
+    "es": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-es.mp3",
+    "fr": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-fr.mp3",
+    "de": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-de.mp3",
+    "it": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-it.mp3",
+    "pl": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-pl.mp3",
+    "nl": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-nl.mp3",
+    "pt": "@media/stops/stop-03-new-stop/audio/03-new-stop-audio-pt.mp3"
   },
-  "placeholderMedia": {
-    "heroImage": false,
-    "photos": false,
-    "videos": false,
-    "audioLanguages": [
-      "nl",
-      "pt"
-    ]
-  },
-  "usesPlaceholderMedia": true,
   "contentStatus": "draft",
   "maps": {
     "location": "GOOGLE_MAPS_LOCATION_LINK"
@@ -97,5 +78,15 @@
       "pt": ""
     },
     "directionsUrl": "GOOGLE_MAPS_DIRECTIONS_LINK"
+  },
+  "transcriptFiles": {
+    "en": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-en.txt",
+    "es": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-es.txt",
+    "fr": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-fr.txt",
+    "de": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-de.txt",
+    "it": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-it.txt",
+    "pl": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-pl.txt",
+    "nl": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-nl.txt",
+    "pt": "@media/stops/stop-03-new-stop/transcript/03-new-stop-transcript-pt.txt"
   }
 }

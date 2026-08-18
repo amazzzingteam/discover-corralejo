@@ -1,0 +1,538 @@
+Folder PATH listing
+Volume serial number is 00000092 B27E:3745
+C:.
+|   assets-tree-final
+|   
++---bus-stop-1
+|   +---photos
+|   |       bus-stop-1-photo-2.jpeg
+|   |       bus-stop-1-photo.jpeg
+|   |       
+|   \---videos
+|           bus-stop-1-video-vertical.mp4
+|           
++---bus-stop-2
+|   +---photos
+|   |       bus-stop-2-photo-1.jpeg
+|   |       bus-stop-2-photo-2.jpeg
+|   |       
+|   \---videos
+|           bus-stop-2-video-vertical.mp4
+|           
++---bus-stop-3
+|   +---photos
+|   |       bus-stop-3-photo.jpeg
+|   |       
+|   \---videos
+|           bus-stop-3-video-vertical.mp4
+|           
++---stop-01-supermarket-deseos
+|   |   01-supermarketdeseos-script.docx
+|   |   
+|   +---audio
+|   |       01-supermarket-deseos-audio-de.mp3
+|   |       01-supermarket-deseos-audio-en.mp3
+|   |       01-supermarket-deseos-audio-es.mp3
+|   |       01-supermarket-deseos-audio-fr.mp3
+|   |       01-supermarket-deseos-audio-it.mp3
+|   |       01-supermarket-deseos-audio-nl.mp3
+|   |       01-supermarket-deseos-audio-pl.mp3
+|   |       01-supermarket-deseos-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       01-supermarket-deseos-photo-hero.jpg
+|   |       01-supermarket-deseos-photo-horizontal.jpeg
+|   |       
+|   +---transcript
+|   |       01-supermarket-deseos-transcript-de.txt
+|   |       01-supermarket-deseos-transcript-en.txt
+|   |       01-supermarket-deseos-transcript-es.txt
+|   |       01-supermarket-deseos-transcript-fr.txt
+|   |       01-supermarket-deseos-transcript-it.txt
+|   |       01-supermarket-deseos-transcript-nl.txt
+|   |       01-supermarket-deseos-transcript-pl.txt
+|   |       01-supermarket-deseos-transcript-pt.txt
+|   |       
+|   \---videos
+|           01-supermarket-deseos-video-main.mp4
+|           01-supermarket-deseos-video-vertical.mp4
+|           
++---stop-02-harbour
+|   +---audio
+|   |       02-harbour-audio-de.mp3
+|   |       02-harbour-audio-en.mp3
+|   |       02-harbour-audio-es.mp3
+|   |       02-harbour-audio-fr.mp3
+|   |       02-harbour-audio-it.mp3
+|   |       02-harbour-audio-nl.mp3
+|   |       02-harbour-audio-pl.mp3
+|   |       02-harbour-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       02-harbour-photo-hero.jpeg
+|   |       02-harbour-photo-horizontal-2.jpeg
+|   |       02-harbour-photo-horizontal.jpeg
+|   |       
+|   +---transcript
+|   |       02-harbour-transcript-de.txt
+|   |       02-harbour-transcript-en.txt
+|   |       02-harbour-transcript-es.txt
+|   |       02-harbour-transcript-fr.txt
+|   |       02-harbour-transcript-it.txt
+|   |       02-harbour-transcript-nl.txt
+|   |       02-harbour-transcript-pl.txt
+|   |       02-harbour-transcript-pt.txt
+|   |       
+|   \---videos
+|           02-harbour-video-horizontal.mp4
+|           02-harbour-video-vertical.mp4
+|           
++---stop-03-avenida-maritima
+|   +---audio
+|   |       03-avenida-maritima-audio-de.mp3
+|   |       03-avenida-maritima-audio-en.mp3
+|   |       03-avenida-maritima-audio-es.mp3
+|   |       03-avenida-maritima-audio-fr.mp3
+|   |       03-avenida-maritima-audio-it.mp3
+|   |       03-avenida-maritima-audio-nl.mp3
+|   |       03-avenida-maritima-audio-pl.mp3
+|   |       03-avenida-maritima-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       03-avenida-maritima-photo-hero.jpeg
+|   |       03-avenida-maritima-photo-horizontal.jpeg
+|   |       03-avenida-maritima-photo-vertical.jpeg
+|   |       
+|   +---transcript
+|   |       03-avenida-maritima-transcript-de.txt
+|   |       03-avenida-maritima-transcript-en.txt
+|   |       03-avenida-maritima-transcript-es.txt
+|   |       03-avenida-maritima-transcript-fr.txt
+|   |       03-avenida-maritima-transcript-it.txt
+|   |       03-avenida-maritima-transcript-nl.txt
+|   |       03-avenida-maritima-transcript-pl.txt
+|   |       03-avenida-maritima-transcript-pt.txt
+|   |       
+|   \---videos
+|           03-avenida-maritima-video-horizontal.mp4
+|           
++---stop-04-monumento-al-pescador
+|   |   Stop 4 û Monumento al Pescador.docx
+|   |   
+|   +---audio
+|   |       04-monumento-al-pescador-audio-de.mp3
+|   |       04-monumento-al-pescador-audio-en.mp3
+|   |       04-monumento-al-pescador-audio-es.mp3
+|   |       04-monumento-al-pescador-audio-fr.mp3
+|   |       04-monumento-al-pescador-audio-it.mp3
+|   |       04-monumento-al-pescador-audio-nl.mp3
+|   |       04-monumento-al-pescador-audio-pl.mp3
+|   |       04-monumento-al-pescador-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       04-monumento-al-pescador-photo-hero.jpeg
+|   |       04-monumento-al-pescador-photo-vertical.jpeg
+|   |       
+|   +---transcript
+|   |       04-monumento-al-pescador-transcript-de.txt
+|   |       04-monumento-al-pescador-transcript-en.txt
+|   |       04-monumento-al-pescador-transcript-es.txt
+|   |       04-monumento-al-pescador-transcript-fr.txt
+|   |       04-monumento-al-pescador-transcript-it.txt
+|   |       04-monumento-al-pescador-transcript-nl.txt
+|   |       04-monumento-al-pescador-transcript-pl.txt
+|   |       04-monumento-al-pescador-transcript-pt.txt
+|   |       
+|   \---videos
+|           04-monumento-al-pescador-video-horizontal.mp4
+|           
++---stop-05-muelle-chico
+|   +---audio
+|   |       05-muelle-chico-audio-de.mp3
+|   |       05-muelle-chico-audio-en.mp3
+|   |       05-muelle-chico-audio-es.mp3
+|   |       05-muelle-chico-audio-fr.mp3
+|   |       05-muelle-chico-audio-it.mp3
+|   |       05-muelle-chico-audio-nl.mp3
+|   |       05-muelle-chico-audio-pl.mp3
+|   |       05-muelle-chico-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       05-muelle-chico-photo-hero.jpg
+|   |       05-muelle-chico-photo-horizontal.jpg
+|   |       05-muelle-chico-photo-vertical.jpg
+|   |       
+|   +---transcript
+|   |       05-muelle-chico-transcript-de.txt
+|   |       05-muelle-chico-transcript-en.txt
+|   |       05-muelle-chico-transcript-es.txt
+|   |       05-muelle-chico-transcript-fr.txt
+|   |       05-muelle-chico-transcript-it.txt
+|   |       05-muelle-chico-transcript-nl.txt
+|   |       05-muelle-chico-transcript-pl.txt
+|   |       05-muelle-chico-transcript-pt.txt
+|   |       
+|   \---videos
+|           05-muelle-chico-video-horizontal.mp4
+|           
++---stop-06-plaza-patricio-music-square
+|   |   Plaza Patricio Script.docx
+|   |   
+|   +---audio
+|   |       06-plaza-patricio-music-square-audio-de.mp3
+|   |       06-plaza-patricio-music-square-audio-en.mp3
+|   |       06-plaza-patricio-music-square-audio-es.mp3
+|   |       06-plaza-patricio-music-square-audio-fr.mp3
+|   |       06-plaza-patricio-music-square-audio-it.mp3
+|   |       06-plaza-patricio-music-square-audio-nl.mp3
+|   |       06-plaza-patricio-music-square-audio-pl.mp3
+|   |       06-plaza-patricio-music-square-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       06-plaza-patricio-music-square-photo-hero.jpeg
+|   |       06-plaza-patricio-music-square-photo-vertical.jpeg
+|   |       
+|   +---transcript
+|   |       06-plaza-patricio-music-square-transcript-de.txt
+|   |       06-plaza-patricio-music-square-transcript-en.txt
+|   |       06-plaza-patricio-music-square-transcript-es.txt
+|   |       06-plaza-patricio-music-square-transcript-fr.txt
+|   |       06-plaza-patricio-music-square-transcript-it.txt
+|   |       06-plaza-patricio-music-square-transcript-nl.txt
+|   |       06-plaza-patricio-music-square-transcript-pl.txt
+|   |       06-plaza-patricio-music-square-transcript-pt.txt
+|   |       
+|   \---videos
+|           06-plaza-patricio-music-square-video-horizontal.mp4
+|           06-plaza-patricio-music-square-video-vertical.mp4
+|           
++---stop-07-plaza-patricio-calero
+|   +---audio
+|   +---photos
+|   \---videos
++---stop-08-main-shopping-street
+|   |   Stop 8 û Corralejo Main Shopping Street_.docx
+|   |   
+|   +---audio
+|   |       08-main-shopping-street-audio-de.mp3
+|   |       08-main-shopping-street-audio-en.mp3
+|   |       08-main-shopping-street-audio-es.mp3
+|   |       08-main-shopping-street-audio-fr.mp3
+|   |       08-main-shopping-street-audio-it.mp3
+|   |       08-main-shopping-street-audio-nl.mp3
+|   |       08-main-shopping-street-audio-pl.mp3
+|   |       08-main-shopping-street-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       08-main-shopping-street-photo-hero.jpeg
+|   |       08-main-shopping-street-photo-horizontal.jpeg
+|   |       
+|   +---transcript
+|   |       08-main-shopping-street-transcript-de.txt
+|   |       08-main-shopping-street-transcript-en.txt
+|   |       08-main-shopping-street-transcript-es.txt
+|   |       08-main-shopping-street-transcript-fr.txt
+|   |       08-main-shopping-street-transcript-it.txt
+|   |       08-main-shopping-street-transcript-nl.txt
+|   |       08-main-shopping-street-transcript-pl.txt
+|   |       08-main-shopping-street-transcript-pt.txt
+|   |       
+|   \---videos
+|           08-main-shopping-street-video-horizontal.mp4
+|           
++---stop-09-rainbow-bench
+|   |   stop-09-rainbow-beach.docx
+|   |   
+|   +---audio
+|   |       09-rainbow-bench-audio-de.mp3
+|   |       09-rainbow-bench-audio-en.mp3
+|   |       09-rainbow-bench-audio-es.mp3
+|   |       09-rainbow-bench-audio-fr.mp3
+|   |       09-rainbow-bench-audio-it.mp3
+|   |       09-rainbow-bench-audio-nl.mp3
+|   |       09-rainbow-bench-audio-pl.mp3
+|   |       09-rainbow-bench-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       09-rainbow-bench-photo-hero.jpeg
+|   |       09-rainbow-bench-photo-horizontal.jpeg
+|   |       
+|   +---transcript
+|   |       09-rainbow-bench-transcript-de.txt
+|   |       09-rainbow-bench-transcript-en.txt
+|   |       09-rainbow-bench-transcript-es.txt
+|   |       09-rainbow-bench-transcript-fr.txt
+|   |       09-rainbow-bench-transcript-it.txt
+|   |       09-rainbow-bench-transcript-nl.txt
+|   |       09-rainbow-bench-transcript-pl.txt
+|   |       09-rainbow-bench-transcript-pt.txt
+|   |       
+|   \---videos
+|           09-rainbow-bench-video-horizontal.mp4
+|           
++---stop-10-playa-corralejo-viejo
+|   +---audio
+|   |       10-playa-corralejo-viejo-audio-de.mp3
+|   |       10-playa-corralejo-viejo-audio-en.mp3
+|   |       10-playa-corralejo-viejo-audio-es.mp3
+|   |       10-playa-corralejo-viejo-audio-fr.mp3
+|   |       10-playa-corralejo-viejo-audio-it.mp3
+|   |       10-playa-corralejo-viejo-audio-nl.mp3
+|   |       10-playa-corralejo-viejo-audio-pl.mp3
+|   |       10-playa-corralejo-viejo-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       10-playa-corralejo-viejo-photo-hero.jpeg
+|   |       10-playa-corralejo-viejo-photo-vertical.jpeg
+|   |       
+|   +---transcript
+|   |       10-playa-corralejo-viejo-transcript-de.txt
+|   |       10-playa-corralejo-viejo-transcript-en.txt
+|   |       10-playa-corralejo-viejo-transcript-es.txt
+|   |       10-playa-corralejo-viejo-transcript-fr.txt
+|   |       10-playa-corralejo-viejo-transcript-it.txt
+|   |       10-playa-corralejo-viejo-transcript-nl.txt
+|   |       10-playa-corralejo-viejo-transcript-pl.txt
+|   |       10-playa-corralejo-viejo-transcript-pt.txt
+|   |       
+|   \---videos
+|           10-playa-corralejo-viejo-video-horizontal.mp4
+|           10-playa-corralejo-viejo-video-vertical.mp4
+|           
++---stop-11-waikiki-beach
+|   +---audio
+|   |       11-waikiki-beach-audio-de.mp3
+|   |       11-waikiki-beach-audio-en.mp3
+|   |       11-waikiki-beach-audio-es.mp3
+|   |       11-waikiki-beach-audio-fr.mp3
+|   |       11-waikiki-beach-audio-it.mp3
+|   |       11-waikiki-beach-audio-nl.mp3
+|   |       11-waikiki-beach-audio-pl.mp3
+|   |       11-waikiki-beach-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       11-waikiki-beach-photo-hero.jpeg
+|   |       11-waikiki-beach-photo-vertical.jpeg
+|   |       
+|   +---transcript
+|   |       11-waikiki-beach-transcript-de.txt
+|   |       11-waikiki-beach-transcript-en.txt
+|   |       11-waikiki-beach-transcript-es.txt
+|   |       11-waikiki-beach-transcript-fr.txt
+|   |       11-waikiki-beach-transcript-it.txt
+|   |       11-waikiki-beach-transcript-nl.txt
+|   |       11-waikiki-beach-transcript-pl.txt
+|   |       11-waikiki-beach-transcript-pt.txt
+|   |       
+|   \---videos
+|           11-waikiki-beach-video-horizontal.mp4
+|           11-waikiki-beach-video-vertical.mp4
+|           
++---stop-12-secret-bench-galera-beach
+|   |   Stop 12-secret-bench-galera-beach.docx
+|   |   
+|   +---audio
+|   |       12-secret-bench-galera-beach-audio-de.mp3
+|   |       12-secret-bench-galera-beach-audio-en.mp3
+|   |       12-secret-bench-galera-beach-audio-es.mp3
+|   |       12-secret-bench-galera-beach-audio-fr.mp3
+|   |       12-secret-bench-galera-beach-audio-it.mp3
+|   |       12-secret-bench-galera-beach-audio-nl.mp3
+|   |       12-secret-bench-galera-beach-audio-pl.mp3
+|   |       12-secret-bench-galera-beach-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       12-secret-bench-galera-beach-photo-hero.jpeg
+|   |       12-secret-bench-galera-beach-photo-horizontal.jpeg
+|   |       
+|   +---transcript
+|   |       12-secret-bench-galera-beach-transcript-de.txt
+|   |       12-secret-bench-galera-beach-transcript-en.txt
+|   |       12-secret-bench-galera-beach-transcript-es.txt
+|   |       12-secret-bench-galera-beach-transcript-fr.txt
+|   |       12-secret-bench-galera-beach-transcript-it.txt
+|   |       12-secret-bench-galera-beach-transcript-nl.txt
+|   |       12-secret-bench-galera-beach-transcript-pl.txt
+|   |       12-secret-bench-galera-beach-transcript-pt.txt
+|   |       
+|   \---videos
+|           12-secret-bench-galera-beach-video-horizontal.mp4
+|           12-secret-bench-galera-beach-video-vertical.mp4
+|           
++---stop-13-galera-beach
+|   |   Galera Beach Script.docx
+|   |   
+|   +---audio
+|   |       13-galera-beach-audio-de.mp3
+|   |       13-galera-beach-audio-en.mp3
+|   |       13-galera-beach-audio-es.mp3
+|   |       13-galera-beach-audio-fr.mp3
+|   |       13-galera-beach-audio-it.mp3
+|   |       13-galera-beach-audio-nl.mp3
+|   |       13-galera-beach-audio-pl.mp3
+|   |       13-galera-beach-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       13-galera-beach-photo-hero.jpeg
+|   |       
+|   +---transcript
+|   |       13-galera-beach-transcript-de.txt
+|   |       13-galera-beach-transcript-en.txt
+|   |       13-galera-beach-transcript-es.txt
+|   |       13-galera-beach-transcript-fr.txt
+|   |       13-galera-beach-transcript-it.txt
+|   |       13-galera-beach-transcript-nl.txt
+|   |       13-galera-beach-transcript-pl.txt
+|   |       13-galera-beach-transcript-pt.txt
+|   |       
+|   \---videos
+|           13-galera-beach-video-horizontal.mp4
+|           
++---stop-14-pop-corn-beach
+|   +---audio
+|   |       14-pop-corn-beach-audio-de.mp3
+|   |       14-pop-corn-beach-audio-en.mp3
+|   |       14-pop-corn-beach-audio-es.mp3
+|   |       14-pop-corn-beach-audio-fr.mp3
+|   |       14-pop-corn-beach-audio-it.mp3
+|   |       14-pop-corn-beach-audio-nl.mp3
+|   |       14-pop-corn-beach-audio-pl.mp3
+|   |       14-pop-corn-beach-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       14-pop-corn-beach-photo-hero.jpeg
+|   |       14-pop-corn-beach-photo-vertical.jpeg
+|   |       
+|   +---transcript
+|   |       14-pop-corn-beach-transcript-de.txt
+|   |       14-pop-corn-beach-transcript-en.txt
+|   |       14-pop-corn-beach-transcript-es.txt
+|   |       14-pop-corn-beach-transcript-fr.txt
+|   |       14-pop-corn-beach-transcript-it.txt
+|   |       14-pop-corn-beach-transcript-nl.txt
+|   |       14-pop-corn-beach-transcript-pl.txt
+|   |       14-pop-corn-beach-transcript-pt.txt
+|   |       
+|   \---videos
+|           14-pop-corn-beach-video-horizontal.mp4
+|           14-pop-corn-beach-video-vertical.mp4
+|           
++---stop-15-el-campanario
+|   +---audio
+|   |       15-el-campanario-audio-de.mp3
+|   |       15-el-campanario-audio-en.mp3
+|   |       15-el-campanario-audio-es.mp3
+|   |       15-el-campanario-audio-fr.mp3
+|   |       15-el-campanario-audio-it.mp3
+|   |       15-el-campanario-audio-nl.mp3
+|   |       15-el-campanario-audio-pl.mp3
+|   |       15-el-campanario-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       15-el-campanario-photo-hero.jpg
+|   |       15-el-campanario-photo-horizontal.jpg
+|   |       15-el-campanario-photo-vertical.jpg
+|   |       
+|   +---transcript
+|   |       15-el-campanario-transcript-de.txt
+|   |       15-el-campanario-transcript-en.txt
+|   |       15-el-campanario-transcript-es.txt
+|   |       15-el-campanario-transcript-fr.txt
+|   |       15-el-campanario-transcript-it.txt
+|   |       15-el-campanario-transcript-nl.txt
+|   |       15-el-campanario-transcript-pl.txt
+|   |       15-el-campanario-transcript-pt.txt
+|   |       
+|   \---videos
+|           15-el-campanario-video-horizontal.mp4
+|           15-el-campanario-video-vertical.mp4
+|           
++---stop-16-el-campanario-bell-tower
+|   +---audio
+|   |       16-el-campanario-bell-tower-audio-de.mp3
+|   |       16-el-campanario-bell-tower-audio-en.mp3
+|   |       16-el-campanario-bell-tower-audio-es.mp3
+|   |       16-el-campanario-bell-tower-audio-fr.mp3
+|   |       16-el-campanario-bell-tower-audio-it.mp3
+|   |       16-el-campanario-bell-tower-audio-nl.mp3
+|   |       16-el-campanario-bell-tower-audio-pl.mp3
+|   |       16-el-campanario-bell-tower-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       16-el-campanario-bell-tower-photo-hero.jpeg
+|   |       
+|   +---transcript
+|   |       16-el-campanario-bell-tower-transcript-de.txt
+|   |       16-el-campanario-bell-tower-transcript-en.txt
+|   |       16-el-campanario-bell-tower-transcript-es.txt
+|   |       16-el-campanario-bell-tower-transcript-fr.txt
+|   |       16-el-campanario-bell-tower-transcript-it.txt
+|   |       16-el-campanario-bell-tower-transcript-nl.txt
+|   |       16-el-campanario-bell-tower-transcript-pl.txt
+|   |       16-el-campanario-bell-tower-transcript-pt.txt
+|   |       
+|   \---videos
+|           16-el-campanario-bell-tower-video-horizontal.mp4
+|           16-el-campanario-bell-tower-video-vertical.mp4
+|           
++---stop-17-mama-and-you
+|   |   Mama and You Script.docx
+|   |   
+|   +---audio
+|   |       17-mama-and-you-audio-de.mp3
+|   |       17-mama-and-you-audio-en.mp3
+|   |       17-mama-and-you-audio-es.mp3
+|   |       17-mama-and-you-audio-fr.mp3
+|   |       17-mama-and-you-audio-it.mp3
+|   |       17-mama-and-you-audio-nl.mp3
+|   |       17-mama-and-you-audio-pl.mp3
+|   |       17-mama-and-you-audio-pt.mp3
+|   |       
+|   +---photos
+|   |       17-mama-and-you-photo-hero.jpeg
+|   |       17-mama-and-you-photo-horizontal.jpeg
+|   |       
+|   +---transcript
+|   |       17-mama-and-you-transcript-de.txt
+|   |       17-mama-and-you-transcript-en.txt
+|   |       17-mama-and-you-transcript-es.txt
+|   |       17-mama-and-you-transcript-fr.txt
+|   |       17-mama-and-you-transcript-it.txt
+|   |       17-mama-and-you-transcript-nl.txt
+|   |       17-mama-and-you-transcript-pl.txt
+|   |       17-mama-and-you-transcript-pt.txt
+|   |       
+|   \---videos
+|           17-mama-and-you-video-vertical.mp4
+|           
+\---stop-18-botanic-park
+    |   Stop 18 û Parque Botßnico de Corralejo (La Tunera).docx
+    |   
+    +---audio
+    |       18-botanic-park-audio-de.mp3
+    |       18-botanic-park-audio-en.mp3
+    |       18-botanic-park-audio-es.mp3
+    |       18-botanic-park-audio-fr.mp3
+    |       18-botanic-park-audio-it.mp3
+    |       18-botanic-park-audio-nl.mp3
+    |       18-botanic-park-audio-pl.mp3
+    |       18-botanic-park-audio-pt.mp3
+    |       
+    +---photos
+    |       18-botanic-park-photo-hero.jpeg
+    |       18-botanic-park-photo-horizontal.jpeg
+    |       18-botanic-park-photo-vertical.jpeg
+    |       
+    +---transcript
+    |       18-botanic-park-transcript-de.txt
+    |       18-botanic-park-transcript-en.txt
+    |       18-botanic-park-transcript-es.txt
+    |       18-botanic-park-transcript-fr.txt
+    |       18-botanic-park-transcript-it.txt
+    |       18-botanic-park-transcript-nl.txt
+    |       18-botanic-park-transcript-pl.txt
+    |       18-botanic-park-transcript-pt.txt
+    |       
+    \---videos
+            18-botanic-park-video-horizontal.mp4
+            
