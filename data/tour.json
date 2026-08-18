@@ -2,6 +2,10 @@
   "app": {
     "id": "discover-corralejo",
     "defaultLanguage": "en",
+    "media": {
+      "baseUrl": "https://pub-a141a9ed023547fca5023101bb994921.r2.dev",
+      "tourPath": "tours/corralejo"
+    },
     "name": {
       "en": "Discover Corralejo",
       "es": "Discover Corralejo",
