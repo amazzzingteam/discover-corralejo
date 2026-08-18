@@ -6,6 +6,71 @@ const TOUR_DATA_FILES = {
   mapPoints: "data/map-points.json"
 };
 
+const MEDIA_PATH_PREFIX = "@media/";
+
+function resolveMediaPath(value, mediaConfig = {}) {
+  if (
+    typeof value !== "string" ||
+    !value.startsWith(MEDIA_PATH_PREFIX)
+  ) {
+    return value;
+  }
+
+  const baseUrl = String(
+    mediaConfig.baseUrl || ""
+  ).replace(/\/+$/, "");
+
+  const tourPath = String(
+    mediaConfig.tourPath || ""
+  )
+    .replace(/^\/+/, "")
+    .replace(/\/+$/, "");
+
+  const assetPath = value
+    .slice(MEDIA_PATH_PREFIX.length)
+    .replace(/^\/+/, "");
+
+  if (!baseUrl) {
+    console.warn(
+      "Media path could not be resolved because app.media.baseUrl is missing:",
+      value
+    );
+
+    return value;
+  }
+
+  return [
+    baseUrl,
+    tourPath,
+    assetPath
+  ]
+    .filter(Boolean)
+    .join("/");
+}
+
+function resolveMediaPaths(value, mediaConfig = {}) {
+  if (typeof value === "string") {
+    return resolveMediaPath(value, mediaConfig);
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((item) =>
+      resolveMediaPaths(item, mediaConfig)
+    );
+  }
+
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value).map(([key, item]) => [
+        key,
+        resolveMediaPaths(item, mediaConfig)
+      ])
+    );
+  }
+
+  return value;
+}
+
 let TOUR_APP_DATA = null;
 let tourDataPromise = null;
 
@@ -113,6 +178,27 @@ async function loadTourData() {
         );
       }
 
+      
+      const mediaConfig =
+        mergedTourFile.app?.media || {};
+
+      const resolvedStops =
+        resolveMediaPaths(stopsFile, mediaConfig);
+
+      const resolvedMapPoints =
+        resolveMediaPaths(
+          Array.isArray(mapPointsFile)
+            ? mapPointsFile
+            : [],
+          mediaConfig
+        );
+
+      mergedTourFile.app.placeholderAssets =
+        resolveMediaPaths(
+          mergedTourFile.app.placeholderAssets || {},
+          mediaConfig
+        );
+
       const languagesByCode = Object.fromEntries(
         mergedTourFile.languages.map((language) => [
           language.code,
@@ -121,14 +207,14 @@ async function loadTourData() {
       );
 
       const stopsBySlug = Object.fromEntries(
-        stopsFile.map((stop) => [
+        resolvedStops.map((stop) => [
           stop.slug,
           stop
         ])
       );
 
       const routes = Array.isArray(routesFile) ? routesFile : [];
-      const mapPoints = Array.isArray(mapPointsFile) ? mapPointsFile : [];
+      const mapPoints = resolvedMapPoints;
       const routesById = Object.fromEntries(
         routes.map((route) => [route.id, route])
       );
@@ -144,7 +230,7 @@ async function loadTourData() {
         languages: mergedTourFile.languages,
         languagesByCode,
         ui: mergedTourFile.ui,
-        stops: stopsFile,
+        stops: resolvedStops,
         stopsBySlug,
         routes,
         routesById,
