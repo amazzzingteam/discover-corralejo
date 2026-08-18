@@ -71,11 +71,15 @@ function addOfflineUrl(urls, value) {
   if (typeof value !== "string" || !value.trim()) {
     return;
   }
+  
+  try {
+    const url = new URL(value, document.baseURI);
 
-  const url = new URL(value, document.baseURI);
-
-  if (url.origin === window.location.origin) {
-    urls.add(url.href);
+    if (url.protocol === "http:" || url.protocol === "https:") {
+      urls.add(url.href);
+    }
+  } catch (error) {
+    console.warn("Invalid offline asset URL:", value, error);
   }
 }
 
