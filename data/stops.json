@@ -203,10 +203,10 @@
       ],
       "videos": [
         {
-          "src": "@media/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
+          "src": "@media/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         },
         {
-          "src": "@media/stops/stop-02-harbour/videos/02-harbour-video-vertical.mp4"
+          "src": "@media/stop-02-harbour/videos/02-harbour-video-vertical.mp4"
         }
       ]
     },
