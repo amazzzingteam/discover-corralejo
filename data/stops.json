@@ -192,33 +192,33 @@
       },
       "photos": [
         {
-          "src": "@media/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
+          "src": "@media/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         },
         {
-          "src": "@media/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
+          "src": "@media/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
         },
         {
-          "src": "@media/stop-02-harbour/photos/02-harbour-photo-horizontal-2.jpeg"
+          "src": "@media/stops/stop-02-harbour/photos/02-harbour-photo-horizontal-2.jpeg"
         }
       ],
       "videos": [
         {
-          "src": "@media/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
+          "src": "@media/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4"
         },
         {
-          "src": "@media/stop-02-harbour/videos/02-harbour-video-vertical.mp4"
+          "src": "@media/stops/stop-02-harbour/videos/02-harbour-video-vertical.mp4"
         }
       ]
     },
     "audio": {
-      "en": "@media/stop-02-harbour/audio/02-harbour-audio-en.mp3",
-      "es": "@media/stop-02-harbour/audio/02-harbour-audio-es.mp3",
-      "fr": "@media/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
-      "de": "@media/stop-02-harbour/audio/02-harbour-audio-de.mp3",
-      "it": "@media/stop-02-harbour/audio/02-harbour-audio-it.mp3",
-      "pl": "@media/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
-      "nl": "@media/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
-      "pt": "@media/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
+      "en": "@media/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
+      "es": "@media/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
+      "fr": "@media/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
+      "de": "@media/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
+      "it": "@media/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
+      "pl": "@media/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
+      "nl": "@media/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "@media/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
     },
     "maps": {
       "location": "https://maps.app.goo.gl/pPreZsPUbtiAwL7f6"
