@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v23-offline-map-cache-fix";
+const CACHE_VERSION = "v24-r2-offline-media";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -164,14 +164,24 @@ async function handleRangeRequest(request) {
     return null;
   }
 
+  const requestUrl = new URL(request.url);
+  
+  const isSameOrigin =
+    requestUrl.origin === self.location.origin;
+  
   const fullRequest = new Request(request.url, {
     method: "GET",
     headers: {
-      Accept: request.headers.get("accept") || "*/*"
+      Accept:
+        request.headers.get("accept") || "*/*"
     },
-    credentials: request.credentials,
-    mode: request.mode,
-    redirect: request.redirect
+    credentials: isSameOrigin
+      ? "same-origin"
+      : "omit",
+    mode: isSameOrigin
+      ? "same-origin"
+      : "cors",
+    redirect: "follow"
   });
 
   let cachedResponse = await getCachedResponse(fullRequest);
@@ -312,16 +322,23 @@ async function cacheOfflineTour(urls, clientId, requestId) {
   for (const url of uniqueUrls) {
     try {
       const absoluteUrl = new URL(url, self.registration.scope);
+      const isSameOrigin =
+        absoluteUrl.origin === self.location.origin;
 
-      if (absoluteUrl.origin !== self.location.origin) {
-        throw new Error("Only same-origin assets can be cached.");
+      if (
+        absoluteUrl.protocol !== "http:" &&
+        absoluteUrl.protocol !== "https:"
+      ) {
+        throw new Error("Unsupported offline asset URL.");
       }
-
+      
       const request = new Request(absoluteUrl.href, {
         method: "GET",
-        credentials: "same-origin",
+        mode: isSameOrigin ? "same-origin" : "cors",
+        credentials: isSameOrigin ? "same-origin" : "omit",
         cache: "reload"
       });
+      
       const response = await fetch(request);
 
       if (!response.ok || response.type === "opaque") {
@@ -413,7 +430,14 @@ self.addEventListener("fetch", (event) => {
 
   const requestUrl = new URL(event.request.url);
 
-  if (requestUrl.origin !== self.location.origin) {
+  const isSameOrigin =
+    requestUrl.origin === self.location.origin;
+  
+  const isTourMedia =
+    requestUrl.protocol === "https:" &&
+    requestUrl.pathname.startsWith("/tours/");
+  
+  if (!isSameOrigin && !isTourMedia) {
     return;
   }
 
