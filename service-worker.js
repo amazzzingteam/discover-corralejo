@@ -1,7 +1,7 @@
 // Keep the legacy cache prefix for now so activation can delete older
 // Discover Corralejo cache generations created before the multi-tour refactor.
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v33-tour-aware-analytics";
+const CACHE_VERSION = "v37-discover-canarias-home";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -12,6 +12,8 @@ const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
 const CORE_FILES = [
   "./",
   "./index.html",
+  "./tours.html",
+  "./tour.html",
   "./route.html",
   "./stop.html",
   "./bus-stop.html",
@@ -30,6 +32,7 @@ const CORE_FILES = [
   "./assets/vendor/pmtiles.js",
   "./data/tours.json",
   "./js/data-loader.js",
+  "./js/tours.js",
   "./js/common.js",
   "./js/analytics.js",
   "./js/offline.js",
@@ -48,6 +51,8 @@ const CORE_FILES = [
 
 const REQUIRED_CORE_FILES = new Set([
   "./index.html",
+  "./tours.html",
+  "./tour.html",
   "./route.html",
   "./stop.html",
   "./bus-stop.html",
@@ -59,6 +64,7 @@ const REQUIRED_CORE_FILES = new Set([
   "./assets/vendor/pmtiles.js",
   "./data/tours.json",
   "./js/data-loader.js",
+  "./js/tours.js",
   "./js/common.js",
   "./js/map-points.js",
   "./js/offline.js",

@@ -111,6 +111,7 @@ function createLanguageButton(language) {
 
     selectedLanguageCode = language.code;
     applyPageTranslations();
+    applyWelcomeTourBranding();
     setTranslatedDocumentTitle("chooseLanguage");
     refreshAnalyticsConsentUi();
     updateLanguageSelection();
@@ -169,6 +170,27 @@ function setupLanguageSheetControls() {
   });
 }
 
+
+function applyWelcomeTourBranding() {
+  const appName = String(getAppName() || "").trim();
+  if (!appName) {
+    return;
+  }
+
+  const brand = document.querySelector("[data-app-name-aria-label]");
+  brand?.setAttribute("aria-label", appName);
+
+  const prefix = document.querySelector("[data-welcome-title-prefix]");
+  const place = document.querySelector("[data-welcome-title-place]");
+  if (!prefix || !place) {
+    return;
+  }
+
+  const [firstWord, ...remainingWords] = appName.split(/\s+/);
+  prefix.textContent = firstWord || appName;
+  place.textContent = remainingWords.join(" ") || "";
+}
+
 function applyWelcomeFeaturedMedia() {
   const imageUrl = getTourData().app.featuredMedia?.welcomeHero;
 
@@ -187,6 +209,7 @@ function applyWelcomeFeaturedMedia() {
 
 function initialiseLanguagePage() {
   applyPageTranslations();
+  applyWelcomeTourBranding();
   applyWelcomeFeaturedMedia();
   setTranslatedDocumentTitle("chooseLanguage");
 

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "pdr-provisional-01",
+    "slug": "working-stop-01",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "01",
+    "position": 1,
+    "matchingFolder": null,
+    "role": "Working start point",
+    "typeKey": "startPoint",
+    "typeLabel": {
+      "en": "Start point"
+    },
+    "displayName": {
+      "en": "Cruise Port - Welcome to Puerto del Rosario"
+    },
+    "workingLocation": "Puerto del Rosario Port - cruise passenger disembarkation / pedestrian exit area",
+    "handoverStatus": "Exact listening pin to update",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Cruise Port - Welcome to Puerto del Rosario"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-02",
+      "slug": "working-stop-02",
+      "displayName": {
+        "en": "The Working Harbour & Birth of Puerto de Cabras"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-02",
+    "slug": "working-stop-02",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "02",
+    "position": 2,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "The Working Harbour & Birth of Puerto de Cabras"
+    },
+    "workingLocation": "Puerto del Rosario Port / harbour waterfront",
+    "handoverStatus": "Exact public viewpoint to update",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "The Working Harbour & Birth of Puerto de Cabras"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-03",
+      "slug": "working-stop-03",
+      "displayName": {
+        "en": "Las Escuevas"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-03",
+    "slug": "working-stop-03",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "03",
+    "position": 3,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Las Escuevas"
+    },
+    "workingLocation": "Plaza de las Escuevas, Av. Reyes de España, 3, 35600 Puerto del Rosario",
+    "handoverStatus": "Working location",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Las Escuevas"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-04",
+      "slug": "working-stop-04",
+      "displayName": {
+        "en": "Avenida Maritima + Open-Air Sculpture City"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-04",
+    "slug": "working-stop-04",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "04",
+    "position": 4,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Avenida Maritima + Open-Air Sculpture City"
+    },
+    "workingLocation": "Avenida Maritima, Puerto del Rosario",
+    "handoverStatus": "Exact sculpture/listening point to update",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Avenida Maritima + Open-Air Sculpture City"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-05",
+      "slug": "working-stop-05",
+      "displayName": {
+        "en": "Iglesia de Nuestra Señora del Rosario"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-05",
+    "slug": "working-stop-05",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "05",
+    "position": 5,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Iglesia de Nuestra Señora del Rosario"
+    },
+    "workingLocation": "C. Secundino Alonso, 20, 35600 Puerto del Rosario",
+    "handoverStatus": "Working location",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Iglesia de Nuestra Señora del Rosario"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-06",
+      "slug": "working-stop-06",
+      "displayName": {
+        "en": "Casa Museo Miguel de Unamuno"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-06",
+    "slug": "working-stop-06",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "06",
+    "position": 6,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Casa Museo Miguel de Unamuno"
+    },
+    "workingLocation": "C. Virgen del Rosario, 11, 35600 Puerto del Rosario",
+    "handoverStatus": "Working location",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Casa Museo Miguel de Unamuno"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-07",
+      "slug": "working-stop-07",
+      "displayName": {
+        "en": "Institutional / Capital Story"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-07",
+    "slug": "working-stop-07",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "07",
+    "position": 7,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Institutional / Capital Story"
+    },
+    "workingLocation": "Cabildo Insular de Fuerteventura area, Puerto del Rosario",
+    "handoverStatus": "Exact listening position to confirm",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Institutional / Capital Story"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-08",
+      "slug": "working-stop-08",
+      "displayName": {
+        "en": "Primero de Mayo - Live the City"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-08",
+    "slug": "working-stop-08",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "08",
+    "position": 8,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Primero de Mayo - Live the City"
+    },
+    "workingLocation": "Calle Primero de Mayo pedestrian/commercial area",
+    "handoverStatus": "Exact experience point to update",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Primero de Mayo - Live the City"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-09",
+      "slug": "working-stop-09",
+      "displayName": {
+        "en": "Urban Art / Murals"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-09",
+    "slug": "working-stop-09",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "09",
+    "position": 9,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Urban Art / Murals"
+    },
+    "workingLocation": "Puerto del Rosario centre - on the walking route",
+    "handoverStatus": "Specific artwork/pin being selected",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Urban Art / Murals"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-10",
+      "slug": "working-stop-10",
+      "displayName": {
+        "en": "Municipal Market / Local Life"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-10",
+    "slug": "working-stop-10",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "10",
+    "position": 10,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Municipal Market / Local Life"
+    },
+    "workingLocation": "Mercado Municipal de Puerto del Rosario",
+    "handoverStatus": "Exact entrance/pin to verify",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Municipal Market / Local Life"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-11",
+      "slug": "working-stop-11",
+      "displayName": {
+        "en": "Playa Chica / Los Pozos"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-11",
+    "slug": "working-stop-11",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "11",
+    "position": 11,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Playa Chica / Los Pozos"
+    },
+    "workingLocation": "Playa de los Pozos o Playa Chica, Puerto del Rosario",
+    "handoverStatus": "Working location",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Playa Chica / Los Pozos"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "nextStop": {
+      "id": "pdr-provisional-12",
+      "slug": "working-stop-12",
+      "displayName": {
+        "en": "Senda de los Cetaceos - Atlantic Finale"
+      },
+      "navigationStatus": "provisional-internal-only"
+    }
+  },
+  {
+    "id": "pdr-provisional-12",
+    "slug": "working-stop-12",
+    "identityStatus": "provisional",
+    "published": true,
+    "number": "12",
+    "position": 12,
+    "matchingFolder": null,
+    "role": "Working stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop"
+    },
+    "displayName": {
+      "en": "Senda de los Cetaceos - Atlantic Finale"
+    },
+    "workingLocation": "Rorcual Tropical / Parque de Playa Chica, Puerto del Rosario",
+    "handoverStatus": "Exact pin to confirm",
+    "description": {
+      "en": "Draft technical scaffold only. Final verified stop content will be added from the approved Puerto del Rosario handover package."
+    },
+    "media": {
+      "heroImage": "",
+      "heroAlt": {
+        "en": "Senda de los Cetaceos - Atlantic Finale"
+      },
+      "photos": [],
+      "videos": []
+    },
+    "audio": {},
+    "maps": {},
+    "contentStatus": "provisional",
+    "transcriptFiles": {},
+    "isFinal": true,
+    "finalButtonLabel": {
+      "en": "Finish technical preview"
+    }
+  }
+]

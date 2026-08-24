@@ -57,14 +57,31 @@ function createRouteCard(stop, completedStopIds, currentStopId) {
 
   const image = document.createElement("img");
   image.className = "stop-card-image";
-  image.src = stop.media.heroImage;
+  const heroImageUrl = stop.media?.heroImage || getPlaceholderAsset("heroImage");
+
+  if (heroImageUrl) {
+    image.src = heroImageUrl;
+    image.hidden = false;
+    imageWrap.classList.remove("is-media-pending");
+  } else {
+    image.removeAttribute("src");
+    image.hidden = true;
+    imageWrap.classList.add("is-media-pending");
+  }
+
   image.addEventListener("error", () => {
     const fallbackHero = getPlaceholderAsset("heroImage");
     if (fallbackHero && image.src !== new URL(fallbackHero, document.baseURI).href) {
       image.src = fallbackHero;
+      image.hidden = false;
+      imageWrap.classList.remove("is-media-pending");
+      return;
     }
+
+    image.hidden = true;
+    imageWrap.classList.add("is-media-pending");
   }, { once: true });
-  image.alt = getLocalizedValue(stop.media.heroAlt || stop.displayName);
+  image.alt = getLocalizedValue(stop.media?.heroAlt || stop.displayName);
   image.loading = "lazy";
   image.decoding = "async";
 
@@ -129,8 +146,20 @@ function renderUpNextCard(currentStop) {
   const mapButton = document.querySelector("#up-next-map");
 
   card.hidden = false;
-  image.src = currentStop.media.heroImage;
-  image.alt = getLocalizedValue(currentStop.media.heroAlt || currentStop.displayName);
+  const upNextImageWrap = image?.closest(".up-next-image-wrap");
+  const upNextHero = currentStop.media?.heroImage || getPlaceholderAsset("heroImage");
+
+  if (upNextHero) {
+    image.src = upNextHero;
+    image.hidden = false;
+    upNextImageWrap?.classList.remove("is-media-pending");
+  } else {
+    image.removeAttribute("src");
+    image.hidden = true;
+    upNextImageWrap?.classList.add("is-media-pending");
+  }
+
+  image.alt = getLocalizedValue(currentStop.media?.heroAlt || currentStop.displayName);
   number.textContent = currentStop.number;
   heading.textContent = getLocalizedValue(currentStop.displayName);
   openButton.href = buildTourUrl("stop.html", { stop: currentStop.slug });
@@ -147,7 +176,15 @@ function renderUpNextCard(currentStop) {
     meta.textContent = getLocalizedValue(currentStop.typeLabel) || translate(currentStop.typeKey);
   }
 
+  const mapAvailable = getTourData().app.map?.enabled !== false &&
+    Boolean(getTourData().app.map?.pmtiles);
+  mapButton.hidden = !mapAvailable;
+
   mapButton.onclick = () => {
+    if (!mapAvailable) {
+      return;
+    }
+
     activateRouteView("map", currentStop);
 
     window.setTimeout(() => {
@@ -289,6 +326,8 @@ function initialiseRouteOverviewMap(stops, completedStopIds, currentStopId) {
   if (!container) {
     return;
   }
+
+  container.setAttribute("aria-label", `${getAppName()} route map`);
 
   const mapConfig = getTourMapConfig();
   const viewConfig = getTourMapViewConfig("overview");
@@ -486,8 +525,26 @@ function activateRouteView(viewName, previewStop = null) {
 }
 
 function setupRouteViewSwitch() {
-  document.querySelector("#route-view-list")?.addEventListener("click", () => activateRouteView("list"));
-  document.querySelector("#route-view-map")?.addEventListener("click", () => activateRouteView("map"));
+  const listButton = document.querySelector("#route-view-list");
+  const mapButton = document.querySelector("#route-view-map");
+  const mapPanel = document.querySelector("#route-map-panel");
+  const mapAvailable = getTourData().app.map?.enabled !== false &&
+    Boolean(getTourData().app.map?.pmtiles);
+
+  if (!mapAvailable) {
+    if (mapButton) {
+      mapButton.hidden = true;
+      mapButton.setAttribute("aria-hidden", "true");
+    }
+    if (mapPanel) {
+      mapPanel.hidden = true;
+    }
+    listButton?.setAttribute("aria-selected", "true");
+    return;
+  }
+
+  listButton?.addEventListener("click", () => activateRouteView("list"));
+  mapButton?.addEventListener("click", () => activateRouteView("map"));
 }
 
 function isIosDevice() {
@@ -507,11 +564,18 @@ function setupRouteActions() {
   const offlineStatus = document.querySelector("#offline-download-status");
   const offlineProgress = document.querySelector("#offline-download-progress");
 
-  setupPwaInstallButton(installButton);
+  const installEnabled = getTourData().app.pwa?.installEnabled !== false;
+
+  if (installEnabled) {
+    setupPwaInstallButton(installButton);
+  } else if (installButton) {
+    installButton.hidden = true;
+  }
+
   setupOfflineDownload(offlineButton, offlineStatus, offlineProgress);
 
   if (iosHelp) {
-    iosHelp.hidden = !(isIosDevice() && !isStandaloneDisplay());
+    iosHelp.hidden = !installEnabled || !(isIosDevice() && !isStandaloneDisplay());
   }
 
   exitButton?.addEventListener("click", () => {
@@ -525,7 +589,7 @@ function setupRouteActions() {
     trackAnalyticsEventAndNavigate(
       "tour_exit",
       eventParameters,
-      buildTourUrl("index.html", { from: "route_overview" })
+      "index.html?from=tour_exit"
     );
   });
 }

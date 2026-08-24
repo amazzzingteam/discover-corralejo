@@ -421,7 +421,7 @@ function showDataLoadError(error) {
       <section class="content-section">
         <h1>Tour not found</h1>
         <p>The requested tour is not available in this version of Discover Canarias.</p>
-        <p><a class="button" href="index.html">Open Discover Corralejo</a></p>
+        <p><a class="button" href="index.html">Choose a tour</a></p>
       </section>
     `;
     return;

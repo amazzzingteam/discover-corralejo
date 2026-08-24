@@ -154,7 +154,7 @@ function requireSelectedLanguage() {
     return true;
   }
 
-  window.location.replace(buildTourUrl("index.html"));
+  window.location.replace(buildTourUrl("tour.html"));
   return false;
 }
 
@@ -299,7 +299,7 @@ function buildTourUrl(pagePath, parameters = {}) {
 
 function applyTourContextToInternalLinks(root = document) {
   const appPages = new Set([
-    "index.html",
+    "tour.html",
     "route.html",
     "stop.html",
     "bus-stop.html",

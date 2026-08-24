@@ -458,7 +458,7 @@ function setupBusStopActions(point, nearestEntry) {
     trackAnalyticsEventAndNavigate(
       "tour_exit",
       parameters,
-      buildTourUrl("index.html", { from: "exit_tour" })
+      "index.html?from=exit_tour"
     );
   });
 }

@@ -1,6 +1,8 @@
 const OFFLINE_APP_SHELL_URLS = Object.freeze([
   "./",
   "index.html",
+  "tours.html",
+  "tour.html",
   "route.html",
   "stop.html",
   "bus-stop.html",
@@ -34,6 +36,10 @@ const OFFLINE_APP_SHELL_URLS = Object.freeze([
   "assets/icons/icon-192.png",
   "assets/icons/icon-512.png"
 ]);
+
+function isOfflineTourDownloadEnabled() {
+  return getTourData().app.offline?.enabled !== false;
+}
 
 const offlineUiState = {
   initialised: false,
@@ -354,6 +360,15 @@ function updateDownloadControls() {
     return;
   }
 
+  if (!isOfflineTourDownloadEnabled()) {
+    button.disabled = true;
+    button.textContent = translate("offlinePendingButton");
+    statusElement.textContent = translate("offlinePending");
+    statusElement.dataset.state = "warning";
+    progressElement?.setAttribute("hidden", "");
+    return;
+  }
+
   if (!("serviceWorker" in navigator) || !("caches" in window)) {
     button.disabled = true;
     button.textContent = translate("downloadOfflineButton");
@@ -391,6 +406,15 @@ function updateDownloadControls() {
 }
 
 async function refreshOfflineReadiness() {
+  if (!isOfflineTourDownloadEnabled()) {
+    offlineUiState.ready = false;
+    offlineUiState.checking = false;
+    offlineUiState.missingCount = null;
+    updateDownloadControls();
+    updateGlobalConnectivityMessage();
+    return;
+  }
+
   if (!("serviceWorker" in navigator) || !("caches" in window)) {
     offlineUiState.ready = false;
     offlineUiState.missingCount = null;
@@ -520,6 +544,11 @@ async function setupOfflineDownload(button, statusElement, progressElement = nul
   }
 
   button.dataset.offlineSetup = "true";
+
+  if (!isOfflineTourDownloadEnabled()) {
+    updateDownloadControls();
+    return;
+  }
 
   if (!("serviceWorker" in navigator) || !("caches" in window)) {
     updateDownloadControls();

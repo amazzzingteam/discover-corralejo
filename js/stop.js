@@ -528,7 +528,7 @@ function setupStopActions(stop) {
     event.preventDefault();
     trackStopExit(
       "home",
-      buildTourUrl("index.html", { from: "stop_page" })
+      buildTourUrl("tour.html", { from: "stop_page" })
     );
   });
 
@@ -546,7 +546,7 @@ function setupStopActions(stop) {
     trackAnalyticsEventAndNavigate(
       "tour_exit",
       parameters,
-      buildTourUrl("index.html", { from: "exit_tour" })
+      "index.html?from=exit_tour"
     );
   });
 }
@@ -561,7 +561,16 @@ function renderStop(stop) {
 
   const previewBadge = document.querySelector("#preview-media-badge");
   if (previewBadge) {
-    previewBadge.hidden = !(stop.usesPlaceholderMedia || stop.contentStatus === "placeholder");
+    const isProvisional = stop.contentStatus === "provisional";
+    previewBadge.hidden = !(
+      stop.usesPlaceholderMedia ||
+      stop.contentStatus === "placeholder" ||
+      isProvisional
+    );
+
+    if (isProvisional) {
+      previewBadge.textContent = translate("finalMediaPending");
+    }
   }
 
   document.querySelector(".stop-hero-card")?.classList.add(
@@ -614,15 +623,33 @@ function renderStop(stop) {
   const heroImage = document.querySelector(
     "#stop-hero"
   );
-  heroImage.src = stop.media.heroImage;
+  const heroCard = heroImage?.closest(".stop-hero-card");
+  const heroImageUrl = stop.media?.heroImage || getPlaceholderAsset("heroImage");
+
+  if (heroImageUrl) {
+    heroImage.src = heroImageUrl;
+    heroImage.hidden = false;
+    heroCard?.classList.remove("is-media-pending");
+  } else {
+    heroImage.removeAttribute("src");
+    heroImage.hidden = true;
+    heroCard?.classList.add("is-media-pending");
+  }
+
   heroImage.addEventListener("error", () => {
     const fallbackHero = getPlaceholderAsset("heroImage");
     if (fallbackHero && heroImage.src !== new URL(fallbackHero, document.baseURI).href) {
       heroImage.src = fallbackHero;
+      heroImage.hidden = false;
+      heroCard?.classList.remove("is-media-pending");
+      return;
     }
+
+    heroImage.hidden = true;
+    heroCard?.classList.add("is-media-pending");
   }, { once: true });
   heroImage.alt = getLocalizedValue(
-    stop.media.heroAlt || stop.displayName
+    stop.media?.heroAlt || stop.displayName
   );
 
   renderTranscript(stop);
@@ -634,7 +661,20 @@ function renderStop(stop) {
   const mapsButton = document.querySelector(
     "#maps-button"
   );
-  mapsButton.href = stop.maps.location;
+  const locationSection = mapsButton?.closest(".location-card");
+  const locationUrl = stop.maps?.location;
+
+  if (locationUrl) {
+    mapsButton.href = locationUrl;
+    if (locationSection) {
+      locationSection.hidden = false;
+    }
+  } else {
+    mapsButton.removeAttribute("href");
+    if (locationSection) {
+      locationSection.hidden = true;
+    }
+  }
 
   const nextStopButton = document.querySelector(
     "#next-stop-button"

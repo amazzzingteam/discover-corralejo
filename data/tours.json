@@ -9,6 +9,15 @@
       "status": "published",
       "dataPath": "data/tours/corralejo",
       "legacyStorageId": "discover-corralejo"
+    },
+    {
+      "id": "puerto-del-rosario",
+      "number": "02",
+      "slug": "puerto-del-rosario",
+      "displayName": "Discover Puerto del Rosario",
+      "status": "provisional",
+      "dataPath": "data/tours/puerto-del-rosario",
+      "previewOnly": true
     }
   ]
 }

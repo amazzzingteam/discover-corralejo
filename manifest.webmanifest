@@ -1,8 +1,8 @@
 {
   "id": "./index.html",
-  "name": "Discover Corralejo",
-  "short_name": "Corralejo",
-  "description": "A multilingual walking tour of Corralejo.",
+  "name": "Discover Canarias",
+  "short_name": "Discover",
+  "description": "A multilingual self-guided walking tour platform for the Canary Islands.",
   "start_url": "./index.html?source=pwa_launch",
   "scope": "./",
   "display": "standalone",
@@ -52,14 +52,14 @@
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Discover Corralejo welcome screen"
+      "label": "Discover Corralejo tour welcome screen in Discover Canarias"
     },
     {
       "src": "assets/screenshots/route-mobile.png",
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Corralejo walking route overview"
+      "label": "Discover Corralejo route overview in Discover Canarias"
     }
   ]
 }

@@ -1,6 +1,6 @@
-# Discover Corralejo PWA
+# Discover Canarias PWA
 
-Discover Corralejo is a mobile-first self-guided walking tour implemented as a static PWA.
+Discover Canarias is a mobile-first reusable walking-tour PWA. Discover Corralejo is Tour 01 and the repository now also contains a provisional Puerto del Rosario Tour 02 scaffold for technical testing.
 
 ## Run the project
 
@@ -117,6 +117,23 @@ Contains the three bus reference points and their R2 photo/video paths.
 
 Reusable example for future stops. Media and transcript paths use the same `@media/` convention.
 
+
+## Active-tour branding
+
+Shared pages should not hard-code a specific tour's visible identity. The welcome hero reads the selected tour name from `app.name`, and shared route/map labels are populated from the active tour at runtime.
+
+For example:
+
+```text
+?tour=corralejo
+→ Discover Corralejo
+
+?tour=puerto-del-rosario
+→ Discover Puerto del Rosario
+```
+
+The current web-app manifest / Apple install metadata still uses the established Corralejo production PWA identity. Puerto PWA installation is disabled while Tour 02 is provisional, so that install identity is intentionally not being migrated in this step.
+
 ## Tour-aware navigation
 
 Internal navigation is generated with the shared `buildTourUrl()` helper in `js/common.js`.
@@ -148,7 +165,7 @@ This prevents future tours from sharing progress even if the reusable applicatio
 
 `data/tours.json` gives Corralejo a temporary `legacyStorageId` of `discover-corralejo`. The storage helpers can read the old Corralejo keys as a backward-compatibility fallback, while all new writes use the `corralejo` namespace. Resetting Corralejo progress clears both the current and legacy Corralejo session keys so old state cannot reappear.
 
-Theme storage remains a shared UI preference and analytics/consent storage is handled separately in `js/analytics.js`; analytics storage is intentionally left for the dedicated analytics refactor.
+Theme storage remains a shared UI preference. Analytics consent is shared across the Discover application, while tour-specific analytics session state is isolated by active tour ID.
 
 ## Offline mode
 
@@ -203,3 +220,65 @@ The website can later move away from GitHub hosting without changing the R2 cont
 The current service-worker cache prefix remains `discover-corralejo-v3` intentionally so activation can remove older cache generations already stored on existing devices. The cache **version** is bumped for each offline change; the prefix can be renamed later with an explicit legacy-cache cleanup plan.
 
 At install time, the core cache must not contain any `data/tours/corralejo/...` files, Corralejo route GeoJSON, or `assets/maps/corralejo.pmtiles`. `data/tours.json` remains part of the shared shell because it is the registry used to resolve available tours.
+
+
+## Step 8A — Discover Canarias tour selector
+
+The shared tour selector reads `data/tours.json` and renders the tours registered in the application. `index.html` is now the primary Discover Canarias home screen; `tours.html` remains as a compatibility alias.
+
+- Published tours with a valid `dataPath` can be opened.
+- Provisional tours marked `previewOnly: true` can be opened from the selector as clearly labelled technical previews; other draft/provisional tours can remain disabled.
+- Archived/hidden tours are not displayed.
+- Step 8A keeps the selector copy in English as draft UI text; verified selector translations should be added before production while the selected tour continues to provide the full 8-language experience.
+- Selecting a tour opens `tour.html?tour=<tour-id>&source=tour_selector`.
+- Legacy `index.html?tour=<tour-id>` links are redirected to the corresponding `tour.html` landing page for backwards compatibility.
+- Invalid explicit tour URLs now offer a link back to the Discover Canarias home screen.
+- The selector page and its JavaScript are part of the shared service-worker app shell.
+
+Puerto del Rosario was intentionally not registered in Step 8A. It is added in Step 9A only after its provisional scaffold exists.
+
+
+## Step 9A — Puerto del Rosario provisional Tour 02 scaffold
+
+Puerto del Rosario now exists as a second tour data package under:
+
+```text
+data/tours/puerto-del-rosario/
+  tour.json
+  stops.json
+  routes.json
+  map-points.json
+  content-extension.json
+```
+
+`data/tours.json` registers it as `provisional` with `previewOnly: true`. The Discover Canarias selector therefore shows Tour 02 as a clearly labelled **Technical preview** that can be opened for internal/client demonstration.
+
+```text
+tour.html?tour=puerto-del-rosario
+```
+
+The 12 records in `stops.json` use the working stop names and working location/status notes from the Puerto del Rosario Technical Brief V3. The working order, IDs and slugs are explicitly provisional. No coordinates, Google Maps links, R2 media paths, route geometry, PMTiles, audio or transcript files are invented.
+
+For the technical preview:
+
+- map support is disabled until confirmed Puerto map coverage/PMTiles exists;
+- offline tour download is disabled until the final content/map package exists;
+- PWA install remains disabled for the provisional Puerto preview, while the shared manifest now uses the Discover Canarias platform identity;
+- analytics sending is disabled for the provisional scaffold, although the shared analytics helpers still resolve `tour_id` as `puerto-del-rosario`;
+- missing hero/gallery/video/audio/transcript/location content is handled gracefully by the shared renderer;
+- internal Next Stop navigation follows only the current provisional working order and has no invented external directions.
+
+When the approved Puerto package arrives, replace the provisional IDs/slugs/order/location data and add final media/routes/maps through the tour data files rather than creating Puerto-specific HTML/JavaScript.
+
+## Step 10 — Discover Canarias as the main entry screen
+
+`index.html` is now the platform home screen. Opening the site root presents **Discover Canarias** and the tour selector immediately.
+
+- Tour 01 — Discover Corralejo opens normally.
+- Tour 02 — Discover Puerto del Rosario is available as a clearly labelled **Technical preview** for demonstration while its final route/content package is pending.
+- The per-tour language/welcome screen now lives at `tour.html`.
+- Old links such as `index.html?tour=corralejo` remain compatible and redirect to `tour.html?tour=corralejo`.
+- "Change language" returns to the current tour's `tour.html` screen.
+- "Exit tour" returns to the Discover Canarias home selector.
+- The PWA manifest now uses the shared Discover Canarias identity.
+- `tours.html` remains available as a compatibility alias for the selector.

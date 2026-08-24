@@ -2846,3 +2846,246 @@ textarea,
     top: 52%;
   }
 }
+
+
+/* Discover Canarias tour selector */
+
+.tour-selector-screen {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(114, 175, 193, 0.2), transparent 32%),
+    var(--sand);
+}
+
+.tour-selector-stage {
+  width: min(100%, 620px);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding-bottom: max(30px, env(safe-area-inset-bottom));
+}
+
+.tour-selector-hero {
+  position: relative;
+  min-height: 300px;
+  padding:
+    max(26px, env(safe-area-inset-top))
+    22px
+    34px;
+  color: var(--warm-white);
+  background:
+    radial-gradient(circle at 84% 18%, rgba(114, 175, 193, 0.5), transparent 24%),
+    linear-gradient(145deg, var(--atlantic-deep), var(--atlantic));
+  overflow: hidden;
+}
+
+.tour-selector-hero::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -110px;
+  width: 240px;
+  height: 240px;
+  border: 2px solid rgba(255, 253, 248, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 28px rgba(255, 253, 248, 0.05),
+    0 0 0 58px rgba(255, 253, 248, 0.04);
+}
+
+.tour-selector-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--warm-white);
+  font-size: 0.95rem;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.tour-selector-brand .brand-symbol-small {
+  flex: 0 0 auto;
+}
+
+.tour-selector-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 470px;
+  margin-top: 64px;
+}
+
+.tour-selector-copy h1 {
+  margin: 6px 0 14px;
+  color: var(--warm-white);
+  font-size: clamp(2.7rem, 12vw, 4.7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.tour-selector-copy > p:last-child {
+  max-width: 420px;
+  margin-bottom: 0;
+  color: rgba(255, 253, 248, 0.84);
+  font-size: 1rem;
+}
+
+.tour-selector-panel {
+  position: relative;
+  z-index: 2;
+  margin: -18px 12px 0;
+  padding: 18px 10px 6px;
+  background: var(--warm-white);
+  border: 1px solid rgba(21, 93, 108, 0.12);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.tour-selector-list {
+  display: grid;
+  gap: 12px;
+}
+
+.tour-selector-card {
+  padding: 18px;
+  background:
+    linear-gradient(145deg, rgba(220, 235, 240, 0.46), rgba(255, 253, 248, 0.96));
+  border: 1px solid rgba(21, 93, 108, 0.16);
+  border-radius: 18px;
+}
+
+.tour-selector-card-loading {
+  color: rgba(37, 37, 37, 0.66);
+}
+
+.tour-selector-card-loading p {
+  margin: 0;
+}
+
+.tour-selector-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.tour-selector-number,
+.tour-selector-status {
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tour-selector-number {
+  color: var(--atlantic);
+}
+
+.tour-selector-status {
+  padding: 5px 9px;
+  border-radius: 999px;
+}
+
+.tour-selector-status.is-available {
+  color: var(--atlantic-deep);
+  background: rgba(114, 175, 193, 0.18);
+}
+
+.tour-selector-status.is-preview {
+  color: #7a4b00;
+  background: rgba(244, 184, 75, 0.22);
+}
+
+.tour-selector-status.is-coming-soon {
+  color: rgba(37, 37, 37, 0.66);
+  background: rgba(37, 37, 37, 0.08);
+}
+
+.tour-selector-card h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 7vw, 2.1rem);
+}
+
+.tour-selector-preview-note {
+  margin: 10px 0 0;
+  color: rgba(37, 37, 37, 0.68);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.tour-selector-open-button {
+  margin-top: 16px;
+}
+
+.tour-selector-unavailable-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  color: rgba(37, 37, 37, 0.5);
+  background: rgba(37, 37, 37, 0.06);
+  border: 1px solid rgba(37, 37, 37, 0.1);
+  border-radius: 15px;
+  font-weight: 800;
+}
+
+.tour-selector-note,
+.tour-selector-error {
+  margin: 16px 8px 8px;
+  color: rgba(37, 37, 37, 0.62);
+  font-size: 0.83rem;
+  text-align: center;
+}
+
+.tour-selector-error {
+  color: var(--coral-deep);
+  font-weight: 750;
+}
+
+@media (min-width: 650px) {
+  .tour-selector-stage {
+    min-height: calc(100svh - 32px);
+    margin: 16px auto;
+    overflow: hidden;
+    border: 1px solid rgba(21, 93, 108, 0.12);
+    border-radius: 32px;
+    box-shadow: 0 30px 90px rgba(7, 38, 45, 0.18);
+  }
+
+  .tour-selector-hero {
+    border-radius: 32px 32px 0 0;
+  }
+
+  .tour-selector-panel {
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+}
+
+
+/* Multi-tour provisional content: keep shared cards readable when final media
+   has not been handed over yet. */
+.stop-card-image-wrap.is-media-pending,
+.up-next-image-wrap.is-media-pending {
+  background:
+    linear-gradient(135deg, rgba(21, 93, 108, 0.96), rgba(13, 70, 82, 0.78));
+}
+
+.stop-card-image-wrap.is-media-pending .stop-card-image,
+.up-next-image-wrap.is-media-pending .up-next-image {
+  display: none;
+}
+
+.stop-hero-card.is-media-pending {
+  background:
+    linear-gradient(145deg, #155d6c 0%, #0d4652 58%, #082f37 100%);
+}
+
+.stop-hero-card.is-media-pending .hero-image {
+  display: none;
+}
