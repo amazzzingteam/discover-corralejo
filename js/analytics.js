@@ -20,7 +20,9 @@ const ANALYTICS_COMMON_PARAMETERS = Object.freeze([
   "tour_id",
   "route_id",
   "route_version",
-  "selected_language"
+  "selected_language",
+  "interaction",
+  "stop_id"
 ]);
 
 let analyticsInitialised = false;
@@ -37,18 +39,80 @@ function getFeedbackConfig() {
   return getTourData().app.feedback || {};
 }
 
-function getAnalyticsStorageKey(name) {
-  return `tourApp:${getTourData().app.id}:analytics:${name}`;
+function getTourAnalyticsStorageKey(name) {
+  return `tourApp:${getTourStorageId()}:analytics:${name}`;
+}
+
+function getLegacyTourAnalyticsStorageKey(name) {
+  const legacyStorageId = getLegacyTourStorageId();
+
+  return legacyStorageId
+    ? `tourApp:${legacyStorageId}:analytics:${name}`
+    : null;
+}
+
+function getAnalyticsConsentStorageKey() {
+  return "tourApp:analytics:consent";
+}
+
+function readTourAnalyticsSessionValue(name) {
+  const currentKey = getTourAnalyticsStorageKey(name);
+  const currentValue = sessionStorage.getItem(currentKey);
+
+  if (currentValue !== null) {
+    return currentValue;
+  }
+
+  const legacyKey = getLegacyTourAnalyticsStorageKey(name);
+  const legacyValue = legacyKey
+    ? sessionStorage.getItem(legacyKey)
+    : null;
+
+  if (legacyValue !== null) {
+    sessionStorage.setItem(currentKey, legacyValue);
+  }
+
+  return legacyValue;
+}
+
+function removeTourAnalyticsSessionValue(name) {
+  sessionStorage.removeItem(
+    getTourAnalyticsStorageKey(name)
+  );
+
+  const legacyKey = getLegacyTourAnalyticsStorageKey(name);
+  if (legacyKey) {
+    sessionStorage.removeItem(legacyKey);
+  }
 }
 
 function getStoredAnalyticsConsent() {
-  const value = localStorage.getItem(
-    getAnalyticsStorageKey("consent")
+  const sharedValue = localStorage.getItem(
+    getAnalyticsConsentStorageKey()
   );
 
-  return value === "accepted" || value === "declined"
-    ? value
-    : null;
+  if (sharedValue === "accepted" || sharedValue === "declined") {
+    return sharedValue;
+  }
+
+  const legacyKeys = [
+    getTourAnalyticsStorageKey("consent"),
+    getLegacyTourAnalyticsStorageKey("consent")
+  ].filter(Boolean);
+
+  for (const legacyKey of legacyKeys) {
+    const legacyValue = localStorage.getItem(legacyKey);
+
+    if (legacyValue === "accepted" || legacyValue === "declined") {
+      localStorage.setItem(
+        getAnalyticsConsentStorageKey(),
+        legacyValue
+      );
+      return legacyValue;
+    }
+  }
+
+  return null;
 }
 
 function isValidMeasurementId(measurementId) {
@@ -103,8 +167,8 @@ function normaliseParameterValue(value) {
 }
 
 function initialiseEntrySource() {
-  const storageKey = getAnalyticsStorageKey("entrySource");
-  const existingSource = sessionStorage.getItem(storageKey);
+  const storageKey = getTourAnalyticsStorageKey("entrySource");
+  const existingSource = readTourAnalyticsSessionValue("entrySource");
 
   if (existingSource) {
     return existingSource;
@@ -124,16 +188,18 @@ function initialiseEntrySource() {
 }
 
 function getEntrySource() {
-  return sessionStorage.getItem(
-    getAnalyticsStorageKey("entrySource")
-  ) || initialiseEntrySource();
+  return readTourAnalyticsSessionValue("entrySource") ||
+    initialiseEntrySource();
 }
 
 function getCommonAnalyticsParameters() {
   const app = getTourData().app;
 
   return {
-    tour_id: app.id,
+    tour_id:
+      getActiveTourId() ||
+      app.tourId ||
+      app.id,
     route_id: app.route?.id || "default_route",
     route_version: app.route?.version || "route-v1",
     selected_language: getActiveLanguage()
@@ -157,8 +223,25 @@ function filterAnalyticsParameters(eventName, parameters = {}) {
   ]);
   const combinedParameters = {
     ...getCommonAnalyticsParameters(),
+    interaction: eventName,
     ...parameters
   };
+
+  if (
+    !combinedParameters.stop_id &&
+    parameters.from_stop_id
+  ) {
+    combinedParameters.stop_id = parameters.from_stop_id;
+  }
+
+  if (
+    !combinedParameters.stop_id &&
+    parameters.last_stop_id &&
+    parameters.last_stop_id !== "none"
+  ) {
+    combinedParameters.stop_id = parameters.last_stop_id;
+  }
+
   const filteredParameters = {};
 
   Object.entries(combinedParameters).forEach(
@@ -179,8 +262,8 @@ function filterAnalyticsParameters(eventName, parameters = {}) {
 }
 
 function readPendingAnalyticsEvents() {
-  const storedValue = sessionStorage.getItem(
-    getAnalyticsStorageKey("pendingEvents")
+  const storedValue = readTourAnalyticsSessionValue(
+    "pendingEvents"
   );
 
   if (!storedValue) {
@@ -200,7 +283,7 @@ function readPendingAnalyticsEvents() {
 
 function writePendingAnalyticsEvents(events) {
   sessionStorage.setItem(
-    getAnalyticsStorageKey("pendingEvents"),
+    getTourAnalyticsStorageKey("pendingEvents"),
     JSON.stringify(events.slice(-100))
   );
 }
@@ -216,9 +299,7 @@ function queuePendingAnalyticsEvent(eventName, parameters) {
 }
 
 function clearPendingAnalyticsEvents() {
-  sessionStorage.removeItem(
-    getAnalyticsStorageKey("pendingEvents")
-  );
+  removeTourAnalyticsSessionValue("pendingEvents");
 }
 
 function configureGoogleTag() {
@@ -568,7 +649,7 @@ function setAnalyticsConsent(consentValue) {
 
   analyticsConsentState = consentValue;
   localStorage.setItem(
-    getAnalyticsStorageKey("consent"),
+    getAnalyticsConsentStorageKey(),
     consentValue
   );
   removeAnalyticsConsentBanner();

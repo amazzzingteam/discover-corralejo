@@ -25,12 +25,89 @@ function getTourData() {
   return TOUR_APP_DATA;
 }
 
-function getLanguageStorageKey() {
-  return `tourApp:${getTourData().app.id}:language`;
+function getTourStorageId() {
+  return (
+    getActiveTourId() ||
+    getTourData().activeTour?.id ||
+    getTourData().app.id
+  );
+}
+
+function getLegacyTourStorageId() {
+  const legacyStorageId =
+    getTourData().activeTour?.legacyStorageId;
+
+  return (
+    legacyStorageId &&
+    legacyStorageId !== getTourStorageId()
+  )
+    ? legacyStorageId
+    : null;
+}
+
+function getTourLocalStorageKey(name) {
+  return `tourApp:${getTourStorageId()}:${name}`;
+}
+
+function getLegacyTourLocalStorageKey(name) {
+  const legacyStorageId = getLegacyTourStorageId();
+
+  return legacyStorageId
+    ? `tourApp:${legacyStorageId}:${name}`
+    : null;
 }
 
 function getTourSessionStorageKey(name) {
-  return `tourApp:${getTourData().app.id}:session:${name}`;
+  return `tourApp:${getTourStorageId()}:session:${name}`;
+}
+
+function getLegacyTourSessionStorageKey(name) {
+  const legacyStorageId = getLegacyTourStorageId();
+
+  return legacyStorageId
+    ? `tourApp:${legacyStorageId}:session:${name}`
+    : null;
+}
+
+function readTourLocalStorageValue(name) {
+  const currentValue = localStorage.getItem(
+    getTourLocalStorageKey(name)
+  );
+
+  if (currentValue !== null) {
+    return currentValue;
+  }
+
+  const legacyKey = getLegacyTourLocalStorageKey(name);
+  return legacyKey
+    ? localStorage.getItem(legacyKey)
+    : null;
+}
+
+function readTourSessionStorageValue(name) {
+  const currentValue = sessionStorage.getItem(
+    getTourSessionStorageKey(name)
+  );
+
+  if (currentValue !== null) {
+    return currentValue;
+  }
+
+  const legacyKey = getLegacyTourSessionStorageKey(name);
+  return legacyKey
+    ? sessionStorage.getItem(legacyKey)
+    : null;
+}
+
+function removeTourSessionStorageValue(name) {
+  sessionStorage.removeItem(
+    getTourSessionStorageKey(name)
+  );
+
+  const legacyKey = getLegacyTourSessionStorageKey(name);
+  if (legacyKey) {
+    sessionStorage.removeItem(legacyKey);
+  }
 }
 
 function isValidLanguage(languageCode) {
@@ -41,8 +118,8 @@ function isValidLanguage(languageCode) {
 }
 
 function getSelectedLanguage() {
-  const savedLanguage = localStorage.getItem(
-    getLanguageStorageKey()
+  const savedLanguage = readTourLocalStorageValue(
+    "language"
   );
 
   return isValidLanguage(savedLanguage)
@@ -65,7 +142,7 @@ function saveSelectedLanguage(languageCode) {
   }
 
   localStorage.setItem(
-    getLanguageStorageKey(),
+    getTourLocalStorageKey("language"),
     languageCode
   );
 
@@ -314,8 +391,8 @@ function getStopAnalyticsId(stop) {
 }
 
 function getCompletedStopIds() {
-  const storedValue = sessionStorage.getItem(
-    getTourSessionStorageKey("completedStops")
+  const storedValue = readTourSessionStorageValue(
+    "completedStops"
   );
 
   if (!storedValue) {
@@ -358,21 +435,15 @@ function setLastStopId(stop) {
 }
 
 function getLastStopId() {
-  return sessionStorage.getItem(
-    getTourSessionStorageKey("lastStopId")
+  return readTourSessionStorageValue(
+    "lastStopId"
   ) || "none";
 }
 
 function resetTourProgress() {
-  sessionStorage.removeItem(
-    getTourSessionStorageKey("completedStops")
-  );
-  sessionStorage.removeItem(
-    getTourSessionStorageKey("lastStopId")
-  );
-  sessionStorage.removeItem(
-    getTourSessionStorageKey("tourCompleteTracked")
-  );
+  removeTourSessionStorageValue("completedStops");
+  removeTourSessionStorageValue("lastStopId");
+  removeTourSessionStorageValue("tourCompleteTracked");
 }
 
 function isFinalStop(stop) {
@@ -383,8 +454,8 @@ function isFinalStop(stop) {
 }
 
 function hasTrackedTourComplete() {
-  return sessionStorage.getItem(
-    getTourSessionStorageKey("tourCompleteTracked")
+  return readTourSessionStorageValue(
+    "tourCompleteTracked"
   ) === "true";
 }
 

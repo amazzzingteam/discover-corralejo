@@ -131,6 +131,25 @@ completion.html?tour=corralejo&stop=harbour
 
 Legacy Corralejo URLs without a `tour` parameter continue to work because `data/tours.json` defines Corralejo as the default tour. Do not manually hard-code a tour ID into individual page links; use the shared helper so future tours keep their own context.
 
+## Tour-aware progress and language storage
+
+Tour-specific browser state now uses the active registry tour ID rather than `app.id`.
+
+For Corralejo, new keys use the namespace:
+
+```text
+tourApp:corralejo:language
+tourApp:corralejo:session:completedStops
+tourApp:corralejo:session:lastStopId
+tourApp:corralejo:session:tourCompleteTracked
+```
+
+This prevents future tours from sharing progress even if the reusable application later uses a common app identity.
+
+`data/tours.json` gives Corralejo a temporary `legacyStorageId` of `discover-corralejo`. The storage helpers can read the old Corralejo keys as a backward-compatibility fallback, while all new writes use the `corralejo` namespace. Resetting Corralejo progress clears both the current and legacy Corralejo session keys so old state cannot reappear.
+
+Theme storage remains a shared UI preference and analytics/consent storage is handled separately in `js/analytics.js`; analytics storage is intentionally left for the dedicated analytics refactor.
+
 ## Offline mode
 
 `js/offline.js` builds the complete offline asset list from the active tour. Shared application-shell files are static, while tour JSON files, the configured PMTiles archive, route geometry, R2 photos/video/audio/transcripts, featured media, placeholder media, and reference-point media are collected dynamically.
@@ -150,6 +169,19 @@ js/analytics.js
 ```
 
 It handles consent, safe GA4 event parameters, route entry sources, PWA installation, and feedback events.
+
+Analytics is now multi-tour aware:
+
+- `tour_id` uses the active registry tour ID (for example `corralejo`), not the legacy app ID.
+- `selected_language` is attached as a common parameter to every registered interaction.
+- `interaction` mirrors the GA4 event name so reports can explicitly group by interaction type.
+- Stop-level events use `stop_id`; events such as `next_stop_click` and `tour_exit` also derive the current/last stop into the common `stop_id` dimension.
+- Existing route identifiers and route versions remain unchanged.
+- Analytics consent is stored once for the shared Discover application at `tourApp:analytics:consent`.
+- Existing Corralejo consent under `tourApp:discover-corralejo:analytics:consent` is migrated automatically when found.
+- Tour-specific analytics session state such as `entrySource` and queued events uses the active tour namespace, for example `tourApp:corralejo:analytics:entrySource`.
+
+This gives GA4 a consistent reporting chain of tour → stop → language → interaction without changing the existing event names or consent requirement.
 
 ## Reusing the app for another tour
 

@@ -7,7 +7,8 @@
       "slug": "corralejo",
       "displayName": "Discover Corralejo",
       "status": "published",
-      "dataPath": "data/tours/corralejo"
+      "dataPath": "data/tours/corralejo",
+      "legacyStorageId": "discover-corralejo"
     }
   ]
 }

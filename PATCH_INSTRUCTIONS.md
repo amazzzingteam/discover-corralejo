@@ -1,50 +1,88 @@
-# Discover Canarias — Step 6B: shared service-worker app shell
+# Discover Canarias — Step 7B: tour-aware analytics
 
-This checkpoint removes Corralejo-specific tour content from the service worker's automatic install-time precache.
+This checkpoint makes the existing GA4 layer explicitly multi-tour aware while preserving the current consent requirement and event model.
 
 ## What changed
 
-- `service-worker.js` now precaches only the shared application shell plus `data/tours.json`.
-- Corralejo `tour.json`, `stops.json`, `content-extension.json`, `routes.json`, `map-points.json`, all 17 route GeoJSON files, and `assets/maps/corralejo.pmtiles` were removed from `CORE_FILES`.
-- The same Corralejo-specific files were also removed from `REQUIRED_CORE_FILES`.
-- Selected-tour data, route geometry, PMTiles, R2 photos/video/audio/transcripts, and reference-point media remain handled by the explicit tour-aware offline download flow from Step 6A.
-- The proven same-origin/R2 caching logic and audio/video Range-request handling were not changed.
-- Service-worker cache version: `v31-shared-app-shell`.
+- GA4 `tour_id` now uses the active registry tour ID, so Corralejo reports `corralejo` instead of the legacy app ID `discover-corralejo`.
+- Every registered analytics event receives the common parameters:
+  - `tour_id`
+  - `route_id`
+  - `route_version`
+  - `selected_language`
+  - `interaction`
+- `interaction` mirrors the GA4 event name.
+- Stop-level interactions use a consistent common `stop_id` dimension. For `next_stop_click`, `from_stop_id` is also exposed as `stop_id`; for `tour_exit`, `last_stop_id` is exposed as `stop_id` when available.
+- `tour_complete` now explicitly includes the final stop ID.
+- Existing event names and event-specific parameters remain in place.
+- Analytics consent is shared across the Discover application at:
+  - `tourApp:analytics:consent`
+- Existing Corralejo consent under:
+  - `tourApp:discover-corralejo:analytics:consent`
+  is read and migrated automatically.
+- Tour-specific analytics session state now uses the active tour namespace:
+  - `tourApp:corralejo:analytics:entrySource`
+  - `tourApp:corralejo:analytics:pendingEvents`
+- Consent is still required before GA4 events are sent.
+- Ad storage/signals remain denied.
+- Service-worker cache version: `v33-tour-aware-analytics`.
 
-## Why the cache prefix still says `discover-corralejo-v3`
+## Why this matters
 
-The legacy cache prefix is intentionally retained at this checkpoint. During activation, the service worker deletes older cache generations that use that prefix. Renaming it now without an explicit legacy-cache migration would leave old Corralejo caches behind on existing devices.
+The manager requirement is that analytics can distinguish:
 
-A future branding/cache-prefix migration can be done separately after the multi-tour engine is stable.
+```text
+tour → stop → language → interaction
+```
 
-## Expected behaviour
-
-Service-worker installation should now cache the reusable application shell only.
-
-Opening a tour online may naturally runtime-cache files that the browser requests, but the service worker no longer downloads Corralejo tour data, Corralejo route geometry, or the Corralejo PMTiles archive automatically during installation.
-
-The explicit **Download offline tour** action still builds the selected tour's full manifest dynamically. For Corralejo that remains roughly 400 URLs at the current content state.
+The shared analytics layer now provides that structure without creating Puerto-specific analytics code. A future Tour 02 will automatically report its own active tour ID.
 
 ## Live Server checks
 
-1. Clear/unregister the previous service worker once.
+1. Clear/unregister the previous service worker once so `v33-tour-aware-analytics` activates.
 2. Open `route.html?tour=corralejo`.
-3. Confirm normal Corralejo browsing and maps still work.
-4. In DevTools → Application → Cache Storage, inspect the `...core-v31-shared-app-shell` cache.
-5. Confirm the core cache does **not** contain:
-   - `data/tours/corralejo/...`
-   - `assets/maps/corralejo.pmtiles`
-   - Corralejo route `.geojson` files
-6. Confirm it still contains the shared pages/CSS/JS/vendor files and `data/tours.json`.
-7. Re-run:
+3. In DevTools Console run:
 
-   ```js
-   const urls = collectOfflineTourUrls();
-   console.log(urls.length);
-   console.log(urls.filter((url) => url.includes("data/tours/corralejo")));
-   console.log(urls.filter((url) => url.includes("corralejo.pmtiles")));
-   ```
+```js
+filterAnalyticsParameters("audio_play", {
+  stop_id: "02-harbour",
+  audio_language: getActiveLanguage()
+});
+```
 
-   The explicit tour manifest should still contain the Corralejo data and PMTiles.
+Expected key values include:
 
-Full R2/offline regression remains for Step 6C on GitHub Pages and a real phone/airplane-mode test.
+```text
+tour_id: "corralejo"
+stop_id: "02-harbour"
+selected_language: "<current language>"
+interaction: "audio_play"
+```
+
+4. Run:
+
+```js
+filterAnalyticsParameters("next_stop_click", {
+  from_stop_id: "01-supermercado-deseos",
+  to_stop_id: "02-harbour"
+});
+```
+
+Expected:
+- `tour_id: "corralejo"`
+- `stop_id: "01-supermercado-deseos"`
+- `interaction: "next_stop_click"`
+- original `from_stop_id` / `to_stop_id` remain present.
+
+5. In Local Storage, accept analytics (or reopen privacy settings and accept) and confirm:
+   - `tourApp:analytics:consent = accepted`
+6. In Session Storage, confirm:
+   - `tourApp:corralejo:analytics:entrySource`
+7. Existing `tourApp:discover-corralejo:analytics:*` keys may remain as legacy data; their presence is not a failure.
+8. Confirm normal navigation, progress, audio, map and offline UI still work.
+
+## Notes
+
+GA4 already treats the event name as the interaction type. The additional `interaction` parameter mirrors that event name deliberately so the manager's requested reporting chain can be used directly as event parameters/custom dimensions if desired.
+
+No new analytics provider, backend, cookie framework, advertising tracking, or user account system is introduced.

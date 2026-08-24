@@ -100,6 +100,7 @@ function trackTourCompletionIfNeeded(stop) {
   }
 
   trackAnalyticsEvent("tour_complete", {
+    stop_id: getStopAnalyticsId(stop),
     route_version:
       getTourData().app.route?.version || "route-v1",
     selected_language: getActiveLanguage(),

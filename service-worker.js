@@ -1,7 +1,7 @@
 // Keep the legacy cache prefix for now so activation can delete older
 // Discover Corralejo cache generations created before the multi-tour refactor.
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v31-shared-app-shell";
+const CACHE_VERSION = "v33-tour-aware-analytics";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
