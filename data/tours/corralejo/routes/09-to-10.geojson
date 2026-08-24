@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86734,
+            28.73699
+          ],
+          [
+            -13.8674067,
+            28.7369996
+          ],
+          [
+            -13.8675115,
+            28.7364309
+          ],
+          [
+            -13.8675142,
+            28.7363627
+          ],
+          [
+            -13.8676054,
+            28.7362052
+          ],
+          [
+            -13.86773,
+            28.73578
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "09-to-10",
+        "fromStopId": "09-rainbow-beach",
+        "toStopId": "10-playa-corralejo-viejo",
+        "distanceMetres": 146,
+        "walkingMinutes": 2,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

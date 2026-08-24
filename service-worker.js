@@ -1,9 +1,14 @@
+// Keep the legacy cache prefix for now so activation can delete older
+// Discover Corralejo cache generations created before the multi-tour refactor.
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v25-r2-content-final";
+const CACHE_VERSION = "v31-shared-app-shell";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
 
+// Install-time precache is intentionally limited to the shared application
+// shell. Selected-tour data, route geometry, PMTiles and R2 media are cached
+// by the explicit tour-aware offline download flow.
 const CORE_FILES = [
   "./",
   "./index.html",
@@ -14,38 +19,16 @@ const CORE_FILES = [
   "./feedback-complete.html",
   "./manifest.webmanifest",
   "./css/styles.css",
+  "./css/platform-polish.css",
   "./assets/screenshots/route-mobile.png",
   "./assets/screenshots/welcome-mobile.png",
   "./assets/icons/icon-maskable-512.png",
   "./assets/icons/icon-maskable-192.png",
   "./assets/icons/apple-touch-icon.png",
-  "./css/platform-polish.css",
   "./assets/vendor/maplibre-gl.css",
   "./assets/vendor/maplibre-gl.js",
   "./assets/vendor/pmtiles.js",
-  "./assets/maps/corralejo.pmtiles",
-  "./data/tour.json",
-  "./data/stops.json",
-  "./data/content-extension.json",
-  "./data/routes.json",
-  "./data/map-points.json",
-  "./data/routes/01-to-02.geojson",
-  "./data/routes/02-to-03.geojson",
-  "./data/routes/03-to-04.geojson",
-  "./data/routes/04-to-05.geojson",
-  "./data/routes/05-to-06.geojson",
-  "./data/routes/06-to-07.geojson",
-  "./data/routes/07-to-08.geojson",
-  "./data/routes/08-to-09.geojson",
-  "./data/routes/09-to-10.geojson",
-  "./data/routes/10-to-11.geojson",
-  "./data/routes/11-to-12.geojson",
-  "./data/routes/12-to-13.geojson",
-  "./data/routes/13-to-14.geojson",
-  "./data/routes/14-to-15.geojson",
-  "./data/routes/15-to-16.geojson",
-  "./data/routes/16-to-17.geojson",
-  "./data/routes/17-to-18.geojson",
+  "./data/tours.json",
   "./js/data-loader.js",
   "./js/common.js",
   "./js/analytics.js",
@@ -74,11 +57,7 @@ const REQUIRED_CORE_FILES = new Set([
   "./assets/vendor/maplibre-gl.css",
   "./assets/vendor/maplibre-gl.js",
   "./assets/vendor/pmtiles.js",
-  "./assets/maps/corralejo.pmtiles",
-  "./data/tour.json",
-  "./data/stops.json",
-  "./data/routes.json",
-  "./data/map-points.json",
+  "./data/tours.json",
   "./js/data-loader.js",
   "./js/common.js",
   "./js/map-points.js",

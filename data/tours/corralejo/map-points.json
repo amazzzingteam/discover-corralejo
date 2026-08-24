@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bus-stop-01",
+    "type": "bus_stop",
+    "published": true,
+    "status": "published",
+    "displayName": {
+      "en": "Corralejo Harbour bus stop",
+      "es": "Parada de guagua del Puerto de Corralejo",
+      "fr": "Arrêt de bus du port de Corralejo",
+      "de": "Bushaltestelle am Hafen von Corralejo",
+      "it": "Fermata autobus del porto di Corralejo",
+      "pl": "Przystanek autobusowy przy porcie w Corralejo",
+      "nl": "Bushalte bij de haven van Corralejo",
+      "pt": "Paragem de autocarro do porto de Corralejo"
+    },
+    "description": {
+      "en": "A helpful bus reference point near the walking route. Use it to orient yourself or rejoin the tour.",
+      "es": "Un punto de referencia de autobús útil cerca de la ruta. Úsalo para orientarte o volver a incorporarte al recorrido.",
+      "fr": "Un point de repère utile près du parcours. Utilisez-le pour vous orienter ou rejoindre à nouveau la visite.",
+      "de": "Ein hilfreicher Bus-Orientierungspunkt in der Nähe der Route. Nutzen Sie ihn zur Orientierung oder um wieder zur Tour zu gelangen.",
+      "it": "Un utile punto di riferimento vicino al percorso. Usalo per orientarti o rientrare nel tour.",
+      "pl": "Pomocny punkt orientacyjny w pobliżu trasy. Użyj go, aby się zorientować lub ponownie dołączyć do wycieczki.",
+      "nl": "Een handig busreferentiepunt bij de wandelroute. Gebruik het om je te oriënteren of opnieuw aan te sluiten bij de tour.",
+      "pt": "Um ponto de referência útil perto do percurso. Utilize-o para se orientar ou voltar a juntar-se ao passeio."
+    },
+    "coordinates": {
+      "latitude": 28.7405778,
+      "longitude": -13.8629531
+    },
+    "mapsUrl": "https://maps.app.goo.gl/ZF7av1Q2oSPQuRfi9",
+    "media": {
+      "photos": [
+        {
+          "src": "@media/stops/bus-stop-1/photos/bus-stop-1-photo.jpeg"
+        },
+        {
+          "src": "@media/stops/bus-stop-1/photos/bus-stop-1-photo-2.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/bus-stop-1/videos/bus-stop-1-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "coordinateConfidence": "verified_public_transport_dataset",
+    "matchingFolder": "bus-stop-1"
+  },
+  {
+    "id": "bus-stop-02",
+    "type": "bus_stop",
+    "published": true,
+    "status": "published",
+    "displayName": {
+      "en": "Corralejo bus station",
+      "es": "Estación de guaguas de Corralejo",
+      "fr": "Gare routière de Corralejo",
+      "de": "Busbahnhof Corralejo",
+      "it": "Stazione degli autobus di Corralejo",
+      "pl": "Dworzec autobusowy w Corralejo",
+      "nl": "Busstation Corralejo",
+      "pt": "Estação de autocarros de Corralejo"
+    },
+    "description": {
+      "en": "A helpful bus reference point near the walking route. Use it to orient yourself or rejoin the tour.",
+      "es": "Un punto de referencia de autobús útil cerca de la ruta. Úsalo para orientarte o volver a incorporarte al recorrido.",
+      "fr": "Un point de repère utile près du parcours. Utilisez-le pour vous orienter ou rejoindre à nouveau la visite.",
+      "de": "Ein hilfreicher Bus-Orientierungspunkt in der Nähe der Route. Nutzen Sie ihn zur Orientierung oder um wieder zur Tour zu gelangen.",
+      "it": "Un utile punto di riferimento vicino al percorso. Usalo per orientarti o rientrare nel tour.",
+      "pl": "Pomocny punkt orientacyjny w pobliżu trasy. Użyj go, aby się zorientować lub ponownie dołączyć do wycieczki.",
+      "nl": "Een handig busreferentiepunt bij de wandelroute. Gebruik het om je te oriënteren of opnieuw aan te sluiten bij de tour.",
+      "pt": "Um ponto de referência útil perto do percurso. Utilize-o para se orientar ou voltar a juntar-se ao passeio."
+    },
+    "coordinates": {
+      "latitude": 28.74027,
+      "longitude": -13.87118
+    },
+    "mapsUrl": "https://maps.app.goo.gl/FN7oSYomUPDabqcc9",
+    "media": {
+      "photos": [
+        {
+          "src": "@media/stops/bus-stop-2/photos/bus-stop-2-photo-1.jpeg"
+        },
+        {
+          "src": "@media/stops/bus-stop-2/photos/bus-stop-2-photo-2.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/bus-stop-2/videos/bus-stop-2-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "coordinateConfidence": "verified_public_transport_dataset",
+    "matchingFolder": "bus-stop-2"
+  },
+  {
+    "id": "bus-stop-03",
+    "type": "bus_stop",
+    "published": true,
+    "status": "published_coordinate_review_recommended",
+    "displayName": {
+      "en": "El Campanario area bus stop",
+      "es": "Parada de guagua de la zona de El Campanario",
+      "fr": "Arrêt de bus du secteur El Campanario",
+      "de": "Bushaltestelle im Bereich El Campanario",
+      "it": "Fermata autobus zona El Campanario",
+      "pl": "Przystanek autobusowy w okolicy El Campanario",
+      "nl": "Bushalte bij El Campanario",
+      "pt": "Paragem de autocarro da zona de El Campanario"
+    },
+    "description": {
+      "en": "A helpful bus reference point near the walking route. Use it to orient yourself or rejoin the tour.",
+      "es": "Un punto de referencia de autobús útil cerca de la ruta. Úsalo para orientarte o volver a incorporarte al recorrido.",
+      "fr": "Un point de repère utile près du parcours. Utilisez-le pour vous orienter ou rejoindre à nouveau la visite.",
+      "de": "Ein hilfreicher Bus-Orientierungspunkt in der Nähe der Route. Nutzen Sie ihn zur Orientierung oder um wieder zur Tour zu gelangen.",
+      "it": "Un utile punto di riferimento vicino al percorso. Usalo per orientarti o rientrare nel tour.",
+      "pl": "Pomocny punkt orientacyjny w pobliżu trasy. Użyj go, aby się zorientować lub ponownie dołączyć do wycieczki.",
+      "nl": "Een handig busreferentiepunt bij de wandelroute. Gebruik het om je te oriënteren of opnieuw aan te sluiten bij de tour.",
+      "pt": "Um ponto de referência útil perto do percurso. Utilize-o para se orientar ou voltar a juntar-se ao passeio."
+    },
+    "coordinates": {
+      "latitude": 28.72755,
+      "longitude": -13.8629
+    },
+    "mapsUrl": "https://maps.app.goo.gl/RMDG4EDQU7xDSWUp8",
+    "media": {
+      "photos": [
+        {
+          "src": "@media/stops/bus-stop-3/photos/bus-stop-3-photo.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/bus-stop-3/videos/bus-stop-3-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "coordinateConfidence": "estimated_from_supplied_media_and_route",
+    "matchingFolder": "bus-stop-3"
+  }
+]

@@ -1,3 +1,41 @@
+function getTourMapConfig() {
+  const mapConfig = getTourData().app?.map || {};
+
+  if (mapConfig.enabled === false) {
+    const error = new Error("The selected tour does not have an enabled local map.");
+    error.code = "TOUR_MAP_DISABLED";
+    throw error;
+  }
+
+  if (!mapConfig.pmtiles) {
+    const error = new Error("The selected tour does not define app.map.pmtiles.");
+    error.code = "TOUR_MAP_PATH_MISSING";
+    throw error;
+  }
+
+  if (!Array.isArray(mapConfig.center) || mapConfig.center.length !== 2) {
+    const error = new Error("The selected tour does not define a valid app.map.center.");
+    error.code = "TOUR_MAP_CENTER_MISSING";
+    throw error;
+  }
+
+  return mapConfig;
+}
+
+function getTourMapViewConfig(viewName) {
+  const mapConfig = getTourMapConfig();
+  const viewConfig = mapConfig?.[viewName];
+
+  return viewConfig && typeof viewConfig === "object"
+    ? viewConfig
+    : {};
+}
+
+function getTourMapArchiveUrl() {
+  const mapConfig = getTourMapConfig();
+  return new URL(mapConfig.pmtiles, window.location.href).href;
+}
+
 function getLineStringFeature(geoJson) {
   if (geoJson?.type === "Feature" && geoJson.geometry?.type === "LineString") {
     return geoJson;
@@ -12,7 +50,7 @@ function getLineStringFeature(geoJson) {
   return null;
 }
 
-function createCorralejoMapStyle(archiveUrl) {
+function createTourMapStyle(archiveUrl) {
   const roadWidth = [
     "interpolate",
     ["linear"],
@@ -44,7 +82,7 @@ function createCorralejoMapStyle(archiveUrl) {
   return {
     version: 8,
     sources: {
-      corralejo: {
+      "tour-basemap": {
         type: "vector",
         url: `pmtiles://${archiveUrl}`,
         attribution:
@@ -62,7 +100,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "earth",
         type: "fill",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "earth",
         paint: {
           "fill-color": "#f4ebdd"
@@ -71,7 +109,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "landcover",
         type: "fill",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "landcover",
         paint: {
           "fill-color": [
@@ -91,7 +129,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "landuse",
         type: "fill",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "landuse",
         paint: {
           "fill-color": [
@@ -111,7 +149,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "water",
         type: "fill",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "water",
         paint: {
           "fill-color": "#9dced9",
@@ -121,7 +159,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "buildings",
         type: "fill",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "buildings",
         minzoom: 12,
         paint: {
@@ -133,7 +171,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "road-casing",
         type: "line",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "roads",
         filter: ["!=", ["get", "kind"], "path"],
         layout: {
@@ -149,7 +187,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "roads",
         type: "line",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "roads",
         filter: ["!=", ["get", "kind"], "path"],
         layout: {
@@ -173,7 +211,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "paths",
         type: "line",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "roads",
         filter: ["==", ["get", "kind"], "path"],
         layout: {
@@ -200,7 +238,7 @@ function createCorralejoMapStyle(archiveUrl) {
       {
         id: "boundaries",
         type: "line",
-        source: "corralejo",
+        source: "tour-basemap",
         "source-layer": "boundaries",
         paint: {
           "line-color": "#9aa8a8",
@@ -263,7 +301,7 @@ function addRouteResetControl(map, fitRoute) {
 
       this.button = document.createElement("button");
       this.button.type = "button";
-      this.button.className = "corralejo-map-reset";
+      this.button.className = "tour-map-reset";
       this.button.title = translate("mapReset");
       this.button.setAttribute("aria-label", translate("mapReset"));
       this.button.textContent = "↺";
@@ -288,14 +326,14 @@ function initialisePmtilesProtocol(archiveUrl) {
     throw new Error("The local MapLibre or PMTiles library was not loaded.");
   }
 
-  if (!window.__discoverCorralejoPmtilesProtocol) {
+  if (!window.__discoverPmtilesProtocol) {
     const protocol = new pmtiles.Protocol();
     maplibregl.addProtocol("pmtiles", protocol.tile);
-    window.__discoverCorralejoPmtilesProtocol = protocol;
+    window.__discoverPmtilesProtocol = protocol;
   }
 
   const archive = new pmtiles.PMTiles(archiveUrl);
-  window.__discoverCorralejoPmtilesProtocol.add(archive);
+  window.__discoverPmtilesProtocol.add(archive);
   return archive;
 }
 
@@ -318,28 +356,24 @@ function renderRouteMap(container, routeFeature, currentStop, nextStop) {
   shell.append(mapElement, loading, mapBadge);
   container.replaceChildren(shell);
 
-  const archiveUrl = new URL(
-    "assets/maps/corralejo.pmtiles",
-    window.location.href
-  ).href;
+  const mapConfig = getTourMapConfig();
+  const viewConfig = getTourMapViewConfig("routePreview");
+  const archiveUrl = getTourMapArchiveUrl();
 
   initialisePmtilesProtocol(archiveUrl);
 
   const map = new maplibregl.Map({
     container: mapElement,
-    style: createCorralejoMapStyle(archiveUrl),
-    center: [-13.865, 28.738],
-    zoom: 15,
-    minZoom: 12,
-    maxZoom: 18,
+    style: createTourMapStyle(archiveUrl),
+    center: mapConfig.center,
+    zoom: viewConfig.zoom,
+    minZoom: viewConfig.minZoom ?? mapConfig.minZoom,
+    maxZoom: viewConfig.maxZoom ?? mapConfig.maxZoom,
     attributionControl: false,
     cooperativeGestures: false,
     dragRotate: false,
     pitchWithRotate: false,
-    maxBounds: [
-      [-13.886, 28.710],
-      [-13.843, 28.759]
-    ]
+    maxBounds: viewConfig.bounds || mapConfig.bounds
   });
 
   const routeBounds = getRouteBounds(routeFeature, currentStop, nextStop);
@@ -351,7 +385,7 @@ function renderRouteMap(container, routeFeature, currentStop, nextStop) {
         bottom: 92,
         left: 70
       },
-      maxZoom: 17,
+      maxZoom: viewConfig.fitMaxZoom ?? mapConfig.maxZoom,
       duration: 450
     });
   };
@@ -453,7 +487,7 @@ function renderRouteMap(container, routeFeature, currentStop, nextStop) {
   });
 
   map.on("error", (event) => {
-    console.warn("Corralejo map warning:", event.error || event);
+    console.warn("Tour map warning:", event.error || event);
   });
 
   window.addEventListener(

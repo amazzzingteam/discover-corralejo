@@ -14,7 +14,7 @@ The application code is kept separately from tour media:
 
 - GitHub: source control and the current GitHub Pages deployment
 - Cloudflare R2: stop photos, videos, audio, transcripts, and bus-stop media
-- `data/tour.json`: central media host configuration
+- `data/tours/corralejo/tour.json`: Corralejo media host and tour configuration
 - `@media/...`: portable media paths used throughout the JSON data
 
 Current media configuration:
@@ -71,7 +71,9 @@ Stop `id` and `slug` values are permanent application identifiers and may intent
 
 ## Main data files
 
-### `data/tour.json`
+Corralejo-specific runtime data now lives under `data/tours/corralejo/`. `data/tours.json` is the tour registry. `data/stop-template.json` remains shared at the data root.
+
+### `data/tours/corralejo/tour.json`
 
 Controls:
 
@@ -84,13 +86,30 @@ Controls:
 - GA4 Measurement ID and consent settings
 - Feedback form configuration
 
-### `data/stops.json`
+### Tour-aware local map configuration
+
+Corralejo's runtime map settings now live in `data/tours/corralejo/tour.json` under `app.map`.
+
+This includes:
+
+- PMTiles archive path
+- map centre and bounds
+- minimum/maximum zoom
+- route-overview zoom
+- next-stop route-preview bounds/zoom
+- bus/reference-point map zoom
+
+The shared map scripts read the active tour configuration instead of hard-coding Corralejo coordinates or the Corralejo PMTiles path. When another tour is added, it should provide its own `app.map` values rather than adding tour-specific `if` statements to the shared JavaScript.
+
+The page-side offline downloader is tour-aware: it reads the active tour's loaded data files, route geometry, and `app.map.pmtiles` configuration instead of hard-coding Corralejo paths. The service worker's install-time precache now contains only the shared application shell plus `data/tours.json`; selected-tour data and maps are left to the explicit offline download flow.
+
+### `data/tours/corralejo/stops.json`
 
 Contains the 18 tour stops, including permanent analytics IDs, tourist-facing content, R2 media paths, R2 transcript paths, map information, and next-stop information.
 
 Transcripts are **not stored inline** in this file. `transcriptFiles` points to the language-specific `.txt` files in R2.
 
-### `data/map-points.json`
+### `data/tours/corralejo/map-points.json`
 
 Contains the three bus reference points and their R2 photo/video paths.
 
@@ -98,11 +117,27 @@ Contains the three bus reference points and their R2 photo/video paths.
 
 Reusable example for future stops. Media and transcript paths use the same `@media/` convention.
 
+## Tour-aware navigation
+
+Internal navigation is generated with the shared `buildTourUrl()` helper in `js/common.js`.
+
+When Corralejo is active, new links carry the tour context explicitly, for example:
+
+```text
+route.html?tour=corralejo
+stop.html?tour=corralejo&stop=harbour
+completion.html?tour=corralejo&stop=harbour
+```
+
+Legacy Corralejo URLs without a `tour` parameter continue to work because `data/tours.json` defines Corralejo as the default tour. Do not manually hard-code a tour ID into individual page links; use the shared helper so future tours keep their own context.
+
 ## Offline mode
 
-`js/offline.js` builds the complete offline asset list, including R2 photos, video, audio, transcript files, bus-stop media, route geometry, and application files.
+`js/offline.js` builds the complete offline asset list from the active tour. Shared application-shell files are static, while tour JSON files, the configured PMTiles archive, route geometry, R2 photos/video/audio/transcripts, featured media, placeholder media, and reference-point media are collected dynamically.
 
-`service-worker.js` caches both same-origin application resources and CORS-enabled R2 tour media. Audio/video Range requests are handled so downloaded media can continue to play offline.
+`js/data-loader.js` exposes the selected tour's data files that actually loaded. Optional files such as `content-extension.json`, `routes.json`, and `map-points.json` are only included in the explicit offline download when present.
+
+`service-worker.js` caches both same-origin application resources and CORS-enabled R2 tour media. Audio/video Range requests are handled so downloaded media can continue to play offline. Its **install-time** precache is now tour-neutral: Corralejo/Puerto tour JSON, route GeoJSON, PMTiles and R2 media are not automatically installed for every user. Those assets are cached through the selected tour's explicit offline download.
 
 When changing offline caching behaviour, bump `CACHE_VERSION` in `service-worker.js` so clients receive a fresh cache generation.
 
@@ -124,8 +159,15 @@ For another tour:
 
 1. Create another R2 tour prefix such as `tours/another-tour/`.
 2. Duplicate/adapt the tour data files.
-3. Update `data/tour.json` (`app.id`, route settings, `media.tourPath`, featured media, and analytics configuration).
+3. Add the tour to `data/tours.json` and point its `dataPath` to a new `data/tours/<tour-id>/` folder.
 4. Add the new stop/media data using `@media/...` paths.
 5. Update route geometry, map data, branding, manifest, and icons as required.
 
 The website can later move away from GitHub hosting without changing the R2 content model.
+
+
+## Step 6B service-worker boundary
+
+The current service-worker cache prefix remains `discover-corralejo-v3` intentionally so activation can remove older cache generations already stored on existing devices. The cache **version** is bumped for each offline change; the prefix can be renamed later with an explicit legacy-cache cleanup plan.
+
+At install time, the core cache must not contain any `data/tours/corralejo/...` files, Corralejo route GeoJSON, or `assets/maps/corralejo.pmtiles`. `data/tours.json` remains part of the shared shell because it is the registry used to resolve available tours.

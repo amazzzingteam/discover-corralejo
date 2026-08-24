@@ -6,7 +6,7 @@ function showBusStopNotFound() {
     <section class="content-section">
       <h1>${translate("busStopNotFound")}</h1>
       <p>${translate("busStopNotFoundBody")}</p>
-      <a class="button" href="route.html?view_source=bus_stop_not_found">
+      <a class="button" href="${buildTourUrl("route.html", { view_source: "bus_stop_not_found" })}">
         ${translate("backToRoute")}
       </a>
     </section>
@@ -282,21 +282,23 @@ async function renderBusStopMap(point, nearestEntry) {
   const loading = document.querySelector("#bus-stop-map-loading");
   if (!container || !window.maplibregl || !window.pmtiles) return;
 
-  const archiveUrl = new URL("assets/maps/corralejo.pmtiles", window.location.href).href;
+  const mapConfig = getTourMapConfig();
+  const viewConfig = getTourMapViewConfig("referencePoint");
+  const archiveUrl = getTourMapArchiveUrl();
   initialisePmtilesProtocol(archiveUrl);
 
   const map = new maplibregl.Map({
     container,
-    style: createCorralejoMapStyle(archiveUrl),
+    style: createTourMapStyle(archiveUrl),
     center: [Number(point.coordinates.longitude), Number(point.coordinates.latitude)],
-    zoom: 14,
-    minZoom: 11.5,
-    maxZoom: 18,
+    zoom: viewConfig.zoom,
+    minZoom: viewConfig.minZoom ?? mapConfig.minZoom,
+    maxZoom: viewConfig.maxZoom ?? mapConfig.maxZoom,
     attributionControl: false,
     cooperativeGestures: false,
     dragRotate: false,
     pitchWithRotate: false,
-    maxBounds: [[-13.89, 28.705], [-13.838, 28.764]]
+    maxBounds: viewConfig.bounds || mapConfig.bounds
   });
 
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
@@ -341,7 +343,7 @@ async function renderBusStopMap(point, nearestEntry) {
       title.textContent = `${stop.number}. ${getLocalizedValue(stop.displayName)}`;
       const link = document.createElement("a");
       link.className = "map-popup-link";
-      link.href = `stop.html?stop=${encodeURIComponent(stop.slug)}&from=bus_stop_map`;
+      link.href = buildTourUrl("stop.html", { stop: stop.slug, from: "bus_stop_map" });
       link.textContent = translate("openStop");
       popupContent.append(title, link);
 
@@ -389,7 +391,7 @@ async function renderBusStopMap(point, nearestEntry) {
 
     map.fitBounds(bounds, {
       padding: { top: 56, right: 44, bottom: 56, left: 44 },
-      maxZoom: 14.4,
+      maxZoom: viewConfig.fitMaxZoom ?? mapConfig.maxZoom,
       duration: 0
     });
 
@@ -421,7 +423,7 @@ function setupBusStopActions(point, nearestEntry) {
 
   if (nearestEntry?.stop) {
     const nearestName = getLocalizedValue(nearestEntry.stop.displayName);
-    const stopUrl = `stop.html?stop=${encodeURIComponent(nearestEntry.stop.slug)}&from=bus_stop_page`;
+    const stopUrl = buildTourUrl("stop.html", { stop: nearestEntry.stop.slug, from: "bus_stop_page" });
     rejoinButton.href = stopUrl;
     rejoinButton.textContent = translate("rejoinTourAt", { name: nearestName });
     directionsButton.href = createWalkingDirectionsUrl(point, nearestEntry.stop);
@@ -433,7 +435,7 @@ function setupBusStopActions(point, nearestEntry) {
       });
     });
   } else {
-    rejoinButton.href = "route.html?view_source=bus_stop_page";
+    rejoinButton.href = buildTourUrl("route.html", { view_source: "bus_stop_page" });
     rejoinButton.textContent = translate("backToRoute");
     directionsButton.hidden = true;
   }
@@ -453,7 +455,11 @@ function setupBusStopActions(point, nearestEntry) {
       selected_language: getActiveLanguage()
     };
     resetTourProgress();
-    trackAnalyticsEventAndNavigate("tour_exit", parameters, "index.html?from=exit_tour");
+    trackAnalyticsEventAndNavigate(
+      "tour_exit",
+      parameters,
+      buildTourUrl("index.html", { from: "exit_tour" })
+    );
   });
 }
 

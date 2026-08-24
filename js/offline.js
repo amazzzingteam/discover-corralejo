@@ -1,4 +1,4 @@
-const OFFLINE_CORE_URLS = Object.freeze([
+const OFFLINE_APP_SHELL_URLS = Object.freeze([
   "./",
   "index.html",
   "route.html",
@@ -17,29 +17,7 @@ const OFFLINE_CORE_URLS = Object.freeze([
   "assets/vendor/maplibre-gl.css",
   "assets/vendor/maplibre-gl.js",
   "assets/vendor/pmtiles.js",
-  "assets/maps/corralejo.pmtiles",
-  "data/tour.json",
-  "data/stops.json",
-  "data/content-extension.json",
-  "data/routes.json",
-  "data/map-points.json",
-  "data/routes/01-to-02.geojson",
-  "data/routes/02-to-03.geojson",
-  "data/routes/03-to-04.geojson",
-  "data/routes/04-to-05.geojson",
-  "data/routes/05-to-06.geojson",
-  "data/routes/06-to-07.geojson",
-  "data/routes/07-to-08.geojson",
-  "data/routes/08-to-09.geojson",
-  "data/routes/09-to-10.geojson",
-  "data/routes/10-to-11.geojson",
-  "data/routes/11-to-12.geojson",
-  "data/routes/12-to-13.geojson",
-  "data/routes/13-to-14.geojson",
-  "data/routes/14-to-15.geojson",
-  "data/routes/15-to-16.geojson",
-  "data/routes/16-to-17.geojson",
-  "data/routes/17-to-18.geojson",
+  "data/tours.json",
   "js/data-loader.js",
   "js/common.js",
   "js/analytics.js",
@@ -83,10 +61,44 @@ function addOfflineUrl(urls, value) {
   }
 }
 
+function addOfflineAssetTree(urls, value) {
+  if (typeof value === "string") {
+    addOfflineUrl(urls, value);
+    return;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((item) => addOfflineAssetTree(urls, item));
+    return;
+  }
+
+  if (value && typeof value === "object") {
+    Object.values(value).forEach((item) =>
+      addOfflineAssetTree(urls, item)
+    );
+  }
+}
+
+function addActiveTourInfrastructureUrls(urls) {
+  const data = getTourData();
+
+  Object.values(data.dataFiles || {}).forEach((filePath) => {
+    addOfflineUrl(urls, filePath);
+  });
+
+  if (data.app.map?.enabled !== false) {
+    addOfflineUrl(urls, data.app.map?.pmtiles);
+  }
+
+  addOfflineAssetTree(urls, data.app.featuredMedia || {});
+  addOfflineAssetTree(urls, data.app.placeholderAssets || {});
+}
+
 function collectOfflineTourUrls() {
   const urls = new Set();
 
-  OFFLINE_CORE_URLS.forEach((url) => addOfflineUrl(urls, url));
+  OFFLINE_APP_SHELL_URLS.forEach((url) => addOfflineUrl(urls, url));
+  addActiveTourInfrastructureUrls(urls);
 
   getPublishedStops().forEach((stop) => {
     addOfflineUrl(urls, stop.media?.heroImage);

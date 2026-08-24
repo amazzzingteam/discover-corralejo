@@ -1,0 +1,71 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86773,
+            28.73578
+          ],
+          [
+            -13.8678896,
+            28.7353397
+          ],
+          [
+            -13.8680747,
+            28.7353655
+          ],
+          [
+            -13.8682303,
+            28.7353962
+          ],
+          [
+            -13.8686031,
+            28.7354172
+          ],
+          [
+            -13.8686917,
+            28.7353468
+          ],
+          [
+            -13.8687292,
+            28.735295
+          ],
+          [
+            -13.868756,
+            28.735222
+          ],
+          [
+            -13.8691073,
+            28.7352479
+          ],
+          [
+            -13.8692932,
+            28.734754
+          ],
+          [
+            -13.8675356,
+            28.7346012
+          ],
+          [
+            -13.86684,
+            28.73398
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "10-to-11",
+        "fromStopId": "10-playa-corralejo-viejo",
+        "toStopId": "11-waikiki-beach",
+        "distanceMetres": 510,
+        "walkingMinutes": 7,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

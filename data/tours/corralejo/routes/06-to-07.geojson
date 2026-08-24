@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86772,
+            28.73906
+          ],
+          [
+            -13.8675127,
+            28.7388995
+          ],
+          [
+            -13.8675436,
+            28.7385241
+          ],
+          [
+            -13.8675382,
+            28.738376
+          ],
+          [
+            -13.86744,
+            28.73828
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "06-to-07",
+        "fromStopId": "06-plaza-patricio-music-square",
+        "toStopId": "07-plaza-patricio-calero",
+        "distanceMetres": 99,
+        "walkingMinutes": 2,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

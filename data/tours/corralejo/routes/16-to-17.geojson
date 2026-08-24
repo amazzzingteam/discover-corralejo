@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86476,
+            28.72871
+          ],
+          [
+            -13.8644452,
+            28.7286803
+          ],
+          [
+            -13.8644242,
+            28.728853
+          ],
+          [
+            -13.864207,
+            28.7288577
+          ],
+          [
+            -13.8640997,
+            28.7288411
+          ],
+          [
+            -13.8637161,
+            28.7288035
+          ],
+          [
+            -13.8634399,
+            28.72846
+          ],
+          [
+            -13.86352,
+            28.72841
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "16-to-17",
+        "fromStopId": "16-el-campanario-bell-tower",
+        "toStopId": "17-mama-and-you",
+        "distanceMetres": 176,
+        "walkingMinutes": 3,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

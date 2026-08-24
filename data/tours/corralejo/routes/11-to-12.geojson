@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86684,
+            28.73398
+          ],
+          [
+            -13.866385,
+            28.7331782
+          ],
+          [
+            -13.866393,
+            28.733103
+          ],
+          [
+            -13.8663474,
+            28.7330913
+          ],
+          [
+            -13.8665043,
+            28.7326981
+          ],
+          [
+            -13.866342,
+            28.7326491
+          ],
+          [
+            -13.8661945,
+            28.7325809
+          ],
+          [
+            -13.8657894,
+            28.7323715
+          ],
+          [
+            -13.8652584,
+            28.7329643
+          ],
+          [
+            -13.86523,
+            28.73326
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "11-to-12",
+        "fromStopId": "11-waikiki-beach",
+        "toStopId": "12-lobos-viewpoint",
+        "distanceMetres": 354,
+        "walkingMinutes": 5,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

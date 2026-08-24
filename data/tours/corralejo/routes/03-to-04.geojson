@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.8669,
+            28.73986
+          ],
+          [
+            -13.8669589,
+            28.7396436
+          ],
+          [
+            -13.866975,
+            28.7395495
+          ],
+          [
+            -13.8669375,
+            28.7394531
+          ],
+          [
+            -13.8669444,
+            28.7393566
+          ],
+          [
+            -13.86702,
+            28.73916
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "03-to-04",
+        "fromStopId": "03-avenida-maritima",
+        "toStopId": "04-monumento-al-pescador",
+        "distanceMetres": 80,
+        "walkingMinutes": 2,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

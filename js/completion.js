@@ -5,7 +5,7 @@ function showCompletionStopNotFound() {
     <section class="content-section">
       <h1>${translate("stopNotFound")}</h1>
       <p>${translate("stopNotFoundBody")}</p>
-      <a class="button" href="route.html?view_source=completion_not_found">
+      <a class="button" href="${buildTourUrl("route.html", { view_source: "completion_not_found" })}">
         ${translate("returnToRoute")}
       </a>
     </section>
@@ -40,10 +40,13 @@ function setupCompletionActions(stop) {
   const nextStopName = getLocalizedValue(
     stop.nextStop.displayName
   );
-  const nextStopUrl =
-    `stop.html?stop=${encodeURIComponent(
-      stop.nextStop.slug
-    )}&from=completion_page`;
+  const nextStopUrl = buildTourUrl(
+    "stop.html",
+    {
+      stop: stop.nextStop.slug,
+      from: "completion_page"
+    }
+  );
 
   nextStopButton.hidden = false;
   nextStopButton.href = nextStopUrl;

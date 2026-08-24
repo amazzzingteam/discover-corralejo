@@ -1,7 +1,8 @@
 function getMapPointPageUrl(point, source = "map") {
-  const pointId = encodeURIComponent(point?.id || "");
-  const from = encodeURIComponent(source);
-  return `bus-stop.html?point=${pointId}&from=${from}`;
+  return buildTourUrl("bus-stop.html", {
+    point: point?.id || "",
+    from: source
+  });
 }
 
 function createMapReferenceMarker(point, options = {}) {

@@ -1,0 +1,1988 @@
+[
+  {
+    "id": "01-supermercado-deseos",
+    "slug": "supermercado-deseos",
+    "published": true,
+    "number": "01",
+    "position": 1,
+    "matchingFolder": "stop-01-supermarket-deseos",
+    "role": "Start point",
+    "typeKey": "startPoint",
+    "typeLabel": {
+      "en": "Start point",
+      "es": "Punto de inicio",
+      "fr": "Point de départ",
+      "de": "Startpunkt",
+      "it": "Punto di partenza",
+      "pl": "Punkt startowy",
+      "nl": "Startpunt",
+      "pt": "Ponto de partida"
+    },
+    "displayName": {
+      "en": "Supermercado Deseos",
+      "es": "Supermercado Deseos",
+      "fr": "Supermercado Deseos",
+      "de": "Supermercado Deseos",
+      "it": "Supermercado Deseos",
+      "pl": "Supermercado Deseos",
+      "nl": "Supermercado Deseos",
+      "pt": "Supermercado Deseos"
+    },
+    "coordinates": {
+      "latitude": 28.74237,
+      "longitude": -13.86509
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-01-supermarket-deseos/photos/01-supermarket-deseos-photo-hero.jpg",
+      "heroAlt": {
+        "en": "Supermercado Deseos",
+        "es": "Supermercado Deseos",
+        "fr": "Supermercado Deseos",
+        "de": "Supermercado Deseos",
+        "it": "Supermercado Deseos",
+        "pl": "Supermercado Deseos",
+        "nl": "Supermercado Deseos",
+        "pt": "Supermercado Deseos"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-01-supermarket-deseos/photos/01-supermarket-deseos-photo-horizontal.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-01-supermarket-deseos/videos/01-supermarket-deseos-video-main.mp4"
+        },
+        {
+          "src": "@media/stops/stop-01-supermarket-deseos/videos/01-supermarket-deseos-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-en.mp3",
+      "es": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-es.mp3",
+      "fr": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-fr.mp3",
+      "de": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-de.mp3",
+      "it": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-it.mp3",
+      "pl": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-pl.mp3",
+      "nl": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-nl.mp3",
+      "pt": "@media/stops/stop-01-supermarket-deseos/audio/01-supermarket-deseos-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/5G4V1XPMxcPQ9Ecr6"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "02-harbour",
+      "slug": "harbour",
+      "displayName": {
+        "en": "Corralejo Harbour",
+        "es": "Corralejo Harbour",
+        "fr": "Corralejo Harbour",
+        "de": "Corralejo Harbour",
+        "it": "Corralejo Harbour",
+        "pl": "Corralejo Harbour",
+        "nl": "Corralejo Harbour",
+        "pt": "Corralejo Harbour"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/xUUSpdkNpDqQngoA6",
+      "routeId": "01-to-02"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-en.txt",
+      "es": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-es.txt",
+      "fr": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-fr.txt",
+      "de": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-de.txt",
+      "it": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-it.txt",
+      "pl": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-pl.txt",
+      "nl": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-nl.txt",
+      "pt": "@media/stops/stop-01-supermarket-deseos/transcript/01-supermarket-deseos-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "02-harbour",
+    "slug": "harbour",
+    "published": true,
+    "number": "02",
+    "position": 2,
+    "matchingFolder": "stop-02-harbour",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Corralejo Harbour",
+      "es": "Corralejo Harbour",
+      "fr": "Corralejo Harbour",
+      "de": "Corralejo Harbour",
+      "it": "Corralejo Harbour",
+      "pl": "Corralejo Harbour",
+      "nl": "Corralejo Harbour",
+      "pt": "Corralejo Harbour"
+    },
+    "coordinates": {
+      "latitude": 28.74176,
+      "longitude": -13.86475
+    },
+    "description": {
+      "en": "Draft content: Corralejo Harbour is one of the main stops on the Discover Corralejo walking route. The final verified description will be added later.",
+      "es": "Contenido provisional: el Puerto de Corralejo es una de las paradas principales de la ruta Discover Corralejo. La descripción final verificada se añadirá más adelante.",
+      "fr": "Contenu provisoire : le port de Corralejo est l’une des principales étapes du parcours Discover Corralejo. La description finale vérifiée sera ajoutée ultérieurement.",
+      "de": "Vorläufiger Inhalt: Der Hafen von Corralejo ist eine der Hauptstationen der Discover-Corralejo-Route. Die endgültige geprüfte Beschreibung wird später hinzugefügt.",
+      "it": "Contenuto provvisorio: il porto di Corralejo è una delle tappe principali del percorso Discover Corralejo. La descrizione finale verificata sarà aggiunta successivamente.",
+      "pl": "Treść tymczasowa: port w Corralejo jest jednym z głównych przystanków trasy Discover Corralejo. Ostateczny zweryfikowany opis zostanie dodany później.",
+      "nl": "Conceptinhoud: de haven van Corralejo is een van de belangrijkste stops op de wandelroute Discover Corralejo. De definitieve gecontroleerde beschrijving wordt later toegevoegd.",
+      "pt": "Conteúdo provisório: o Porto de Corralejo é uma das principais paragens do percurso pedonal Discover Corralejo. A descrição final verificada será adicionada mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-02-harbour/photos/02-harbour-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Corralejo Harbour",
+        "es": "Corralejo Harbour",
+        "fr": "Corralejo Harbour",
+        "de": "Corralejo Harbour",
+        "it": "Corralejo Harbour",
+        "pl": "Corralejo Harbour",
+        "nl": "Corralejo Harbour",
+        "pt": "Corralejo Harbour"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-02-harbour/photos/02-harbour-photo-horizontal.jpeg"
+        },
+        {
+          "src": "@media/stops/stop-02-harbour/photos/02-harbour-photo-horizontal-2.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-02-harbour/videos/02-harbour-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-02-harbour/videos/02-harbour-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-02-harbour/audio/02-harbour-audio-en.mp3",
+      "es": "@media/stops/stop-02-harbour/audio/02-harbour-audio-es.mp3",
+      "fr": "@media/stops/stop-02-harbour/audio/02-harbour-audio-fr.mp3",
+      "de": "@media/stops/stop-02-harbour/audio/02-harbour-audio-de.mp3",
+      "it": "@media/stops/stop-02-harbour/audio/02-harbour-audio-it.mp3",
+      "pl": "@media/stops/stop-02-harbour/audio/02-harbour-audio-pl.mp3",
+      "nl": "@media/stops/stop-02-harbour/audio/02-harbour-audio-nl.mp3",
+      "pt": "@media/stops/stop-02-harbour/audio/02-harbour-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/pPreZsPUbtiAwL7f6"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "03-avenida-maritima",
+      "slug": "avenida-maritima",
+      "displayName": {
+        "en": "Avenida Marítima",
+        "es": "Avenida Marítima",
+        "fr": "Avenida Marítima",
+        "de": "Avenida Marítima",
+        "it": "Avenida Marítima",
+        "pl": "Avenida Marítima",
+        "nl": "Avenida Marítima",
+        "pt": "Avenida Marítima"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/Hc62vXzuWLsC7qyaA",
+      "routeId": "02-to-03"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-en.txt",
+      "es": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-es.txt",
+      "fr": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-fr.txt",
+      "de": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-de.txt",
+      "it": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-it.txt",
+      "pl": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-pl.txt",
+      "nl": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-nl.txt",
+      "pt": "@media/stops/stop-02-harbour/transcript/02-harbour-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "03-avenida-maritima",
+    "slug": "avenida-maritima",
+    "published": true,
+    "number": "03",
+    "position": 3,
+    "matchingFolder": "stop-03-avenida-maritima",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Avenida Marítima",
+      "es": "Avenida Marítima",
+      "fr": "Avenida Marítima",
+      "de": "Avenida Marítima",
+      "it": "Avenida Marítima",
+      "pl": "Avenida Marítima",
+      "nl": "Avenida Marítima",
+      "pt": "Avenida Marítima"
+    },
+    "coordinates": {
+      "latitude": 28.73986,
+      "longitude": -13.8669
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Avenida Marítima",
+        "es": "Avenida Marítima",
+        "fr": "Avenida Marítima",
+        "de": "Avenida Marítima",
+        "it": "Avenida Marítima",
+        "pl": "Avenida Marítima",
+        "nl": "Avenida Marítima",
+        "pt": "Avenida Marítima"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-horizontal.jpeg"
+        },
+        {
+          "src": "@media/stops/stop-03-avenida-maritima/photos/03-avenida-maritima-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-03-avenida-maritima/videos/03-avenida-maritima-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-en.mp3",
+      "es": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-es.mp3",
+      "fr": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-fr.mp3",
+      "de": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-de.mp3",
+      "it": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-it.mp3",
+      "pl": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-pl.mp3",
+      "nl": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-nl.mp3",
+      "pt": "@media/stops/stop-03-avenida-maritima/audio/03-avenida-maritima-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/J1ng92oB8gfyGfmw8"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "04-monumento-al-pescador",
+      "slug": "monumento-al-pescador",
+      "displayName": {
+        "en": "Monumento el Pescador & Marinero",
+        "es": "Monumento el Pescador & Marinero",
+        "fr": "Monumento el Pescador & Marinero",
+        "de": "Monumento el Pescador & Marinero",
+        "it": "Monumento el Pescador & Marinero",
+        "pl": "Monumento el Pescador & Marinero",
+        "nl": "Monumento el Pescador & Marinero",
+        "pt": "Monumento el Pescador & Marinero"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/mWZ6PGZw5APA2xBS7",
+      "routeId": "03-to-04"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-en.txt",
+      "es": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-es.txt",
+      "fr": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-fr.txt",
+      "de": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-de.txt",
+      "it": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-it.txt",
+      "pl": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-pl.txt",
+      "nl": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-nl.txt",
+      "pt": "@media/stops/stop-03-avenida-maritima/transcript/03-avenida-maritima-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "04-monumento-al-pescador",
+    "slug": "monumento-al-pescador",
+    "published": true,
+    "number": "04",
+    "position": 4,
+    "matchingFolder": "stop-04-monumento-al-pescador",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Monumento el Pescador & Marinero",
+      "es": "Monumento el Pescador & Marinero",
+      "fr": "Monumento el Pescador & Marinero",
+      "de": "Monumento el Pescador & Marinero",
+      "it": "Monumento el Pescador & Marinero",
+      "pl": "Monumento el Pescador & Marinero",
+      "nl": "Monumento el Pescador & Marinero",
+      "pt": "Monumento el Pescador & Marinero"
+    },
+    "coordinates": {
+      "latitude": 28.73916,
+      "longitude": -13.86702
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-04-monumento-al-pescador/photos/04-monumento-al-pescador-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Monumento el Pescador & Marinero",
+        "es": "Monumento el Pescador & Marinero",
+        "fr": "Monumento el Pescador & Marinero",
+        "de": "Monumento el Pescador & Marinero",
+        "it": "Monumento el Pescador & Marinero",
+        "pl": "Monumento el Pescador & Marinero",
+        "nl": "Monumento el Pescador & Marinero",
+        "pt": "Monumento el Pescador & Marinero"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-04-monumento-al-pescador/photos/04-monumento-al-pescador-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-04-monumento-al-pescador/videos/04-monumento-al-pescador-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-en.mp3",
+      "es": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-es.mp3",
+      "fr": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-fr.mp3",
+      "de": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-de.mp3",
+      "it": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-it.mp3",
+      "pl": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-pl.mp3",
+      "nl": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-nl.mp3",
+      "pt": "@media/stops/stop-04-monumento-al-pescador/audio/04-monumento-al-pescador-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/qSHQSaMA2tUZ3XT38"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "05-muelle-chico",
+      "slug": "muelle-chico",
+      "displayName": {
+        "en": "Muelle Chico",
+        "es": "Muelle Chico",
+        "fr": "Muelle Chico",
+        "de": "Muelle Chico",
+        "it": "Muelle Chico",
+        "pl": "Muelle Chico",
+        "nl": "Muelle Chico",
+        "pt": "Muelle Chico"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/GE2UcLuqVradJpge7",
+      "routeId": "04-to-05"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-en.txt",
+      "es": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-es.txt",
+      "fr": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-fr.txt",
+      "de": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-de.txt",
+      "it": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-it.txt",
+      "pl": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-pl.txt",
+      "nl": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-nl.txt",
+      "pt": "@media/stops/stop-04-monumento-al-pescador/transcript/04-monumento-al-pescador-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "05-muelle-chico",
+    "slug": "muelle-chico",
+    "published": true,
+    "number": "05",
+    "position": 5,
+    "matchingFolder": "stop-05-muelle-chico",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Muelle Chico",
+      "es": "Muelle Chico",
+      "fr": "Muelle Chico",
+      "de": "Muelle Chico",
+      "it": "Muelle Chico",
+      "pl": "Muelle Chico",
+      "nl": "Muelle Chico",
+      "pt": "Muelle Chico"
+    },
+    "coordinates": {
+      "latitude": 28.73895,
+      "longitude": -13.86691
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-hero.jpg",
+      "heroAlt": {
+        "en": "Muelle Chico",
+        "es": "Muelle Chico",
+        "fr": "Muelle Chico",
+        "de": "Muelle Chico",
+        "it": "Muelle Chico",
+        "pl": "Muelle Chico",
+        "nl": "Muelle Chico",
+        "pt": "Muelle Chico"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-horizontal.jpg"
+        },
+        {
+          "src": "@media/stops/stop-05-muelle-chico/photos/05-muelle-chico-photo-vertical.jpg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-05-muelle-chico/videos/05-muelle-chico-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-en.mp3",
+      "es": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-es.mp3",
+      "fr": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-fr.mp3",
+      "de": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-de.mp3",
+      "it": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-it.mp3",
+      "pl": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-pl.mp3",
+      "nl": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-nl.mp3",
+      "pt": "@media/stops/stop-05-muelle-chico/audio/05-muelle-chico-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/91t786QGkFiXL9dD7"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "06-plaza-patricio-music-square",
+      "slug": "plaza-patricio-music-square",
+      "displayName": {
+        "en": "The Music Square Corralejo / Plaza Felix",
+        "es": "The Music Square Corralejo / Plaza Felix",
+        "fr": "The Music Square Corralejo / Plaza Felix",
+        "de": "The Music Square Corralejo / Plaza Felix",
+        "it": "The Music Square Corralejo / Plaza Felix",
+        "pl": "The Music Square Corralejo / Plaza Felix",
+        "nl": "The Music Square Corralejo / Plaza Felix",
+        "pt": "The Music Square Corralejo / Plaza Felix"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/BrsMmxe1crssYE6UA",
+      "routeId": "05-to-06"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-en.txt",
+      "es": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-es.txt",
+      "fr": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-fr.txt",
+      "de": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-de.txt",
+      "it": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-it.txt",
+      "pl": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-pl.txt",
+      "nl": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-nl.txt",
+      "pt": "@media/stops/stop-05-muelle-chico/transcript/05-muelle-chico-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "06-plaza-patricio-music-square",
+    "slug": "plaza-patricio-music-square",
+    "published": true,
+    "number": "06",
+    "position": 6,
+    "matchingFolder": "stop-06-plaza-patricio-music-square",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "The Music Square Corralejo / Plaza Felix",
+      "es": "The Music Square Corralejo / Plaza Felix",
+      "fr": "The Music Square Corralejo / Plaza Felix",
+      "de": "The Music Square Corralejo / Plaza Felix",
+      "it": "The Music Square Corralejo / Plaza Felix",
+      "pl": "The Music Square Corralejo / Plaza Felix",
+      "nl": "The Music Square Corralejo / Plaza Felix",
+      "pt": "The Music Square Corralejo / Plaza Felix"
+    },
+    "coordinates": {
+      "latitude": 28.73906,
+      "longitude": -13.86772
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "The Music Square Corralejo / Plaza Felix",
+        "es": "The Music Square Corralejo / Plaza Felix",
+        "fr": "The Music Square Corralejo / Plaza Felix",
+        "de": "The Music Square Corralejo / Plaza Felix",
+        "it": "The Music Square Corralejo / Plaza Felix",
+        "pl": "The Music Square Corralejo / Plaza Felix",
+        "nl": "The Music Square Corralejo / Plaza Felix",
+        "pt": "The Music Square Corralejo / Plaza Felix"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-en.mp3",
+      "es": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-es.mp3",
+      "fr": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-fr.mp3",
+      "de": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-de.mp3",
+      "it": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-it.mp3",
+      "pl": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-pl.mp3",
+      "nl": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-nl.mp3",
+      "pt": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/85UnyeJ69FSgT7zX7"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "07-plaza-patricio-calero",
+      "slug": "plaza-patricio-calero",
+      "displayName": {
+        "en": "Plaza Patricio Calero",
+        "es": "Plaza Patricio Calero",
+        "fr": "Plaza Patricio Calero",
+        "de": "Plaza Patricio Calero",
+        "it": "Plaza Patricio Calero",
+        "pl": "Plaza Patricio Calero",
+        "nl": "Plaza Patricio Calero",
+        "pt": "Plaza Patricio Calero"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/yR1gy1FNu8DsX3QT8",
+      "routeId": "06-to-07"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-en.txt",
+      "es": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-es.txt",
+      "fr": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-fr.txt",
+      "de": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-de.txt",
+      "it": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-it.txt",
+      "pl": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-pl.txt",
+      "nl": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-nl.txt",
+      "pt": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "07-plaza-patricio-calero",
+    "slug": "plaza-patricio-calero",
+    "published": true,
+    "number": "07",
+    "position": 7,
+    "matchingFolder": "stop-07-plaza-patricio-calero",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Plaza Patricio Calero",
+      "es": "Plaza Patricio Calero",
+      "fr": "Plaza Patricio Calero",
+      "de": "Plaza Patricio Calero",
+      "it": "Plaza Patricio Calero",
+      "pl": "Plaza Patricio Calero",
+      "nl": "Plaza Patricio Calero",
+      "pt": "Plaza Patricio Calero"
+    },
+    "coordinates": {
+      "latitude": 28.73828,
+      "longitude": -13.86744
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Plaza Patricio Calero",
+        "es": "Plaza Patricio Calero",
+        "fr": "Plaza Patricio Calero",
+        "de": "Plaza Patricio Calero",
+        "it": "Plaza Patricio Calero",
+        "pl": "Plaza Patricio Calero",
+        "nl": "Plaza Patricio Calero",
+        "pt": "Plaza Patricio Calero"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-06-plaza-patricio-music-square/photos/06-plaza-patricio-music-square-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-06-plaza-patricio-music-square/videos/06-plaza-patricio-music-square-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-en.mp3",
+      "es": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-es.mp3",
+      "fr": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-fr.mp3",
+      "de": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-de.mp3",
+      "it": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-it.mp3",
+      "pl": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-pl.mp3",
+      "nl": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-nl.mp3",
+      "pt": "@media/stops/stop-06-plaza-patricio-music-square/audio/06-plaza-patricio-music-square-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/VU3BfwnTtuLUJpFz7"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "08-main-shopping-street",
+      "slug": "main-shopping-street",
+      "displayName": {
+        "en": "Corralejo Main Street Start",
+        "es": "Corralejo Main Street Start",
+        "fr": "Corralejo Main Street Start",
+        "de": "Corralejo Main Street Start",
+        "it": "Corralejo Main Street Start",
+        "pl": "Corralejo Main Street Start",
+        "nl": "Corralejo Main Street Start",
+        "pt": "Corralejo Main Street Start"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/tP5M2WePhY1fqJWi9",
+      "routeId": "07-to-08"
+    },
+    "sharedContentFromStopId": "06-plaza-patricio-music-square",
+    "transcriptFiles": {
+      "en": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-en.txt",
+      "es": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-es.txt",
+      "fr": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-fr.txt",
+      "de": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-de.txt",
+      "it": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-it.txt",
+      "pl": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-pl.txt",
+      "nl": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-nl.txt",
+      "pt": "@media/stops/stop-06-plaza-patricio-music-square/transcript/06-plaza-patricio-music-square-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "08-main-shopping-street",
+    "slug": "main-shopping-street",
+    "published": true,
+    "number": "08",
+    "position": 8,
+    "matchingFolder": "stop-08-main-shopping-street",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Corralejo Main Street Start",
+      "es": "Corralejo Main Street Start",
+      "fr": "Corralejo Main Street Start",
+      "de": "Corralejo Main Street Start",
+      "it": "Corralejo Main Street Start",
+      "pl": "Corralejo Main Street Start",
+      "nl": "Corralejo Main Street Start",
+      "pt": "Corralejo Main Street Start"
+    },
+    "coordinates": {
+      "latitude": 28.73835,
+      "longitude": -13.8681
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-08-main-shopping-street/photos/08-main-shopping-street-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Corralejo Main Street Start",
+        "es": "Corralejo Main Street Start",
+        "fr": "Corralejo Main Street Start",
+        "de": "Corralejo Main Street Start",
+        "it": "Corralejo Main Street Start",
+        "pl": "Corralejo Main Street Start",
+        "nl": "Corralejo Main Street Start",
+        "pt": "Corralejo Main Street Start"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-08-main-shopping-street/photos/08-main-shopping-street-photo-horizontal.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-08-main-shopping-street/videos/08-main-shopping-street-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-en.mp3",
+      "es": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-es.mp3",
+      "fr": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-fr.mp3",
+      "de": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-de.mp3",
+      "it": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-it.mp3",
+      "pl": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-pl.mp3",
+      "nl": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-nl.mp3",
+      "pt": "@media/stops/stop-08-main-shopping-street/audio/08-main-shopping-street-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/Gn3Sap4hfq6TNj7s5"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "09-rainbow-beach",
+      "slug": "rainbow-bench",
+      "displayName": {
+        "en": "Rainbow bench",
+        "es": "Rainbow bench",
+        "fr": "Rainbow bench",
+        "de": "Rainbow bench",
+        "it": "Rainbow bench",
+        "pl": "Rainbow bench",
+        "nl": "Rainbow bench",
+        "pt": "Rainbow bench"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/RKA8iWo3eFsbUVMx9",
+      "routeId": "08-to-09"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-en.txt",
+      "es": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-es.txt",
+      "fr": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-fr.txt",
+      "de": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-de.txt",
+      "it": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-it.txt",
+      "pl": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-pl.txt",
+      "nl": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-nl.txt",
+      "pt": "@media/stops/stop-08-main-shopping-street/transcript/08-main-shopping-street-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "09-rainbow-bench",
+    "slug": "rainbow-bench",
+    "published": true,
+    "number": "09",
+    "position": 9,
+    "matchingFolder": "stop-09-rainbow-bench",
+    "role": "Secret Instagrammable Spot",
+    "typeKey": "secretInstagrammableSpot",
+    "typeLabel": {
+      "en": "Secret Instagrammable Spot",
+      "es": "Rincón secreto para Instagram",
+      "fr": "Lieu secret instagrammable",
+      "de": "Geheimer Instagram-Spot",
+      "it": "Luogo segreto instagrammabile",
+      "pl": "Sekretne miejsce na Instagram",
+      "nl": "Geheime Instagramwaardige plek",
+      "pt": "Local secreto perfeito para Instagram"
+    },
+    "displayName": {
+      "en": "Rainbow bench",
+      "es": "Rainbow bench",
+      "fr": "Rainbow bench",
+      "de": "Rainbow bench",
+      "it": "Rainbow bench",
+      "pl": "Rainbow bench",
+      "nl": "Rainbow bench",
+      "pt": "Rainbow bench"
+    },
+    "coordinates": {
+      "latitude": 28.73699,
+      "longitude": -13.86734
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-09-rainbow-bench/photos/09-rainbow-bench-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Rainbow bench",
+        "es": "Rainbow bench",
+        "fr": "Rainbow bench",
+        "de": "Rainbow bench",
+        "it": "Rainbow bench",
+        "pl": "Rainbow bench",
+        "nl": "Rainbow bench",
+        "pt": "Rainbow bench"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-09-rainbow-bench/photos/09-rainbow-bench-photo-horizontal.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-09-rainbow-bench/videos/09-rainbow-bench-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-en.mp3",
+      "es": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-es.mp3",
+      "fr": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-fr.mp3",
+      "de": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-de.mp3",
+      "it": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-it.mp3",
+      "pl": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-pl.mp3",
+      "nl": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-nl.mp3",
+      "pt": "@media/stops/stop-09-rainbow-bench/audio/09-rainbow-bench-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/f4wnpd8fPREjVFTY6"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "10-playa-corralejo-viejo",
+      "slug": "playa-corralejo-viejo",
+      "displayName": {
+        "en": "Corralejo Viejo",
+        "es": "Corralejo Viejo",
+        "fr": "Corralejo Viejo",
+        "de": "Corralejo Viejo",
+        "it": "Corralejo Viejo",
+        "pl": "Corralejo Viejo",
+        "nl": "Corralejo Viejo",
+        "pt": "Corralejo Viejo"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/7Rb7bShEHTrZrSVF9",
+      "routeId": "09-to-10"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-en.txt",
+      "es": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-es.txt",
+      "fr": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-fr.txt",
+      "de": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-de.txt",
+      "it": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-it.txt",
+      "pl": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-pl.txt",
+      "nl": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-nl.txt",
+      "pt": "@media/stops/stop-09-rainbow-bench/transcript/09-rainbow-bench-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "10-playa-corralejo-viejo",
+    "slug": "playa-corralejo-viejo",
+    "published": true,
+    "number": "10",
+    "position": 10,
+    "matchingFolder": "stop-10-playa-corralejo-viejo",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Corralejo Viejo",
+      "es": "Corralejo Viejo",
+      "fr": "Corralejo Viejo",
+      "de": "Corralejo Viejo",
+      "it": "Corralejo Viejo",
+      "pl": "Corralejo Viejo",
+      "nl": "Corralejo Viejo",
+      "pt": "Corralejo Viejo"
+    },
+    "coordinates": {
+      "latitude": 28.73578,
+      "longitude": -13.86773
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-10-playa-corralejo-viejo/photos/10-playa-corralejo-viejo-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Corralejo Viejo",
+        "es": "Corralejo Viejo",
+        "fr": "Corralejo Viejo",
+        "de": "Corralejo Viejo",
+        "it": "Corralejo Viejo",
+        "pl": "Corralejo Viejo",
+        "nl": "Corralejo Viejo",
+        "pt": "Corralejo Viejo"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-10-playa-corralejo-viejo/photos/10-playa-corralejo-viejo-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-10-playa-corralejo-viejo/videos/10-playa-corralejo-viejo-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-10-playa-corralejo-viejo/videos/10-playa-corralejo-viejo-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-en.mp3",
+      "es": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-es.mp3",
+      "fr": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-fr.mp3",
+      "de": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-de.mp3",
+      "it": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-it.mp3",
+      "pl": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-pl.mp3",
+      "nl": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-nl.mp3",
+      "pt": "@media/stops/stop-10-playa-corralejo-viejo/audio/10-playa-corralejo-viejo-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/cahxmgwV7eny5iXo8"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "11-waikiki-beach",
+      "slug": "waikiki-beach",
+      "displayName": {
+        "en": "Corralejo Waikiki & Galera Beach",
+        "es": "Corralejo Waikiki & Galera Beach",
+        "fr": "Corralejo Waikiki & Galera Beach",
+        "de": "Corralejo Waikiki & Galera Beach",
+        "it": "Corralejo Waikiki & Galera Beach",
+        "pl": "Corralejo Waikiki & Galera Beach",
+        "nl": "Corralejo Waikiki & Galera Beach",
+        "pt": "Corralejo Waikiki & Galera Beach"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/BpK2ajzvvgz5e8ZG8",
+      "routeId": "10-to-11"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-en.txt",
+      "es": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-es.txt",
+      "fr": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-fr.txt",
+      "de": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-de.txt",
+      "it": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-it.txt",
+      "pl": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-pl.txt",
+      "nl": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-nl.txt",
+      "pt": "@media/stops/stop-10-playa-corralejo-viejo/transcript/10-playa-corralejo-viejo-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "11-waikiki-beach",
+    "slug": "waikiki-beach",
+    "published": true,
+    "number": "11",
+    "position": 11,
+    "matchingFolder": "stop-11-waikiki-beach",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Corralejo Waikiki & Galera Beach",
+      "es": "Corralejo Waikiki & Galera Beach",
+      "fr": "Corralejo Waikiki & Galera Beach",
+      "de": "Corralejo Waikiki & Galera Beach",
+      "it": "Corralejo Waikiki & Galera Beach",
+      "pl": "Corralejo Waikiki & Galera Beach",
+      "nl": "Corralejo Waikiki & Galera Beach",
+      "pt": "Corralejo Waikiki & Galera Beach"
+    },
+    "coordinates": {
+      "latitude": 28.73398,
+      "longitude": -13.86684
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-11-waikiki-beach/photos/11-waikiki-beach-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Corralejo Waikiki & Galera Beach",
+        "es": "Corralejo Waikiki & Galera Beach",
+        "fr": "Corralejo Waikiki & Galera Beach",
+        "de": "Corralejo Waikiki & Galera Beach",
+        "it": "Corralejo Waikiki & Galera Beach",
+        "pl": "Corralejo Waikiki & Galera Beach",
+        "nl": "Corralejo Waikiki & Galera Beach",
+        "pt": "Corralejo Waikiki & Galera Beach"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-11-waikiki-beach/photos/11-waikiki-beach-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-11-waikiki-beach/videos/11-waikiki-beach-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-11-waikiki-beach/videos/11-waikiki-beach-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-en.mp3",
+      "es": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-es.mp3",
+      "fr": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-fr.mp3",
+      "de": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-de.mp3",
+      "it": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-it.mp3",
+      "pl": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-pl.mp3",
+      "nl": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-nl.mp3",
+      "pt": "@media/stops/stop-11-waikiki-beach/audio/11-waikiki-beach-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/b1acQWaSXwD9RVWN7"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "12-lobos-viewpoint",
+      "slug": "lobos-viewpoint",
+      "displayName": {
+        "en": "Uitkijkpost Corralejo",
+        "es": "Uitkijkpost Corralejo",
+        "fr": "Uitkijkpost Corralejo",
+        "de": "Uitkijkpost Corralejo",
+        "it": "Uitkijkpost Corralejo",
+        "pl": "Uitkijkpost Corralejo",
+        "nl": "Uitkijkpost Corralejo",
+        "pt": "Uitkijkpost Corralejo"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/WXdw2eVPvhMdxe8b9",
+      "routeId": "11-to-12"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-en.txt",
+      "es": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-es.txt",
+      "fr": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-fr.txt",
+      "de": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-de.txt",
+      "it": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-it.txt",
+      "pl": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-pl.txt",
+      "nl": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-nl.txt",
+      "pt": "@media/stops/stop-11-waikiki-beach/transcript/11-waikiki-beach-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "12-lobos-viewpoint",
+    "slug": "lobos-viewpoint",
+    "published": true,
+    "number": "12",
+    "position": 12,
+    "matchingFolder": "stop-12-secret-bench-galera-beach",
+    "role": "Secret Instagrammable Spot",
+    "typeKey": "secretInstagrammableSpot",
+    "typeLabel": {
+      "en": "Secret Instagrammable Spot",
+      "es": "Rincón secreto para Instagram",
+      "fr": "Lieu secret instagrammable",
+      "de": "Geheimer Instagram-Spot",
+      "it": "Luogo segreto instagrammabile",
+      "pl": "Sekretne miejsce na Instagram",
+      "nl": "Geheime Instagramwaardige plek",
+      "pt": "Local secreto perfeito para Instagram"
+    },
+    "displayName": {
+      "en": "Uitkijkpost Corralejo",
+      "es": "Uitkijkpost Corralejo",
+      "fr": "Uitkijkpost Corralejo",
+      "de": "Uitkijkpost Corralejo",
+      "it": "Uitkijkpost Corralejo",
+      "pl": "Uitkijkpost Corralejo",
+      "nl": "Uitkijkpost Corralejo",
+      "pt": "Uitkijkpost Corralejo"
+    },
+    "coordinates": {
+      "latitude": 28.73326,
+      "longitude": -13.86523
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-12-secret-bench-galera-beach/photos/12-secret-bench-galera-beach-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Uitkijkpost Corralejo",
+        "es": "Uitkijkpost Corralejo",
+        "fr": "Uitkijkpost Corralejo",
+        "de": "Uitkijkpost Corralejo",
+        "it": "Uitkijkpost Corralejo",
+        "pl": "Uitkijkpost Corralejo",
+        "nl": "Uitkijkpost Corralejo",
+        "pt": "Uitkijkpost Corralejo"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-12-secret-bench-galera-beach/photos/12-secret-bench-galera-beach-photo-horizontal.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-12-secret-bench-galera-beach/videos/12-secret-bench-galera-beach-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-12-secret-bench-galera-beach/videos/12-secret-bench-galera-beach-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-en.mp3",
+      "es": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-es.mp3",
+      "fr": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-fr.mp3",
+      "de": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-de.mp3",
+      "it": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-it.mp3",
+      "pl": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-pl.mp3",
+      "nl": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-nl.mp3",
+      "pt": "@media/stops/stop-12-secret-bench-galera-beach/audio/12-secret-bench-galera-beach-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/Q9xHsYpUZYEQW7n16"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "13-galera-beach",
+      "slug": "galera-beach",
+      "displayName": {
+        "en": "Galera Beach Art Villas",
+        "es": "Galera Beach Art Villas",
+        "fr": "Galera Beach Art Villas",
+        "de": "Galera Beach Art Villas",
+        "it": "Galera Beach Art Villas",
+        "pl": "Galera Beach Art Villas",
+        "nl": "Galera Beach Art Villas",
+        "pt": "Galera Beach Art Villas"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/FhXu98e2S9EpY5mw5",
+      "routeId": "12-to-13"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-en.txt",
+      "es": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-es.txt",
+      "fr": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-fr.txt",
+      "de": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-de.txt",
+      "it": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-it.txt",
+      "pl": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-pl.txt",
+      "nl": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-nl.txt",
+      "pt": "@media/stops/stop-12-secret-bench-galera-beach/transcript/12-secret-bench-galera-beach-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "13-galera-beach",
+    "slug": "galera-beach",
+    "published": true,
+    "number": "13",
+    "position": 13,
+    "matchingFolder": "stop-13-galera-beach",
+    "role": "Secret Instagrammable Spot",
+    "typeKey": "secretInstagrammableSpot",
+    "typeLabel": {
+      "en": "Secret Instagrammable Spot",
+      "es": "Rincón secreto para Instagram",
+      "fr": "Lieu secret instagrammable",
+      "de": "Geheimer Instagram-Spot",
+      "it": "Luogo segreto instagrammabile",
+      "pl": "Sekretne miejsce na Instagram",
+      "nl": "Geheime Instagramwaardige plek",
+      "pt": "Local secreto perfeito para Instagram"
+    },
+    "displayName": {
+      "en": "Galera Beach Art Villas",
+      "es": "Galera Beach Art Villas",
+      "fr": "Galera Beach Art Villas",
+      "de": "Galera Beach Art Villas",
+      "it": "Galera Beach Art Villas",
+      "pl": "Galera Beach Art Villas",
+      "nl": "Galera Beach Art Villas",
+      "pt": "Galera Beach Art Villas"
+    },
+    "coordinates": {
+      "latitude": 28.73265,
+      "longitude": -13.86572
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-13-galera-beach/photos/13-galera-beach-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Galera Beach Art Villas",
+        "es": "Galera Beach Art Villas",
+        "fr": "Galera Beach Art Villas",
+        "de": "Galera Beach Art Villas",
+        "it": "Galera Beach Art Villas",
+        "pl": "Galera Beach Art Villas",
+        "nl": "Galera Beach Art Villas",
+        "pt": "Galera Beach Art Villas"
+      },
+      "photos": [],
+      "videos": [
+        {
+          "src": "@media/stops/stop-13-galera-beach/videos/13-galera-beach-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-en.mp3",
+      "es": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-es.mp3",
+      "fr": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-fr.mp3",
+      "de": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-de.mp3",
+      "it": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-it.mp3",
+      "pl": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-pl.mp3",
+      "nl": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-nl.mp3",
+      "pt": "@media/stops/stop-13-galera-beach/audio/13-galera-beach-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/o1nWJ3zmecW6SL9d9"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "14-pop-corn-beach",
+      "slug": "pop-corn-beach",
+      "displayName": {
+        "en": "Popcorn Beach",
+        "es": "Popcorn Beach",
+        "fr": "Popcorn Beach",
+        "de": "Popcorn Beach",
+        "it": "Popcorn Beach",
+        "pl": "Popcorn Beach",
+        "nl": "Popcorn Beach",
+        "pt": "Popcorn Beach"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/ukEyR7AjcVefxhM66",
+      "routeId": "13-to-14"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-en.txt",
+      "es": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-es.txt",
+      "fr": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-fr.txt",
+      "de": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-de.txt",
+      "it": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-it.txt",
+      "pl": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-pl.txt",
+      "nl": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-nl.txt",
+      "pt": "@media/stops/stop-13-galera-beach/transcript/13-galera-beach-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "14-pop-corn-beach",
+    "slug": "pop-corn-beach",
+    "published": true,
+    "number": "14",
+    "position": 14,
+    "matchingFolder": "stop-14-pop-corn-beach",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Popcorn Beach",
+      "es": "Popcorn Beach",
+      "fr": "Popcorn Beach",
+      "de": "Popcorn Beach",
+      "it": "Popcorn Beach",
+      "pl": "Popcorn Beach",
+      "nl": "Popcorn Beach",
+      "pt": "Popcorn Beach"
+    },
+    "coordinates": {
+      "latitude": 28.73058,
+      "longitude": -13.86138
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Popcorn Beach",
+        "es": "Popcorn Beach",
+        "fr": "Popcorn Beach",
+        "de": "Popcorn Beach",
+        "it": "Popcorn Beach",
+        "pl": "Popcorn Beach",
+        "nl": "Popcorn Beach",
+        "pt": "Popcorn Beach"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-14-pop-corn-beach/photos/14-pop-corn-beach-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-14-pop-corn-beach/videos/14-pop-corn-beach-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-14-pop-corn-beach/videos/14-pop-corn-beach-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-en.mp3",
+      "es": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-es.mp3",
+      "fr": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-fr.mp3",
+      "de": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-de.mp3",
+      "it": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-it.mp3",
+      "pl": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-pl.mp3",
+      "nl": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-nl.mp3",
+      "pt": "@media/stops/stop-14-pop-corn-beach/audio/14-pop-corn-beach-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/vy5UqfyUYuxH3edWA"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "15-el-campanario",
+      "slug": "el-campanario",
+      "displayName": {
+        "en": "Villa Comercial El Campanario",
+        "es": "Villa Comercial El Campanario",
+        "fr": "Villa Comercial El Campanario",
+        "de": "Villa Comercial El Campanario",
+        "it": "Villa Comercial El Campanario",
+        "pl": "Villa Comercial El Campanario",
+        "nl": "Villa Comercial El Campanario",
+        "pt": "Villa Comercial El Campanario"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/vsWS82ANpM8Zy3Rw7",
+      "routeId": "14-to-15"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-en.txt",
+      "es": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-es.txt",
+      "fr": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-fr.txt",
+      "de": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-de.txt",
+      "it": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-it.txt",
+      "pl": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-pl.txt",
+      "nl": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-nl.txt",
+      "pt": "@media/stops/stop-14-pop-corn-beach/transcript/14-pop-corn-beach-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "15-el-campanario",
+    "slug": "el-campanario",
+    "published": true,
+    "number": "15",
+    "position": 15,
+    "matchingFolder": "stop-15-el-campanario",
+    "role": "Main stop",
+    "typeKey": "mainStop",
+    "typeLabel": {
+      "en": "Main Stop",
+      "es": "Parada principal",
+      "fr": "Étape principale",
+      "de": "Hauptstation",
+      "it": "Tappa principale",
+      "pl": "Główny przystanek",
+      "nl": "Hoofdstop",
+      "pt": "Paragem principal"
+    },
+    "displayName": {
+      "en": "Villa Comercial El Campanario",
+      "es": "Villa Comercial El Campanario",
+      "fr": "Villa Comercial El Campanario",
+      "de": "Villa Comercial El Campanario",
+      "it": "Villa Comercial El Campanario",
+      "pl": "Villa Comercial El Campanario",
+      "nl": "Villa Comercial El Campanario",
+      "pt": "Villa Comercial El Campanario"
+    },
+    "coordinates": {
+      "latitude": 28.72862,
+      "longitude": -13.86474
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-15-el-campanario/photos/15-el-campanario-photo-hero.jpg",
+      "heroAlt": {
+        "en": "Villa Comercial El Campanario",
+        "es": "Villa Comercial El Campanario",
+        "fr": "Villa Comercial El Campanario",
+        "de": "Villa Comercial El Campanario",
+        "it": "Villa Comercial El Campanario",
+        "pl": "Villa Comercial El Campanario",
+        "nl": "Villa Comercial El Campanario",
+        "pt": "Villa Comercial El Campanario"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-15-el-campanario/photos/15-el-campanario-photo-horizontal.jpg"
+        },
+        {
+          "src": "@media/stops/stop-15-el-campanario/photos/15-el-campanario-photo-vertical.jpg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-15-el-campanario/videos/15-el-campanario-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-15-el-campanario/videos/15-el-campanario-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-en.mp3",
+      "es": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-es.mp3",
+      "fr": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-fr.mp3",
+      "de": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-de.mp3",
+      "it": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-it.mp3",
+      "pl": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-pl.mp3",
+      "nl": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-nl.mp3",
+      "pt": "@media/stops/stop-15-el-campanario/audio/15-el-campanario-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/kunQu1dkf6499Uwe7"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "16-el-campanario-bell-tower",
+      "slug": "el-campanario-bell-tower",
+      "displayName": {
+        "en": "El Campanario Bell Tower",
+        "es": "El Campanario Bell Tower",
+        "fr": "El Campanario Bell Tower",
+        "de": "El Campanario Bell Tower",
+        "it": "El Campanario Bell Tower",
+        "pl": "El Campanario Bell Tower",
+        "nl": "El Campanario Bell Tower",
+        "pt": "El Campanario Bell Tower"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/pW6BAT5Vp5V7fRpa9",
+      "routeId": "15-to-16"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-en.txt",
+      "es": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-es.txt",
+      "fr": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-fr.txt",
+      "de": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-de.txt",
+      "it": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-it.txt",
+      "pl": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-pl.txt",
+      "nl": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-nl.txt",
+      "pt": "@media/stops/stop-15-el-campanario/transcript/15-el-campanario-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "16-el-campanario-bell-tower",
+    "slug": "el-campanario-bell-tower",
+    "published": true,
+    "number": "16",
+    "position": 16,
+    "matchingFolder": "stop-16-el-campanario-bell-tower",
+    "role": "Hidden Gem",
+    "typeKey": "hiddenGem",
+    "typeLabel": {
+      "en": "Hidden Gem",
+      "es": "Joya escondida",
+      "fr": "Trésor caché",
+      "de": "Verstecktes Juwel",
+      "it": "Gemma nascosta",
+      "pl": "Ukryta perełka",
+      "nl": "Verborgen parel",
+      "pt": "Joia escondida"
+    },
+    "displayName": {
+      "en": "El Campanario Bell Tower",
+      "es": "El Campanario Bell Tower",
+      "fr": "El Campanario Bell Tower",
+      "de": "El Campanario Bell Tower",
+      "it": "El Campanario Bell Tower",
+      "pl": "El Campanario Bell Tower",
+      "nl": "El Campanario Bell Tower",
+      "pt": "El Campanario Bell Tower"
+    },
+    "coordinates": {
+      "latitude": 28.72871,
+      "longitude": -13.86476
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-16-el-campanario-bell-tower/photos/16-el-campanario-bell-tower-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "El Campanario Bell Tower",
+        "es": "El Campanario Bell Tower",
+        "fr": "El Campanario Bell Tower",
+        "de": "El Campanario Bell Tower",
+        "it": "El Campanario Bell Tower",
+        "pl": "El Campanario Bell Tower",
+        "nl": "El Campanario Bell Tower",
+        "pt": "El Campanario Bell Tower"
+      },
+      "photos": [],
+      "videos": [
+        {
+          "src": "@media/stops/stop-16-el-campanario-bell-tower/videos/16-el-campanario-bell-tower-video-horizontal.mp4",
+          "orientation": "landscape"
+        },
+        {
+          "src": "@media/stops/stop-16-el-campanario-bell-tower/videos/16-el-campanario-bell-tower-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-en.mp3",
+      "es": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-es.mp3",
+      "fr": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-fr.mp3",
+      "de": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-de.mp3",
+      "it": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-it.mp3",
+      "pl": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-pl.mp3",
+      "nl": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-nl.mp3",
+      "pt": "@media/stops/stop-16-el-campanario-bell-tower/audio/16-el-campanario-bell-tower-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/KQM7grGLn1wayD8m8"
+    },
+    "contentStatus": "ready_for_review",
+    "nextStop": {
+      "id": "17-mama-and-you",
+      "slug": "mama-and-you",
+      "displayName": {
+        "en": "Mama and You",
+        "es": "Mama and You",
+        "fr": "Mama and You",
+        "de": "Mama and You",
+        "it": "Mama and You",
+        "pl": "Mama and You",
+        "nl": "Mama and You",
+        "pt": "Mama and You"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/xeRQJeJYLq4UMgXs5",
+      "routeId": "16-to-17"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-en.txt",
+      "es": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-es.txt",
+      "fr": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-fr.txt",
+      "de": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-de.txt",
+      "it": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-it.txt",
+      "pl": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-pl.txt",
+      "nl": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-nl.txt",
+      "pt": "@media/stops/stop-16-el-campanario-bell-tower/transcript/16-el-campanario-bell-tower-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "17-mama-and-you",
+    "slug": "mama-and-you",
+    "published": true,
+    "number": "17",
+    "position": 17,
+    "matchingFolder": "stop-17-mama-and-you",
+    "role": "Secret Instagrammable Spot",
+    "typeKey": "secretInstagrammableSpot",
+    "typeLabel": {
+      "en": "Secret Instagrammable Spot",
+      "es": "Rincón secreto para Instagram",
+      "fr": "Lieu secret instagrammable",
+      "de": "Geheimer Instagram-Spot",
+      "it": "Luogo segreto instagrammabile",
+      "pl": "Sekretne miejsce na Instagram",
+      "nl": "Geheime Instagramwaardige plek",
+      "pt": "Local secreto perfeito para Instagram"
+    },
+    "displayName": {
+      "en": "Mama and You",
+      "es": "Mama and You",
+      "fr": "Mama and You",
+      "de": "Mama and You",
+      "it": "Mama and You",
+      "pl": "Mama and You",
+      "nl": "Mama and You",
+      "pt": "Mama and You"
+    },
+    "coordinates": {
+      "latitude": 28.72841,
+      "longitude": -13.86352
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-17-mama-and-you/photos/17-mama-and-you-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Mama and You",
+        "es": "Mama and You",
+        "fr": "Mama and You",
+        "de": "Mama and You",
+        "it": "Mama and You",
+        "pl": "Mama and You",
+        "nl": "Mama and You",
+        "pt": "Mama and You"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-17-mama-and-you/photos/17-mama-and-you-photo-horizontal.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-17-mama-and-you/videos/17-mama-and-you-video-vertical.mp4",
+          "orientation": "portrait"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-en.mp3",
+      "es": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-es.mp3",
+      "fr": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-fr.mp3",
+      "de": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-de.mp3",
+      "it": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-it.mp3",
+      "pl": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-pl.mp3",
+      "nl": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-nl.mp3",
+      "pt": "@media/stops/stop-17-mama-and-you/audio/17-mama-and-you-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/SojuxVZWDwozCWgG6"
+    },
+    "contentStatus": "draft",
+    "nextStop": {
+      "id": "18-botanic-park",
+      "slug": "botanic-park",
+      "displayName": {
+        "en": "Botanic Park of Corralejo",
+        "es": "Botanic Park of Corralejo",
+        "fr": "Botanic Park of Corralejo",
+        "de": "Botanic Park of Corralejo",
+        "it": "Botanic Park of Corralejo",
+        "pl": "Botanic Park of Corralejo",
+        "nl": "Botanic Park of Corralejo",
+        "pt": "Botanic Park of Corralejo"
+      },
+      "directionsUrl": "https://maps.app.goo.gl/CqUrZnPFiQfbDQREA",
+      "routeId": "17-to-18"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-en.txt",
+      "es": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-es.txt",
+      "fr": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-fr.txt",
+      "de": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-de.txt",
+      "it": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-it.txt",
+      "pl": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-pl.txt",
+      "nl": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-nl.txt",
+      "pt": "@media/stops/stop-17-mama-and-you/transcript/17-mama-and-you-transcript-pt.txt"
+    }
+  },
+  {
+    "id": "18-botanic-park",
+    "slug": "botanic-park",
+    "published": true,
+    "number": "18",
+    "position": 18,
+    "matchingFolder": "stop-18-botanic-park",
+    "role": "Hidden Gem",
+    "typeKey": "hiddenGem",
+    "typeLabel": {
+      "en": "Hidden Gem",
+      "es": "Joya escondida",
+      "fr": "Trésor caché",
+      "de": "Verstecktes Juwel",
+      "it": "Gemma nascosta",
+      "pl": "Ukryta perełka",
+      "nl": "Verborgen parel",
+      "pt": "Joia escondida"
+    },
+    "displayName": {
+      "en": "Botanic Park of Corralejo",
+      "es": "Botanic Park of Corralejo",
+      "fr": "Botanic Park of Corralejo",
+      "de": "Botanic Park of Corralejo",
+      "it": "Botanic Park of Corralejo",
+      "pl": "Botanic Park of Corralejo",
+      "nl": "Botanic Park of Corralejo",
+      "pt": "Botanic Park of Corralejo"
+    },
+    "coordinates": {
+      "latitude": 28.72637,
+      "longitude": -13.8641
+    },
+    "description": {
+      "en": "Temporary content: the final verified information for this stop will be added later.",
+      "es": "Contenido temporal: la información final verificada de esta parada se añadirá más adelante.",
+      "fr": "Contenu temporaire : les informations finales vérifiées de cette étape seront ajoutées ultérieurement.",
+      "de": "Vorläufiger Inhalt: Die endgültigen geprüften Informationen zu dieser Station werden später ergänzt.",
+      "it": "Contenuto temporaneo: le informazioni finali verificate per questa tappa saranno aggiunte in seguito.",
+      "pl": "Treść tymczasowa: ostateczne zweryfikowane informacje o tym przystanku zostaną dodane później.",
+      "nl": "Tijdelijke inhoud: de definitieve gecontroleerde informatie voor deze stop wordt later toegevoegd.",
+      "pt": "Conteúdo temporário: as informações finais verificadas sobre esta paragem serão adicionadas mais tarde."
+    },
+    "media": {
+      "heroImage": "@media/stops/stop-18-botanic-park/photos/18-botanic-park-photo-hero.jpeg",
+      "heroAlt": {
+        "en": "Botanic Park of Corralejo",
+        "es": "Botanic Park of Corralejo",
+        "fr": "Botanic Park of Corralejo",
+        "de": "Botanic Park of Corralejo",
+        "it": "Botanic Park of Corralejo",
+        "pl": "Botanic Park of Corralejo",
+        "nl": "Botanic Park of Corralejo",
+        "pt": "Botanic Park of Corralejo"
+      },
+      "photos": [
+        {
+          "src": "@media/stops/stop-18-botanic-park/photos/18-botanic-park-photo-horizontal.jpeg"
+        },
+        {
+          "src": "@media/stops/stop-18-botanic-park/photos/18-botanic-park-photo-vertical.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "src": "@media/stops/stop-18-botanic-park/videos/18-botanic-park-video-horizontal.mp4",
+          "orientation": "landscape"
+        }
+      ]
+    },
+    "audio": {
+      "en": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-en.mp3",
+      "es": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-es.mp3",
+      "fr": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-fr.mp3",
+      "de": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-de.mp3",
+      "it": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-it.mp3",
+      "pl": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-pl.mp3",
+      "nl": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-nl.mp3",
+      "pt": "@media/stops/stop-18-botanic-park/audio/18-botanic-park-audio-pt.mp3"
+    },
+    "maps": {
+      "location": "https://maps.app.goo.gl/Gv8s1FsM8RDp4Vcu8"
+    },
+    "contentStatus": "draft",
+    "isFinal": true,
+    "finalButtonLabel": {
+      "en": "Finish tour",
+      "es": "Finalizar recorrido",
+      "fr": "Terminer la visite",
+      "de": "Tour beenden",
+      "it": "Termina il tour",
+      "pl": "Zakończ trasę",
+      "nl": "Tour voltooien",
+      "pt": "Concluir percurso"
+    },
+    "transcriptFiles": {
+      "en": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-en.txt",
+      "es": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-es.txt",
+      "fr": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-fr.txt",
+      "de": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-de.txt",
+      "it": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-it.txt",
+      "pl": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-pl.txt",
+      "nl": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-nl.txt",
+      "pt": "@media/stops/stop-18-botanic-park/transcript/18-botanic-park-transcript-pt.txt"
+    }
+  }
+]

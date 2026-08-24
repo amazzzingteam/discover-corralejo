@@ -77,7 +77,7 @@ function requireSelectedLanguage() {
     return true;
   }
 
-  window.location.replace("index.html");
+  window.location.replace(buildTourUrl("index.html"));
   return false;
 }
 
@@ -149,6 +149,8 @@ function applyPageTranslations() {
     .forEach((element) => {
       element.textContent = getAppName();
     });
+
+  applyTourContextToInternalLinks();
 }
 
 function setTranslatedDocumentTitle(translationKey) {
@@ -164,6 +166,85 @@ function getQueryParameter(parameterName) {
   return new URLSearchParams(
     window.location.search
   ).get(parameterName);
+}
+
+function buildTourUrl(pagePath, parameters = {}) {
+  const source = String(pagePath || "");
+  if (!source) {
+    return source;
+  }
+
+  const hashIndex = source.indexOf("#");
+  const hash = hashIndex >= 0 ? source.slice(hashIndex) : "";
+  const pathAndQuery = hashIndex >= 0 ? source.slice(0, hashIndex) : source;
+  const queryIndex = pathAndQuery.indexOf("?");
+  const pathname = queryIndex >= 0
+    ? pathAndQuery.slice(0, queryIndex)
+    : pathAndQuery;
+  const existingQuery = queryIndex >= 0
+    ? pathAndQuery.slice(queryIndex + 1)
+    : "";
+
+  const activeTourId =
+    (typeof getActiveTourId === "function" && getActiveTourId()) ||
+    getTourData().activeTour?.id ||
+    null;
+
+  const existingParameters = new URLSearchParams(existingQuery);
+  const finalParameters = new URLSearchParams();
+
+  if (activeTourId) {
+    finalParameters.set("tour", activeTourId);
+  }
+
+  existingParameters.forEach((value, key) => {
+    if (key !== "tour") {
+      finalParameters.append(key, value);
+    }
+  });
+
+  Object.entries(parameters || {}).forEach(([key, value]) => {
+    if (key === "tour") {
+      return;
+    }
+
+    if (value === null || value === undefined || value === "") {
+      finalParameters.delete(key);
+      return;
+    }
+
+    finalParameters.set(key, String(value));
+  });
+
+  const query = finalParameters.toString();
+  return `${pathname}${query ? `?${query}` : ""}${hash}`;
+}
+
+function applyTourContextToInternalLinks(root = document) {
+  const appPages = new Set([
+    "index.html",
+    "route.html",
+    "stop.html",
+    "bus-stop.html",
+    "completion.html",
+    "feedback-complete.html"
+  ]);
+
+  root.querySelectorAll("a[href]").forEach((link) => {
+    const rawHref = link.getAttribute("href");
+    if (!rawHref || rawHref.startsWith("#")) {
+      return;
+    }
+
+    const hrefWithoutHash = rawHref.split("#", 1)[0];
+    const pathname = hrefWithoutHash.split("?", 1)[0].replace(/^\.\//, "");
+
+    if (!appPages.has(pathname)) {
+      return;
+    }
+
+    link.setAttribute("href", buildTourUrl(rawHref));
+  });
 }
 
 function getStopBySlug(stopSlug) {

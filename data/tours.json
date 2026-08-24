@@ -1,0 +1,13 @@
+{
+  "defaultTour": "corralejo",
+  "tours": [
+    {
+      "id": "corralejo",
+      "number": "01",
+      "slug": "corralejo",
+      "displayName": "Discover Corralejo",
+      "status": "published",
+      "dataPath": "data/tours/corralejo"
+    }
+  ]
+}

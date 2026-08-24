@@ -231,7 +231,7 @@ function initialiseLanguagePage() {
         selected_language: selectedLanguageCode,
         entry_source: getEntrySource()
       },
-      "route.html?view_source=tour_start"
+      buildTourUrl("route.html", { view_source: "tour_start" })
     );
   });
 }

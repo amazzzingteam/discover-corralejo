@@ -20,7 +20,7 @@ function showStopNotFound() {
     <section class="content-section">
       <h1>${translate("stopNotFound")}</h1>
       <p>${translate("stopNotFoundBody")}</p>
-      <a class="button" href="route.html?view_source=stop_not_found">
+      <a class="button" href="${buildTourUrl("route.html", { view_source: "stop_not_found" })}">
         ${translate("returnToRoute")}
       </a>
     </section>
@@ -520,7 +520,7 @@ function setupStopActions(stop) {
     event.preventDefault();
     trackStopExit(
       "home",
-      "route.html?view_source=stop_page"
+      buildTourUrl("route.html", { view_source: "stop_page" })
     );
   });
 
@@ -528,7 +528,7 @@ function setupStopActions(stop) {
     event.preventDefault();
     trackStopExit(
       "home",
-      "index.html?from=stop_page"
+      buildTourUrl("index.html", { from: "stop_page" })
     );
   });
 
@@ -546,7 +546,7 @@ function setupStopActions(stop) {
     trackAnalyticsEventAndNavigate(
       "tour_exit",
       parameters,
-      "index.html?from=exit_tour"
+      buildTourUrl("index.html", { from: "exit_tour" })
     );
   });
 }
@@ -641,16 +641,16 @@ function renderStop(stop) {
   );
 
   if (stop.nextStop?.slug) {
-    nextStopButton.href =
-      `completion.html?stop=${encodeURIComponent(
-        stop.slug
-      )}`;
+    nextStopButton.href = buildTourUrl(
+      "completion.html",
+      { stop: stop.slug }
+    );
     nextStopButton.textContent = translate("completeStop");
   } else {
-    nextStopButton.href =
-      `completion.html?stop=${encodeURIComponent(
-        stop.slug
-      )}`;
+    nextStopButton.href = buildTourUrl(
+      "completion.html",
+      { stop: stop.slug }
+    );
     nextStopButton.textContent =
       getLocalizedValue(stop.finalButtonLabel) ||
       translate("finishTour");

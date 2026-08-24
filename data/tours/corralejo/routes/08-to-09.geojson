@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.8681,
+            28.73835
+          ],
+          [
+            -13.8679754,
+            28.7383524
+          ],
+          [
+            -13.8677421,
+            28.7383101
+          ],
+          [
+            -13.8675892,
+            28.737334
+          ],
+          [
+            -13.86734,
+            28.73699
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "08-to-09",
+        "fromStopId": "08-main-shopping-street",
+        "toStopId": "09-rainbow-beach",
+        "distanceMetres": 190,
+        "walkingMinutes": 3,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

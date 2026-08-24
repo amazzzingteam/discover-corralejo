@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86474,
+            28.72862
+          ],
+          [
+            -13.864743,
+            28.7286011
+          ],
+          [
+            -13.86484,
+            28.7286131
+          ],
+          [
+            -13.8647767,
+            28.7286052
+          ],
+          [
+            -13.86476,
+            28.72871
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "15-to-16",
+        "fromStopId": "15-el-campanario",
+        "toStopId": "16-el-campanario-bell-tower",
+        "distanceMetres": 30,
+        "walkingMinutes": 1,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86691,
+            28.73895
+          ],
+          [
+            -13.8673988,
+            28.7390532
+          ],
+          [
+            -13.8675061,
+            28.7389733
+          ],
+          [
+            -13.86772,
+            28.73906
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "05-to-06",
+        "fromStopId": "05-muelle-chico",
+        "toStopId": "06-plaza-patricio-music-square",
+        "distanceMetres": 86,
+        "walkingMinutes": 2,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}

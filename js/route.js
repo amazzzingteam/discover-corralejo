@@ -40,7 +40,7 @@ function createStopTypeBadge(stop) {
 function createRouteCard(stop, completedStopIds, currentStopId) {
   const state = getRouteState(stop, completedStopIds, currentStopId);
   const typeClass = getStopTypeClass(stop);
-  const stopUrl = `stop.html?stop=${encodeURIComponent(stop.slug)}`;
+  const stopUrl = buildTourUrl("stop.html", { stop: stop.slug });
 
   const card = document.createElement("a");
   card.className = `stop-card stop-card-${typeClass} is-${state}`;
@@ -133,7 +133,7 @@ function renderUpNextCard(currentStop) {
   image.alt = getLocalizedValue(currentStop.media.heroAlt || currentStop.displayName);
   number.textContent = currentStop.number;
   heading.textContent = getLocalizedValue(currentStop.displayName);
-  openButton.href = `stop.html?stop=${encodeURIComponent(currentStop.slug)}`;
+  openButton.href = buildTourUrl("stop.html", { stop: currentStop.slug });
   openButton.textContent = translate("continueTo", {
     name: getLocalizedValue(currentStop.displayName)
   });
@@ -196,7 +196,7 @@ function renderRouteSummary(stops) {
   if (continueButton) {
     if (currentStop) {
       continueButton.hidden = false;
-      continueButton.href = `stop.html?stop=${encodeURIComponent(currentStop.slug)}`;
+      continueButton.href = buildTourUrl("stop.html", { stop: currentStop.slug });
       continueButton.textContent = translate("continueTo", {
         name: getLocalizedValue(currentStop.displayName)
       });
@@ -290,21 +290,23 @@ function initialiseRouteOverviewMap(stops, completedStopIds, currentStopId) {
     return;
   }
 
-  const archiveUrl = new URL("assets/maps/corralejo.pmtiles", window.location.href).href;
+  const mapConfig = getTourMapConfig();
+  const viewConfig = getTourMapViewConfig("overview");
+  const archiveUrl = getTourMapArchiveUrl();
   initialisePmtilesProtocol(archiveUrl);
 
   routeOverviewMap = new maplibregl.Map({
     container,
-    style: createCorralejoMapStyle(archiveUrl),
-    center: [-13.865, 28.738],
-    zoom: 13.2,
-    minZoom: 11.5,
-    maxZoom: 18,
+    style: createTourMapStyle(archiveUrl),
+    center: mapConfig.center,
+    zoom: viewConfig.zoom,
+    minZoom: viewConfig.minZoom ?? mapConfig.minZoom,
+    maxZoom: viewConfig.maxZoom ?? mapConfig.maxZoom,
     attributionControl: false,
     cooperativeGestures: false,
     dragRotate: false,
     pitchWithRotate: false,
-    maxBounds: [[-13.89, 28.705], [-13.838, 28.764]]
+    maxBounds: viewConfig.bounds || mapConfig.bounds
   });
 
   routeOverviewMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
@@ -325,7 +327,7 @@ function initialiseRouteOverviewMap(stops, completedStopIds, currentStopId) {
       popupTitle.textContent = `${stop.number}. ${getLocalizedValue(stop.displayName)}`;
       const popupLink = document.createElement("a");
       popupLink.className = "map-popup-link";
-      popupLink.href = `stop.html?stop=${encodeURIComponent(stop.slug)}`;
+      popupLink.href = buildTourUrl("stop.html", { stop: stop.slug });
       popupLink.textContent = translate("openStop");
       popupContent.append(popupTitle, popupLink);
 
@@ -352,7 +354,7 @@ function initialiseRouteOverviewMap(stops, completedStopIds, currentStopId) {
 
     routeOverviewMap.fitBounds(bounds, {
       padding: { top: 70, right: 46, bottom: 70, left: 46 },
-      maxZoom: 14.3,
+      maxZoom: viewConfig.fitMaxZoom ?? mapConfig.maxZoom,
       duration: 0
     });
 
@@ -520,7 +522,11 @@ function setupRouteActions() {
     };
 
     resetTourProgress();
-    trackAnalyticsEventAndNavigate("tour_exit", eventParameters, "index.html?from=route_overview");
+    trackAnalyticsEventAndNavigate(
+      "tour_exit",
+      eventParameters,
+      buildTourUrl("index.html", { from: "route_overview" })
+    );
   });
 }
 

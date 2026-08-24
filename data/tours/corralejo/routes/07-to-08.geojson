@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.86744,
+            28.73828
+          ],
+          [
+            -13.8675651,
+            28.7383242
+          ],
+          [
+            -13.8677421,
+            28.7383101
+          ],
+          [
+            -13.8679754,
+            28.7383524
+          ],
+          [
+            -13.8681,
+            28.73835
+          ]
+        ]
+      },
+      "properties": {
+        "routeId": "07-to-08",
+        "fromStopId": "07-plaza-patricio-calero",
+        "toStopId": "08-main-shopping-street",
+        "distanceMetres": 66,
+        "walkingMinutes": 1,
+        "status": "approved",
+        "geometrySource": "generated_from_local_openstreetmap_network",
+        "approved": true
+      }
+    }
+  ]
+}
