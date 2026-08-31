@@ -123,7 +123,34 @@ function createRouteCard(stop, completedStopIds, currentStopId) {
 }
 
 function getCurrentStop(stops, completedStopIds) {
-  return stops.find((stop) => !completedStopIds.has(getStopAnalyticsId(stop))) || null;
+  const startStopId =
+    typeof getTourStartStopId === "function"
+      ? getTourStartStopId()
+      : null;
+
+  if (startStopId) {
+    const startIndex = stops.findIndex(
+      (stop) => getStopAnalyticsId(stop) === startStopId
+    );
+
+    if (startIndex >= 0) {
+      return (
+        stops
+          .slice(startIndex)
+          .find(
+            (stop) =>
+              !completedStopIds.has(getStopAnalyticsId(stop))
+          ) || null
+      );
+    }
+  }
+
+  return (
+    stops.find(
+      (stop) =>
+        !completedStopIds.has(getStopAnalyticsId(stop))
+    ) || null
+  );
 }
 
 function renderUpNextCard(currentStop) {

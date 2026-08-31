@@ -1,7 +1,7 @@
 // Keep the legacy cache prefix for now so activation can delete older
 // Discover Corralejo cache generations created before the multi-tour refactor.
 const CACHE_PREFIX = "discover-corralejo-v3";
-const CACHE_VERSION = "v37-discover-canarias-home";
+const CACHE_VERSION = "v38-location-aware-start";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content-${CACHE_VERSION}`;
 const OFFLINE_MANIFEST_URL = "__offline-tour-manifest__.json";
@@ -36,6 +36,7 @@ const CORE_FILES = [
   "./js/common.js",
   "./js/analytics.js",
   "./js/offline.js",
+  "./js/location-start.js",
   "./js/navigation-map.js",
   "./js/map-points.js",
   "./js/index.js",
@@ -68,6 +69,7 @@ const REQUIRED_CORE_FILES = new Set([
   "./js/common.js",
   "./js/map-points.js",
   "./js/offline.js",
+  "./js/location-start.js",
   "./js/register-sw.js"
 ]);
 

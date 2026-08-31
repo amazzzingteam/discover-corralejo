@@ -444,6 +444,37 @@ function resetTourProgress() {
   removeTourSessionStorageValue("completedStops");
   removeTourSessionStorageValue("lastStopId");
   removeTourSessionStorageValue("tourCompleteTracked");
+  removeTourSessionStorageValue("startMode");
+  removeTourSessionStorageValue("startStopId");
+}
+
+function setTourStartContext(mode, stop = null) {
+  const normalisedMode =
+    typeof mode === "string" && mode.trim()
+      ? mode.trim()
+      : "beginning";
+
+  sessionStorage.setItem(
+    getTourSessionStorageKey("startMode"),
+    normalisedMode
+  );
+
+  if (stop) {
+    sessionStorage.setItem(
+      getTourSessionStorageKey("startStopId"),
+      getStopAnalyticsId(stop)
+    );
+  } else {
+    removeTourSessionStorageValue("startStopId");
+  }
+}
+
+function getTourStartMode() {
+  return readTourSessionStorageValue("startMode") || "beginning";
+}
+
+function getTourStartStopId() {
+  return readTourSessionStorageValue("startStopId");
 }
 
 function isFinalStop(stop) {

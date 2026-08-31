@@ -24,6 +24,7 @@ const OFFLINE_APP_SHELL_URLS = Object.freeze([
   "js/common.js",
   "js/analytics.js",
   "js/offline.js",
+  "js/location-start.js",
   "js/navigation-map.js",
   "js/map-points.js",
   "js/index.js",

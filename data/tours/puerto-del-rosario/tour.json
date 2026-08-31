@@ -48,6 +48,12 @@
     },
     "pwa": {
       "installEnabled": false
+    },
+    "locationAwareStart": {
+      "enabled": false,
+      "status": "pending-final-coordinates",
+      "strategy": "nearest-stop",
+      "followExistingRouteOrder": true
     }
   },
   "languages": [
@@ -213,7 +219,21 @@
       "busStopNotFound": "Bus stop not found",
       "busStopNotFoundBody": "This bus reference point is not available.",
       "offlinePending": "Offline download is not available for this provisional tour yet.",
-      "offlinePendingButton": "Offline package pending"
+      "offlinePendingButton": "Offline package pending",
+      "startFromBeginning": "Start from beginning",
+      "startNearMe": "Start near me",
+      "locationChecking": "Finding your nearest stop…",
+      "locationNearestStop": "Nearest stop",
+      "locationDistance": "About {distance} away",
+      "locationStartHere": "Start here",
+      "locationViewRoute": "View full route",
+      "locationCancel": "Cancel",
+      "locationPrivacyNote": "Your location is used only on this device to find the nearest stop.",
+      "locationPermissionDenied": "Location permission was not granted. You can still start from the beginning or choose a stop from the route.",
+      "locationUnavailable": "Your location could not be determined. Try again outdoors, or start from the beginning.",
+      "locationTimeout": "Finding your location took too long. Try again, or start from the beginning.",
+      "locationNotSupported": "Location is not available in this browser. You can still start from the beginning.",
+      "locationNoStops": "Nearest-stop start is not available for this tour yet."
     },
     "es": {
       "chooseLanguage": "Elige tu idioma",
@@ -343,7 +363,21 @@
       "busStopNotFound": "Parada no encontrada",
       "busStopNotFoundBody": "Este punto de referencia de autobús no está disponible.",
       "offlinePending": "La descarga sin conexión todavía no está disponible para este tour provisional.",
-      "offlinePendingButton": "Paquete sin conexión pendiente"
+      "offlinePendingButton": "Paquete sin conexión pendiente",
+      "startFromBeginning": "Empezar desde el principio",
+      "startNearMe": "Empezar cerca de mí",
+      "locationChecking": "Buscando la parada más cercana…",
+      "locationNearestStop": "Parada más cercana",
+      "locationDistance": "A unos {distance}",
+      "locationStartHere": "Empezar aquí",
+      "locationViewRoute": "Ver ruta completa",
+      "locationCancel": "Cancelar",
+      "locationPrivacyNote": "Tu ubicación se usa solo en este dispositivo para encontrar la parada más cercana.",
+      "locationPermissionDenied": "No se concedió permiso de ubicación. Puedes empezar desde el principio o elegir una parada en la ruta.",
+      "locationUnavailable": "No se pudo determinar tu ubicación. Inténtalo de nuevo al aire libre o empieza desde el principio.",
+      "locationTimeout": "La ubicación tardó demasiado en obtenerse. Inténtalo de nuevo o empieza desde el principio.",
+      "locationNotSupported": "La ubicación no está disponible en este navegador. Puedes empezar desde el principio.",
+      "locationNoStops": "El inicio desde la parada más cercana aún no está disponible para este recorrido."
     },
     "fr": {
       "chooseLanguage": "Choisissez votre langue",
@@ -473,7 +507,21 @@
       "busStopNotFound": "Arrêt de bus introuvable",
       "busStopNotFoundBody": "Ce point de référence de bus n’est pas disponible.",
       "offlinePending": "Le téléchargement hors connexion n’est pas encore disponible pour cette visite provisoire.",
-      "offlinePendingButton": "Pack hors connexion en attente"
+      "offlinePendingButton": "Pack hors connexion en attente",
+      "startFromBeginning": "Commencer depuis le début",
+      "startNearMe": "Commencer près de moi",
+      "locationChecking": "Recherche de l’étape la plus proche…",
+      "locationNearestStop": "Étape la plus proche",
+      "locationDistance": "À environ {distance}",
+      "locationStartHere": "Commencer ici",
+      "locationViewRoute": "Voir tout le parcours",
+      "locationCancel": "Annuler",
+      "locationPrivacyNote": "Votre position est utilisée uniquement sur cet appareil pour trouver l’étape la plus proche.",
+      "locationPermissionDenied": "L’accès à la position n’a pas été autorisé. Vous pouvez commencer depuis le début ou choisir une étape du parcours.",
+      "locationUnavailable": "Votre position n’a pas pu être déterminée. Réessayez à l’extérieur ou commencez depuis le début.",
+      "locationTimeout": "La recherche de votre position a pris trop de temps. Réessayez ou commencez depuis le début.",
+      "locationNotSupported": "La localisation n’est pas disponible dans ce navigateur. Vous pouvez commencer depuis le début.",
+      "locationNoStops": "Le démarrage depuis l’étape la plus proche n’est pas encore disponible pour ce parcours."
     },
     "de": {
       "chooseLanguage": "Wähle deine Sprache",
@@ -603,7 +651,21 @@
       "busStopNotFound": "Bushaltestelle nicht gefunden",
       "busStopNotFoundBody": "Dieser Bus-Orientierungspunkt ist nicht verfügbar.",
       "offlinePending": "Der Offline-Download ist für diese vorläufige Tour noch nicht verfügbar.",
-      "offlinePendingButton": "Offline-Paket ausstehend"
+      "offlinePendingButton": "Offline-Paket ausstehend",
+      "startFromBeginning": "Von Anfang an starten",
+      "startNearMe": "In meiner Nähe starten",
+      "locationChecking": "Nächsten Stopp suchen…",
+      "locationNearestStop": "Nächster Stopp",
+      "locationDistance": "Etwa {distance} entfernt",
+      "locationStartHere": "Hier starten",
+      "locationViewRoute": "Gesamte Route ansehen",
+      "locationCancel": "Abbrechen",
+      "locationPrivacyNote": "Dein Standort wird nur auf diesem Gerät verwendet, um den nächsten Stopp zu finden.",
+      "locationPermissionDenied": "Der Standortzugriff wurde nicht erlaubt. Du kannst trotzdem am Anfang starten oder einen Stopp auf der Route auswählen.",
+      "locationUnavailable": "Dein Standort konnte nicht bestimmt werden. Versuche es draußen erneut oder starte am Anfang.",
+      "locationTimeout": "Die Standortbestimmung hat zu lange gedauert. Versuche es erneut oder starte am Anfang.",
+      "locationNotSupported": "Standortdienste sind in diesem Browser nicht verfügbar. Du kannst trotzdem am Anfang starten.",
+      "locationNoStops": "Der Start beim nächstgelegenen Stopp ist für diese Tour noch nicht verfügbar."
     },
     "it": {
       "chooseLanguage": "Scegli la tua lingua",
@@ -733,7 +795,21 @@
       "busStopNotFound": "Fermata autobus non trovata",
       "busStopNotFoundBody": "Questo punto di riferimento dell’autobus non è disponibile.",
       "offlinePending": "Il download offline non è ancora disponibile per questo tour provvisorio.",
-      "offlinePendingButton": "Pacchetto offline in attesa"
+      "offlinePendingButton": "Pacchetto offline in attesa",
+      "startFromBeginning": "Inizia dall’inizio",
+      "startNearMe": "Inizia vicino a me",
+      "locationChecking": "Ricerca della tappa più vicina…",
+      "locationNearestStop": "Tappa più vicina",
+      "locationDistance": "A circa {distance}",
+      "locationStartHere": "Inizia qui",
+      "locationViewRoute": "Vedi il percorso completo",
+      "locationCancel": "Annulla",
+      "locationPrivacyNote": "La tua posizione viene usata solo su questo dispositivo per trovare la tappa più vicina.",
+      "locationPermissionDenied": "Il permesso di posizione non è stato concesso. Puoi comunque iniziare dall’inizio o scegliere una tappa dal percorso.",
+      "locationUnavailable": "Non è stato possibile determinare la tua posizione. Riprova all’aperto oppure inizia dall’inizio.",
+      "locationTimeout": "La ricerca della posizione ha impiegato troppo tempo. Riprova oppure inizia dall’inizio.",
+      "locationNotSupported": "La posizione non è disponibile in questo browser. Puoi comunque iniziare dall’inizio.",
+      "locationNoStops": "L’avvio dalla tappa più vicina non è ancora disponibile per questo tour."
     },
     "pl": {
       "chooseLanguage": "Wybierz język",
@@ -863,7 +939,21 @@
       "busStopNotFound": "Nie znaleziono przystanku",
       "busStopNotFoundBody": "Ten autobusowy punkt orientacyjny jest niedostępny.",
       "offlinePending": "Pobieranie offline nie jest jeszcze dostępne dla tej tymczasowej trasy.",
-      "offlinePendingButton": "Pakiet offline oczekuje"
+      "offlinePendingButton": "Pakiet offline oczekuje",
+      "startFromBeginning": "Zacznij od początku",
+      "startNearMe": "Zacznij w pobliżu",
+      "locationChecking": "Szukam najbliższego przystanku…",
+      "locationNearestStop": "Najbliższy przystanek",
+      "locationDistance": "Około {distance} stąd",
+      "locationStartHere": "Zacznij tutaj",
+      "locationViewRoute": "Zobacz całą trasę",
+      "locationCancel": "Anuluj",
+      "locationPrivacyNote": "Twoja lokalizacja jest używana tylko na tym urządzeniu, aby znaleźć najbliższy przystanek.",
+      "locationPermissionDenied": "Nie udzielono dostępu do lokalizacji. Nadal możesz zacząć od początku lub wybrać przystanek na trasie.",
+      "locationUnavailable": "Nie udało się ustalić Twojej lokalizacji. Spróbuj ponownie na zewnątrz lub zacznij od początku.",
+      "locationTimeout": "Ustalanie lokalizacji trwało zbyt długo. Spróbuj ponownie lub zacznij od początku.",
+      "locationNotSupported": "Lokalizacja nie jest dostępna w tej przeglądarce. Nadal możesz zacząć od początku.",
+      "locationNoStops": "Start od najbliższego przystanku nie jest jeszcze dostępny dla tej trasy."
     },
     "nl": {
       "chooseLanguage": "Kies je taal",
@@ -996,7 +1086,21 @@
       "busStopNotFound": "Bushalte niet gevonden",
       "busStopNotFoundBody": "Dit busreferentiepunt is niet beschikbaar.",
       "offlinePending": "Offline downloaden is nog niet beschikbaar voor deze voorlopige tour.",
-      "offlinePendingButton": "Offlinepakket in afwachting"
+      "offlinePendingButton": "Offlinepakket in afwachting",
+      "startFromBeginning": "Vanaf het begin starten",
+      "startNearMe": "Dicht bij mij starten",
+      "locationChecking": "Dichtstbijzijnde stop zoeken…",
+      "locationNearestStop": "Dichtstbijzijnde stop",
+      "locationDistance": "Ongeveer {distance} verderop",
+      "locationStartHere": "Hier starten",
+      "locationViewRoute": "Volledige route bekijken",
+      "locationCancel": "Annuleren",
+      "locationPrivacyNote": "Je locatie wordt alleen op dit apparaat gebruikt om de dichtstbijzijnde stop te vinden.",
+      "locationPermissionDenied": "Locatietoegang is niet toegestaan. Je kunt nog steeds vanaf het begin starten of een stop op de route kiezen.",
+      "locationUnavailable": "Je locatie kon niet worden bepaald. Probeer het buiten opnieuw of start vanaf het begin.",
+      "locationTimeout": "Het bepalen van je locatie duurde te lang. Probeer opnieuw of start vanaf het begin.",
+      "locationNotSupported": "Locatie is niet beschikbaar in deze browser. Je kunt nog steeds vanaf het begin starten.",
+      "locationNoStops": "Starten bij de dichtstbijzijnde stop is voor deze tour nog niet beschikbaar."
     },
     "pt": {
       "chooseLanguage": "Escolha o seu idioma",
@@ -1129,7 +1233,21 @@
       "busStopNotFound": "Paragem não encontrada",
       "busStopNotFoundBody": "Este ponto de referência de autocarro não está disponível.",
       "offlinePending": "A transferência offline ainda não está disponível para este percurso provisório.",
-      "offlinePendingButton": "Pacote offline pendente"
+      "offlinePendingButton": "Pacote offline pendente",
+      "startFromBeginning": "Começar do início",
+      "startNearMe": "Começar perto de mim",
+      "locationChecking": "A procurar a paragem mais próxima…",
+      "locationNearestStop": "Paragem mais próxima",
+      "locationDistance": "A cerca de {distance}",
+      "locationStartHere": "Começar aqui",
+      "locationViewRoute": "Ver percurso completo",
+      "locationCancel": "Cancelar",
+      "locationPrivacyNote": "A sua localização é usada apenas neste dispositivo para encontrar a paragem mais próxima.",
+      "locationPermissionDenied": "A permissão de localização não foi concedida. Ainda pode começar do início ou escolher uma paragem no percurso.",
+      "locationUnavailable": "Não foi possível determinar a sua localização. Tente novamente no exterior ou comece do início.",
+      "locationTimeout": "A localização demorou demasiado tempo. Tente novamente ou comece do início.",
+      "locationNotSupported": "A localização não está disponível neste navegador. Ainda pode começar do início.",
+      "locationNoStops": "O início pela paragem mais próxima ainda não está disponível para este percurso."
     }
   }
 }

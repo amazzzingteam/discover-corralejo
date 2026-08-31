@@ -71,15 +71,36 @@
       </div>
 
       <div class="welcome-actions">
-        <button
-          id="start-tour-button"
-          class="button button-coral welcome-start-button"
-          type="button"
-          data-i18n="startTour"
-          disabled
-        >
-          Start tour
-        </button>
+        <div class="welcome-start-options">
+          <button
+            id="start-tour-button"
+            class="button button-coral welcome-start-button"
+            type="button"
+            data-i18n="startFromBeginning"
+            disabled
+          >
+            Start from beginning
+          </button>
+
+          <button
+            id="start-near-me-button"
+            class="button welcome-location-button"
+            type="button"
+            disabled
+            hidden
+          >
+            <span class="welcome-location-icon" aria-hidden="true">⌖</span>
+            <span data-i18n="startNearMe">Start near me</span>
+          </button>
+        </div>
+
+        <p
+          id="location-start-status"
+          class="welcome-location-status"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></p>
 
         <button
           id="change-language-button"
@@ -136,12 +157,71 @@
         Choose a language to continue.
       </p>
     </section>
+
+    <section
+      id="location-start-sheet"
+      class="location-start-sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="location-start-title"
+      hidden
+    >
+      <div class="location-start-handle" aria-hidden="true"></div>
+
+      <p class="eyebrow" data-i18n="locationNearestStop">
+        Nearest stop
+      </p>
+
+      <h2 id="location-start-title"></h2>
+
+      <p
+        id="location-start-distance"
+        class="location-start-distance"
+      ></p>
+
+      <p
+        class="location-start-privacy"
+        data-i18n="locationPrivacyNote"
+      >
+        Your location is used only on this device to find the nearest stop.
+      </p>
+
+      <div class="location-start-actions">
+        <button
+          id="location-start-confirm"
+          class="button button-coral"
+          type="button"
+          data-i18n="locationStartHere"
+        >
+          Start here
+        </button>
+
+        <a
+          id="location-view-route"
+          class="button button-secondary"
+          href="route.html"
+          data-i18n="locationViewRoute"
+        >
+          View full route
+        </a>
+
+        <button
+          id="location-start-cancel"
+          class="location-start-cancel"
+          type="button"
+          data-i18n="locationCancel"
+        >
+          Cancel
+        </button>
+      </div>
+    </section>
   </main>
 
   <script src="js/data-loader.js"></script>
   <script src="js/common.js"></script>
   <script src="js/analytics.js"></script>
   <script src="js/offline.js"></script>
+  <script src="js/location-start.js"></script>
   <script src="js/index.js"></script>
   <script src="js/register-sw.js"></script>
 </body>

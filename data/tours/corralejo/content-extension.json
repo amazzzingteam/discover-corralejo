@@ -653,7 +653,21 @@
       "rejoinTourAt": "Sluit weer aan bij {name}",
       "walkingDistanceToTour": "Ongeveer {distance} lopen vanaf de tour.",
       "busStopNotFound": "Bushalte niet gevonden",
-      "busStopNotFoundBody": "Dit busreferentiepunt is niet beschikbaar."
+      "busStopNotFoundBody": "Dit busreferentiepunt is niet beschikbaar.",
+      "startFromBeginning": "Vanaf het begin starten",
+      "startNearMe": "Dicht bij mij starten",
+      "locationChecking": "Dichtstbijzijnde stop zoeken…",
+      "locationNearestStop": "Dichtstbijzijnde stop",
+      "locationDistance": "Ongeveer {distance} verderop",
+      "locationStartHere": "Hier starten",
+      "locationViewRoute": "Volledige route bekijken",
+      "locationCancel": "Annuleren",
+      "locationPrivacyNote": "Je locatie wordt alleen op dit apparaat gebruikt om de dichtstbijzijnde stop te vinden.",
+      "locationPermissionDenied": "Locatietoegang is niet toegestaan. Je kunt nog steeds vanaf het begin starten of een stop op de route kiezen.",
+      "locationUnavailable": "Je locatie kon niet worden bepaald. Probeer het buiten opnieuw of start vanaf het begin.",
+      "locationTimeout": "Het bepalen van je locatie duurde te lang. Probeer opnieuw of start vanaf het begin.",
+      "locationNotSupported": "Locatie is niet beschikbaar in deze browser. Je kunt nog steeds vanaf het begin starten.",
+      "locationNoStops": "Starten bij de dichtstbijzijnde stop is voor deze tour nog niet beschikbaar."
     },
     "pt": {
       "chooseLanguage": "Escolha o seu idioma",
@@ -784,7 +798,21 @@
       "rejoinTourAt": "Voltar ao passeio em {name}",
       "walkingDistanceToTour": "Cerca de {distance} a pé do passeio.",
       "busStopNotFound": "Paragem não encontrada",
-      "busStopNotFoundBody": "Este ponto de referência de autocarro não está disponível."
+      "busStopNotFoundBody": "Este ponto de referência de autocarro não está disponível.",
+      "startFromBeginning": "Começar do início",
+      "startNearMe": "Começar perto de mim",
+      "locationChecking": "A procurar a paragem mais próxima…",
+      "locationNearestStop": "Paragem mais próxima",
+      "locationDistance": "A cerca de {distance}",
+      "locationStartHere": "Começar aqui",
+      "locationViewRoute": "Ver percurso completo",
+      "locationCancel": "Cancelar",
+      "locationPrivacyNote": "A sua localização é usada apenas neste dispositivo para encontrar a paragem mais próxima.",
+      "locationPermissionDenied": "A permissão de localização não foi concedida. Ainda pode começar do início ou escolher uma paragem no percurso.",
+      "locationUnavailable": "Não foi possível determinar a sua localização. Tente novamente no exterior ou comece do início.",
+      "locationTimeout": "A localização demorou demasiado tempo. Tente novamente ou comece do início.",
+      "locationNotSupported": "A localização não está disponível neste navegador. Ainda pode começar do início.",
+      "locationNoStops": "O início pela paragem mais próxima ainda não está disponível para este percurso."
     }
   }
 }

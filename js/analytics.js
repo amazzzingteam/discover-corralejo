@@ -1,5 +1,5 @@
 const ANALYTICS_ALLOWED_PARAMETERS = Object.freeze({
-  tour_start: ["selected_language", "entry_source"],
+  tour_start: ["selected_language", "entry_source", "start_mode"],
   language_selected: ["selected_language", "selection_location"],
   route_view: ["view_source"],
   stop_open: ["stop_id", "selected_language"],

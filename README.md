@@ -282,3 +282,48 @@ When the approved Puerto package arrives, replace the provisional IDs/slugs/orde
 - "Exit tour" returns to the Discover Canarias home selector.
 - The PWA manifest now uses the shared Discover Canarias identity.
 - `tours.html` remains available as a compatibility alias for the selector.
+
+
+## Step 11 — Location-aware start
+
+The shared tour welcome screen now supports an optional **Start near me** flow.
+
+Corralejo enables this because all 18 published stops already have confirmed coordinates in its current structured data. Puerto del Rosario keeps it disabled until final approved stop coordinates are supplied.
+
+Behaviour:
+
+```text
+Choose language
+→ Start from beginning
+   OR
+→ Start near me
+→ browser requests location permission
+→ nearest published stop is calculated locally
+→ tourist confirms the suggested stop
+→ tour opens that stop
+```
+
+Technical notes:
+
+- Uses the browser `navigator.geolocation` API.
+- Nearest-stop distance is calculated locally with the Haversine formula.
+- Exact tourist GPS coordinates are not stored in LocalStorage/SessionStorage and are not sent to GA4.
+- Only the selected start mode and selected stop ID may be included in the existing `tour_start` analytics event.
+- This logic does not call Google Maps or any backend.
+- It can work offline when the selected tour/app shell has already been cached and the device can obtain a GPS position.
+- Location permission denial, unavailable GPS and timeout all fall back cleanly to normal/manual tour starting.
+- The route is not geographically reordered. Starting near Stop 12 means the normal existing Next Stop sequence continues from Stop 12 onward.
+- The route screen remembers the chosen start point during the session so its "Up next" state does not immediately jump back to Stop 1.
+- The new 8-language location UI strings are draft translations pending final content/language review.
+
+Tour config:
+
+```json
+"locationAwareStart": {
+  "enabled": true,
+  "strategy": "nearest-stop",
+  "followExistingRouteOrder": true
+}
+```
+
+For provisional tours without approved coordinates, keep `enabled` false.

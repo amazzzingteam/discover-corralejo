@@ -1,4 +1,6 @@
 let selectedLanguageCode = null;
+let nearestLocationStart = null;
+let locationLookupInProgress = false;
 
 function getLanguageSheet() {
   return document.querySelector("#language-sheet");
@@ -50,6 +52,20 @@ function updateLanguageSelection() {
 
   if (startButton) {
     startButton.disabled = !selectedLanguageCode;
+  }
+
+  const locationButton = document.querySelector(
+    "#start-near-me-button"
+  );
+
+  if (locationButton) {
+    const configured =
+      typeof isLocationAwareStartConfigured === "function" &&
+      isLocationAwareStartConfigured();
+
+    locationButton.hidden = !configured;
+    locationButton.disabled =
+      !selectedLanguageCode || locationLookupInProgress;
   }
 
   if (helpText) {
@@ -207,6 +223,213 @@ function applyWelcomeFeaturedMedia() {
     });
 }
 
+
+function setLocationStartStatus(message = "", state = "info") {
+  const status = document.querySelector("#location-start-status");
+  if (!status) {
+    return;
+  }
+
+  status.hidden = !message;
+  status.textContent = message;
+  status.dataset.state = state;
+}
+
+function closeLocationStartSheet() {
+  const sheet = document.querySelector("#location-start-sheet");
+  if (!sheet) {
+    return;
+  }
+
+  sheet.classList.remove("is-open");
+  document.body.classList.remove("location-start-open");
+
+  window.setTimeout(() => {
+    if (!sheet.classList.contains("is-open")) {
+      sheet.hidden = true;
+    }
+  }, 220);
+}
+
+function openLocationStartSheet(nearest) {
+  const sheet = document.querySelector("#location-start-sheet");
+  const title = document.querySelector("#location-start-title");
+  const distance = document.querySelector("#location-start-distance");
+  const viewRoute = document.querySelector("#location-view-route");
+
+  if (!sheet || !title || !distance) {
+    return;
+  }
+
+  nearestLocationStart = nearest;
+  title.textContent = `${translate("stopNumber", {
+    number: nearest.stop.number
+  })} — ${getLocalizedValue(nearest.stop.displayName)}`;
+
+  distance.textContent = translate("locationDistance", {
+    distance: formatLocationDistance(nearest.distanceMetres)
+  });
+
+  if (viewRoute) {
+    viewRoute.href = buildTourUrl("route.html", {
+      view_source: "location_suggestion"
+    });
+  }
+
+  sheet.hidden = false;
+  document.body.classList.add("location-start-open");
+
+  window.requestAnimationFrame(() => {
+    sheet.classList.add("is-open");
+    document.querySelector("#location-start-confirm")?.focus();
+  });
+}
+
+function navigateToTourStart(stop, startMode) {
+  if (!stop || !selectedLanguageCode) {
+    return;
+  }
+
+  resetTourProgress();
+  setTourStartContext(startMode, stop);
+
+  trackAnalyticsEventAndNavigate(
+    "tour_start",
+    {
+      selected_language: selectedLanguageCode,
+      entry_source: getEntrySource(),
+      start_mode: startMode,
+      stop_id: getStopAnalyticsId(stop)
+    },
+    startMode === "near_me"
+      ? buildTourUrl("stop.html", {
+          stop: stop.slug,
+          start_mode: "near_me"
+        })
+      : buildTourUrl("route.html", {
+          view_source: "tour_start"
+        })
+  );
+}
+
+async function handleStartNearMe() {
+  if (!selectedLanguageCode) {
+    setLanguageSheetOpen(true);
+    updateLanguageSelection();
+    return;
+  }
+
+  if (
+    typeof isLocationAwareStartConfigured !== "function" ||
+    !isLocationAwareStartConfigured()
+  ) {
+    setLocationStartStatus(
+      translate("locationNoStops"),
+      "warning"
+    );
+    return;
+  }
+
+  if (
+    typeof isLocationAwareStartSupported !== "function" ||
+    !isLocationAwareStartSupported()
+  ) {
+    setLocationStartStatus(
+      translate("locationNotSupported"),
+      "warning"
+    );
+    return;
+  }
+
+  locationLookupInProgress = true;
+  nearestLocationStart = null;
+  setLocationStartStatus(
+    translate("locationChecking"),
+    "checking"
+  );
+  updateLanguageSelection();
+
+  try {
+    const position = await requestCurrentTourPosition();
+    const nearest = findNearestTourStop(
+      position.coords.latitude,
+      position.coords.longitude
+    );
+
+    if (!nearest) {
+      setLocationStartStatus(
+        translate("locationNoStops"),
+        "warning"
+      );
+      return;
+    }
+
+    setLocationStartStatus("", "info");
+    openLocationStartSheet(nearest);
+  } catch (error) {
+    console.warn("Nearest-stop location could not be determined:", error);
+    setLocationStartStatus(
+      translate(getLocationStartErrorTranslationKey(error)),
+      "warning"
+    );
+  } finally {
+    locationLookupInProgress = false;
+    updateLanguageSelection();
+  }
+}
+
+function setupLocationAwareStart() {
+  const locationButton = document.querySelector(
+    "#start-near-me-button"
+  );
+  const confirmButton = document.querySelector(
+    "#location-start-confirm"
+  );
+  const cancelButton = document.querySelector(
+    "#location-start-cancel"
+  );
+  const viewRoute = document.querySelector(
+    "#location-view-route"
+  );
+
+  if (!locationButton) {
+    return;
+  }
+
+  locationButton.hidden = !isLocationAwareStartConfigured();
+  locationButton.addEventListener("click", handleStartNearMe);
+
+  confirmButton?.addEventListener("click", () => {
+    if (!nearestLocationStart) {
+      return;
+    }
+
+    closeLocationStartSheet();
+    navigateToTourStart(
+      nearestLocationStart.stop,
+      "near_me"
+    );
+  });
+
+  cancelButton?.addEventListener(
+    "click",
+    closeLocationStartSheet
+  );
+
+  viewRoute?.addEventListener("click", () => {
+    closeLocationStartSheet();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      document.querySelector("#location-start-sheet")?.classList.contains("is-open")
+    ) {
+      closeLocationStartSheet();
+    }
+  });
+}
+
 function initialiseLanguagePage() {
   applyPageTranslations();
   applyWelcomeTourBranding();
@@ -236,6 +459,7 @@ function initialiseLanguagePage() {
   });
 
   setupLanguageSheetControls();
+  setupLocationAwareStart();
   updateLanguageSelection();
   setLanguageSheetOpen(!selectedLanguageCode);
 
@@ -246,16 +470,13 @@ function initialiseLanguagePage() {
       return;
     }
 
-    resetTourProgress();
+    const firstStop = getPublishedStops()[0];
 
-    trackAnalyticsEventAndNavigate(
-      "tour_start",
-      {
-        selected_language: selectedLanguageCode,
-        entry_source: getEntrySource()
-      },
-      buildTourUrl("route.html", { view_source: "tour_start" })
-    );
+    if (!firstStop) {
+      return;
+    }
+
+    navigateToTourStart(firstStop, "beginning");
   });
 }
 
